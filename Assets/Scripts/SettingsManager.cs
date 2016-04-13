@@ -1,21 +1,21 @@
 ﻿using UnityEngine;
-using System.Collections;
 
+/** Mio, 13.04.2016
+ * SettingsManager keeps track and sets settings on change.
+ * It holds and stores a full data set of all user configurations
+ * Currently does not work automatically on changes ingame, but
+ * works fine in editor.
+ * There seems to be no good way of observing property changes (???)
+ */
 [ExecuteInEditMode]
 public class SettingsManager : MonoBehaviour {
     public Material renderTexture;
     public FilterMode filtering = FilterMode.Point;
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    void Start() {
+        OnValidate();
+    }
     
-    // Gets called if there was any input in the inspector fields
     void OnValidate() {
         SetRenderFiltering(filtering);
     }

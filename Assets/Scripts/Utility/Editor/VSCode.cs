@@ -365,77 +365,7 @@ namespace dotBunny.Unity
         /// </summary>
         static void CheckForUpdate()
         {
-            var fileContent = string.Empty;
-
-            EditorUtility.DisplayProgressBar("VSCode", "Checking for updates ...", 0.5f);
-
-            // Because were not a runtime framework, lets just use the simplest way of doing this
-            try
-            {
-                using (var webClient = new System.Net.WebClient())
-                {
-                    fileContent = webClient.DownloadString("https://raw.githubusercontent.com/dotBunny/VSCode/master/Plugins/Editor/VSCode.cs");
-                }
-            }
-            catch (Exception e)
-            {
-                if (Debug)
-                {
-                    UnityEngine.Debug.Log("[VSCode] " + e.Message);
-
-                }
-
-                // Don't go any further if there is an error
-                return;
-            }
-            finally
-            {
-                EditorUtility.ClearProgressBar();
-            }
-
-            // Set the last update time
-            LastUpdate = DateTime.Now;
-
-            // Fix for oddity in downlo
-            if (fileContent.Substring(0, 2) != "/*")
-            {
-                int startPosition = fileContent.IndexOf("/*", StringComparison.CurrentCultureIgnoreCase);
-
-                // Jump over junk characters
-                fileContent = fileContent.Substring(startPosition);
-            }
-
-            string[] fileExploded = fileContent.Split('\n');
-            if (fileExploded.Length > 7)
-            {
-                float github = Version;
-                if (float.TryParse(fileExploded[6].Replace("*", "").Trim(), out github))
-                {
-                    GitHubVersion = github;
-                }
-
-
-                if (github > Version)
-                {
-                    var GUIDs = AssetDatabase.FindAssets("t:Script VSCode");
-                    var path = Application.dataPath.Substring(0, Application.dataPath.Length - "/Assets".Length) + System.IO.Path.DirectorySeparatorChar +
-                               AssetDatabase.GUIDToAssetPath(GUIDs[0]).Replace('/', System.IO.Path.DirectorySeparatorChar);
-
-                    if (EditorUtility.DisplayDialog("VSCode Update", "A newer version of the VSCode plugin is available, would you like to update your version?", "Yes", "No"))
-                    {
-                        // Always make sure the file is writable
-                        System.IO.FileInfo fileInfo = new System.IO.FileInfo(path);
-                        fileInfo.IsReadOnly = false;
-
-                        // Write update file
-                        File.WriteAllText(path, fileContent);
-
-                        // Force update on text file
-                        AssetDatabase.ImportAsset(AssetDatabase.GUIDToAssetPath(GUIDs[0]), ImportAssetOptions.ForceUpdate);
-                    }
-
-                }
-            }
+            return;
         }
 
         /// <summary>

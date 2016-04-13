@@ -1,4 +1,4 @@
-Shader "Sprites/Diffuse"
+Shader "Sprites/Kappa/Diffuse"
 {
 	Properties
 	{

@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/** Mio, 13.04.2016
+ * Smoothly moves the player via axis inputs,
+ * while staying on the fixed unit grid.
+ */
 public class PlayerController : MonoBehaviour {
     private Vector3 _movement;
-    public int speed; // Pixel per Second...
-	// Use this for initialization
+    public int speed; // in Pixels per Second...
+
 	void Start () {
 	    _movement = Vector3.zero;
 	}
 	
-	// Update is called once per frame
 	void Update () {
 	    _movement.z += Input.GetAxis("Vertical") * speed * Time.deltaTime;
         _movement.x += Input.GetAxis("Horizontal") * speed * Time.deltaTime;

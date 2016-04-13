@@ -1,4 +1,4 @@
-﻿Shader "Sprites/Beat/Diffuse-Shadow"
+﻿Shader "Sprites/Kappa/Diffuse-Shadow"
 {
     Properties
     {

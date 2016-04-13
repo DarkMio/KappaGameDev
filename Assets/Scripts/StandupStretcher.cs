@@ -1,23 +1,17 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-/**
+/** Mio, 13.04.2016
  * The Standup-Stretcher is planned to stretch standing up sprites perfectly for
  * angled orthographic cameras. This way we can stretch our sprites to stay in
  * pixel perfect alignment while taking part of the world space.
- *
- * Note to future self: Maybe the Camera can take care of that next time.
- *                      at this point all standing up sprites have to be aligned.
  */
-#if UNITY_EDITOR  // So we're _only_ adjusting in editor view and save us some time.
 [ExecuteInEditMode]
 public class StandupStretcher : MonoBehaviour {
-    private Camera renderCamera;
     public GameObject[] sprites;
     public Transform trashVar;
     private float m_angle;
     private float m_radAngle;
-    private float angle {
+    private float _angle { // convert from deg to rad - synced
         get {
             return m_angle;
         }
@@ -26,7 +20,7 @@ public class StandupStretcher : MonoBehaviour {
             m_radAngle = DegToRad(value);
         }
     }
-    private float radAngle {
+    private float _radAngle { // convert from rad to deg - synced
         get {
             return m_radAngle;
         }
@@ -36,23 +30,18 @@ public class StandupStretcher : MonoBehaviour {
         }
     }
     
-    // Use this for initialization
 	void Start () {
 	    // main = Camera.main;
         trashVar = transform;
-        renderCamera = GetComponent<Camera>();
-        angle = Quaternion.Angle(Quaternion.identity, transform.rotation);
+        _angle = Quaternion.Angle(Quaternion.identity, transform.rotation);
 	}
 	
-	// Update is called once per frame
 	void Update() {
         float compAngle = Quaternion.Angle(Quaternion.identity, transform.rotation);
         float radAngle = DegToRad(compAngle);
-        if(compAngle != angle) {
-            angle = compAngle;
-            Debug.Log("@" + Time.realtimeSinceStartup + ": Hello, I don't like you - compAngle: " + 1/Mathf.Cos(radAngle));
-
-            foreach(GameObject sprite in sprites) {
+        if(compAngle != _angle) { // if the angle has changed
+            _angle = compAngle;
+            foreach(GameObject sprite in sprites) { // then do all calculations on each sprite
                 var standTransform = sprite.GetComponent<Transform>();
                 var scal = standTransform.localScale;
                 standTransform.localScale = new Vector3(scal.x, 1 / Mathf.Cos(radAngle), scal.z);
@@ -68,4 +57,4 @@ public class StandupStretcher : MonoBehaviour {
         return a / 180 * Mathf.PI;
     }
 }
-#endif
+// #endif
