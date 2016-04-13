@@ -20,7 +20,6 @@ public class SettingsManager : MonoBehaviour {
         SetRenderFiltering(filtering);
     }
     
-    
     public void SetRenderFiltering(FilterMode mode) {
         renderTexture.mainTexture.filterMode = mode;
     }
