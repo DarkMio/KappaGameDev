@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-
 
 /** Mio, 13.04.2016
  * Probably only useful for orthographic cameras,

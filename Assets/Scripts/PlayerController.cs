@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 /** Mio, 13.04.2016
  * Smoothly moves the player via axis inputs,
