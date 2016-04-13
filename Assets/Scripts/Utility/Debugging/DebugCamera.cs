@@ -14,7 +14,6 @@ public class DebugCamera : MonoBehaviour {
     public Material textureTile;
     public int distanceFromCamera = 1000;
     public Rect quadSize = new Rect(0, 0, 100, 100);
-	
     
 	void Start () {
 	    _cam = GetComponent<Camera>();
