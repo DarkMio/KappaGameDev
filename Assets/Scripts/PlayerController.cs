@@ -4,17 +4,27 @@
  * Smoothly moves the player via axis inputs,
  * while staying on the fixed unit grid.
  */
+ [ExecuteInEditMode]
 public class PlayerController : MonoBehaviour {
+    private bool playerInput = true;
     private Vector3 _movement;
+    public bool debugDraws = true;
     public int speed; // in Pixels per Second...
+    [TooltipAttribute("Max Distance within a context-menu snaps.")]
+    public float contextDist;
 
 	void Start () {
 	    _movement = Vector3.zero;
 	}
 	
 	void Update () {
-	    _movement.z += Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        _movement.x += Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        if(playerInput) {
+            _movement.z += Input.GetAxis("Vertical") * speed * Time.deltaTime;
+            _movement.x += Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+            if(Input.GetButton("Submit")){
+                checkContextMenu();   
+            }
+        }
 	}
     
     private void LateUpdate() {
@@ -29,5 +39,43 @@ public class PlayerController : MonoBehaviour {
                 transform.position = transform.position + clamped_movement;
             }
         }
+    }
+    
+    /**
+     * Checks if there is any context menu around to open
+     */
+    private GameObject checkContextMenu() {
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("Context Menu");
+        GameObject closest = null;
+        float closestDist = float.MaxValue;
+        foreach(GameObject obj in objs) {
+            if(closest == null) { // to have something to compare with
+                closest = obj;
+                closestDist = Vector3.Distance(transform.position, obj.transform.position);
+            }
+            
+            // Get the distance
+            float compareDist = Vector3.Distance(transform.position, obj.transform.position);
+            if(compareDist < closestDist) { // compare and overwrite it
+                closest = obj;
+                closestDist = compareDist;
+            }
+        }
+        if(debugDraws) {
+            Debug.DrawLine(transform.position, closest.transform.position, Color.red, 2f, false);
+        }
+        
+        MenuTrigger trigger = closest.GetComponent<MenuTrigger>();
+        if(trigger != null && closestDist <= trigger.triggerDistance) { // trigger tells the trigger distance
+            trigger.TriggerMenu();
+            playerInput = false;
+        } else if(trigger == null) {
+            Debug.Log("Trigger -> null");
+        }
+        return closest;
+    }
+    
+    public void enablePlayercontroller() {
+        playerInput = true;
     }
 }
