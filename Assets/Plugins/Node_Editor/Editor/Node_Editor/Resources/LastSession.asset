@@ -1,0 +1,274 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0c2324a9ab1224ebe3edad393e3544, type: 3}
+  m_Name: LastSession
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 11449020}
+  - {fileID: 11430656}
+  - {fileID: 11499768}
+  - {fileID: 11487058}
+--- !u!114 &11400284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 11430656}
+  side: 2
+  sidePosition: 49
+  sideOffset: 0
+  connections: []
+  type: Boolean
+--- !u!114 &11430634
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 11499768}
+  side: 2
+  sidePosition: 49
+  sideOffset: 0
+  connections:
+  - {fileID: 11499200}
+  type: Boolean
+--- !u!114 &11430656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -121
+    y: -75.5
+    width: 200
+    height: 81
+  nodeKnobs:
+  - {fileID: 11481962}
+  - {fileID: 11400284}
+  Inputs:
+  - {fileID: 11481962}
+  Outputs:
+  - {fileID: 11400284}
+--- !u!114 &11445334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 11449020}
+  side: 2
+  sidePosition: 49
+  sideOffset: 0
+  connections: []
+  type: Boolean
+--- !u!114 &11446142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 11499768}
+  side: 4
+  sidePosition: 49
+  sideOffset: 0
+  connection: {fileID: 0}
+  type: Boolean
+--- !u!114 &11449020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -117
+    y: -297.5
+    width: 200
+    height: 81
+  nodeKnobs:
+  - {fileID: 11499200}
+  - {fileID: 11445334}
+  Inputs:
+  - {fileID: 11499200}
+  Outputs:
+  - {fileID: 11445334}
+--- !u!114 &11449192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 11487058}
+  side: 4
+  sidePosition: 20
+  sideOffset: 0
+  connection: {fileID: 0}
+  type: Boolean
+--- !u!114 &11481096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ab6487237ff124ea4c2aa5de9ce3fb, type: 3}
+  m_Name: MainEditorState
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 11400000}
+  parentEditor: {fileID: 0}
+  drawing: 1
+  selectedNode: {fileID: 11499768}
+  panOffset: {x: -1, y: -1}
+  zoom: 1
+--- !u!114 &11481962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 11430656}
+  side: 4
+  sidePosition: 49
+  sideOffset: 0
+  connection: {fileID: 0}
+  type: Boolean
+--- !u!114 &11487058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -61
+    y: -145.5
+    width: 200
+    height: 150
+  nodeKnobs:
+  - {fileID: 11449192}
+  - {fileID: 11492436}
+  Inputs:
+  - {fileID: 11449192}
+  Outputs:
+  - {fileID: 11492436}
+--- !u!114 &11492436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 11487058}
+  side: 2
+  sidePosition: 20
+  sideOffset: 0
+  connections: []
+  type: Boolean
+--- !u!114 &11499200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 11449020}
+  side: 4
+  sidePosition: 49
+  sideOffset: 0
+  connection: {fileID: 11430634}
+  type: Boolean
+--- !u!114 &11499768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -414
+    y: -203.5
+    width: 200
+    height: 117
+  nodeKnobs:
+  - {fileID: 11446142}
+  - {fileID: 11430634}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Inputs:
+  - {fileID: 11446142}
+  - {fileID: 0}
+  Outputs:
+  - {fileID: 11430634}
+  - {fileID: 0}
+  - {fileID: 0}
