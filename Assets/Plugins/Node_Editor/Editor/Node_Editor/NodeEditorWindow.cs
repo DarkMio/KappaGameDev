@@ -46,7 +46,7 @@ namespace NodeEditorFramework
 		}
 		
 		/// <summary>
-		/// Handle opening canvas when double-clicking asset
+		/// Handle opening canvas when double-clicking asset 
 		/// </summary>
 		[UnityEditor.Callbacks.OnOpenAsset(1)]
 		public static bool AutoOpenCanvas (int instanceID, int line) 
