@@ -1,0 +1,3066 @@
+fileFormatVersion: 2
+guid: c50c8b83c49d0b74ea4ba25d28200de0
+timeCreated: 1460723115
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FinalFantasy6Sheet4_0
+    21300002: FinalFantasy6Sheet4_1
+    21300004: FinalFantasy6Sheet4_2
+    21300006: FinalFantasy6Sheet4_3
+    21300008: FinalFantasy6Sheet4_4
+    21300010: FinalFantasy6Sheet4_5
+    21300012: FinalFantasy6Sheet4_6
+    21300014: FinalFantasy6Sheet4_7
+    21300016: FinalFantasy6Sheet4_8
+    21300018: FinalFantasy6Sheet4_9
+    21300020: FinalFantasy6Sheet4_10
+    21300022: FinalFantasy6Sheet4_11
+    21300024: FinalFantasy6Sheet4_12
+    21300026: FinalFantasy6Sheet4_13
+    21300028: FinalFantasy6Sheet4_14
+    21300030: FinalFantasy6Sheet4_15
+    21300032: FinalFantasy6Sheet4_16
+    21300034: FinalFantasy6Sheet4_17
+    21300036: FinalFantasy6Sheet4_18
+    21300038: FinalFantasy6Sheet4_19
+    21300040: FinalFantasy6Sheet4_20
+    21300042: FinalFantasy6Sheet4_21
+    21300044: FinalFantasy6Sheet4_22
+    21300046: FinalFantasy6Sheet4_23
+    21300048: FinalFantasy6Sheet4_24
+    21300050: FinalFantasy6Sheet4_25
+    21300052: FinalFantasy6Sheet4_26
+    21300054: FinalFantasy6Sheet4_27
+    21300056: FinalFantasy6Sheet4_28
+    21300058: FinalFantasy6Sheet4_29
+    21300060: FinalFantasy6Sheet4_30
+    21300062: FinalFantasy6Sheet4_31
+    21300064: FinalFantasy6Sheet4_32
+    21300066: FinalFantasy6Sheet4_33
+    21300068: FinalFantasy6Sheet4_34
+    21300070: FinalFantasy6Sheet4_35
+    21300072: FinalFantasy6Sheet4_36
+    21300074: FinalFantasy6Sheet4_37
+    21300076: FinalFantasy6Sheet4_38
+    21300078: FinalFantasy6Sheet4_39
+    21300080: FinalFantasy6Sheet4_40
+    21300082: FinalFantasy6Sheet4_41
+    21300084: FinalFantasy6Sheet4_42
+    21300086: FinalFantasy6Sheet4_43
+    21300088: FinalFantasy6Sheet4_44
+    21300090: FinalFantasy6Sheet4_45
+    21300092: FinalFantasy6Sheet4_46
+    21300094: FinalFantasy6Sheet4_47
+    21300096: FinalFantasy6Sheet4_48
+    21300098: FinalFantasy6Sheet4_49
+    21300100: FinalFantasy6Sheet4_50
+    21300102: FinalFantasy6Sheet4_51
+    21300104: FinalFantasy6Sheet4_52
+    21300106: FinalFantasy6Sheet4_53
+    21300108: FinalFantasy6Sheet4_54
+    21300110: FinalFantasy6Sheet4_55
+    21300112: FinalFantasy6Sheet4_56
+    21300114: FinalFantasy6Sheet4_57
+    21300116: FinalFantasy6Sheet4_58
+    21300118: FinalFantasy6Sheet4_59
+    21300120: FinalFantasy6Sheet4_60
+    21300122: FinalFantasy6Sheet4_61
+    21300124: FinalFantasy6Sheet4_62
+    21300126: FinalFantasy6Sheet4_63
+    21300128: FinalFantasy6Sheet4_64
+    21300130: FinalFantasy6Sheet4_65
+    21300132: FinalFantasy6Sheet4_66
+    21300134: FinalFantasy6Sheet4_67
+    21300136: FinalFantasy6Sheet4_68
+    21300138: FinalFantasy6Sheet4_69
+    21300140: FinalFantasy6Sheet4_70
+    21300142: FinalFantasy6Sheet4_71
+    21300144: FinalFantasy6Sheet4_72
+    21300146: FinalFantasy6Sheet4_73
+    21300148: FinalFantasy6Sheet4_74
+    21300150: FinalFantasy6Sheet4_75
+    21300152: FinalFantasy6Sheet4_76
+    21300154: FinalFantasy6Sheet4_77
+    21300156: FinalFantasy6Sheet4_78
+    21300158: FinalFantasy6Sheet4_79
+    21300160: FinalFantasy6Sheet4_80
+    21300162: FinalFantasy6Sheet4_81
+    21300164: FinalFantasy6Sheet4_82
+    21300166: FinalFantasy6Sheet4_83
+    21300168: FinalFantasy6Sheet4_84
+    21300170: FinalFantasy6Sheet4_85
+    21300172: FinalFantasy6Sheet4_86
+    21300174: FinalFantasy6Sheet4_87
+    21300176: FinalFantasy6Sheet4_88
+    21300178: FinalFantasy6Sheet4_89
+    21300180: FinalFantasy6Sheet4_90
+    21300182: FinalFantasy6Sheet4_91
+    21300184: FinalFantasy6Sheet4_92
+    21300186: FinalFantasy6Sheet4_93
+    21300188: FinalFantasy6Sheet4_94
+    21300190: FinalFantasy6Sheet4_95
+    21300192: FinalFantasy6Sheet4_96
+    21300194: FinalFantasy6Sheet4_97
+    21300196: FinalFantasy6Sheet4_98
+    21300198: FinalFantasy6Sheet4_99
+    21300200: FinalFantasy6Sheet4_100
+    21300202: FinalFantasy6Sheet4_101
+    21300204: FinalFantasy6Sheet4_102
+    21300206: FinalFantasy6Sheet4_103
+    21300208: FinalFantasy6Sheet4_104
+    21300210: FinalFantasy6Sheet4_105
+    21300212: FinalFantasy6Sheet4_106
+    21300214: FinalFantasy6Sheet4_107
+    21300216: FinalFantasy6Sheet4_108
+    21300218: FinalFantasy6Sheet4_109
+    21300220: FinalFantasy6Sheet4_110
+    21300222: FinalFantasy6Sheet4_111
+    21300224: FinalFantasy6Sheet4_112
+    21300226: FinalFantasy6Sheet4_113
+    21300228: FinalFantasy6Sheet4_114
+    21300230: FinalFantasy6Sheet4_115
+    21300232: FinalFantasy6Sheet4_116
+    21300234: FinalFantasy6Sheet4_117
+    21300236: FinalFantasy6Sheet4_118
+    21300238: FinalFantasy6Sheet4_119
+    21300240: FinalFantasy6Sheet4_120
+    21300242: FinalFantasy6Sheet4_121
+    21300244: FinalFantasy6Sheet4_122
+    21300246: FinalFantasy6Sheet4_123
+    21300248: FinalFantasy6Sheet4_124
+    21300250: FinalFantasy6Sheet4_125
+    21300252: FinalFantasy6Sheet4_126
+    21300254: FinalFantasy6Sheet4_127
+    21300256: FinalFantasy6Sheet4_128
+    21300258: FinalFantasy6Sheet4_129
+    21300260: FinalFantasy6Sheet4_130
+    21300262: FinalFantasy6Sheet4_131
+    21300264: FinalFantasy6Sheet4_132
+    21300266: FinalFantasy6Sheet4_133
+    21300268: FinalFantasy6Sheet4_134
+    21300270: FinalFantasy6Sheet4_135
+    21300272: FinalFantasy6Sheet4_136
+    21300274: FinalFantasy6Sheet4_137
+    21300276: FinalFantasy6Sheet4_138
+    21300278: FinalFantasy6Sheet4_139
+    21300280: FinalFantasy6Sheet4_140
+    21300282: FinalFantasy6Sheet4_141
+    21300284: FinalFantasy6Sheet4_142
+    21300286: FinalFantasy6Sheet4_143
+    21300288: FinalFantasy6Sheet4_144
+    21300290: FinalFantasy6Sheet4_145
+    21300292: FinalFantasy6Sheet4_146
+    21300294: FinalFantasy6Sheet4_147
+    21300296: FinalFantasy6Sheet4_148
+    21300298: FinalFantasy6Sheet4_149
+    21300300: FinalFantasy6Sheet4_150
+    21300302: FinalFantasy6Sheet4_151
+    21300304: FinalFantasy6Sheet4_152
+    21300306: FinalFantasy6Sheet4_153
+    21300308: FinalFantasy6Sheet4_154
+    21300310: FinalFantasy6Sheet4_155
+    21300312: FinalFantasy6Sheet4_156
+    21300314: FinalFantasy6Sheet4_157
+    21300316: FinalFantasy6Sheet4_158
+    21300318: FinalFantasy6Sheet4_159
+    21300320: FinalFantasy6Sheet4_160
+    21300322: FinalFantasy6Sheet4_161
+    21300324: FinalFantasy6Sheet4_162
+    21300326: FinalFantasy6Sheet4_163
+    21300328: FinalFantasy6Sheet4_164
+    21300330: FinalFantasy6Sheet4_165
+    21300332: FinalFantasy6Sheet4_166
+    21300334: FinalFantasy6Sheet4_167
+    21300336: FinalFantasy6Sheet4_168
+    21300338: FinalFantasy6Sheet4_169
+    21300340: FinalFantasy6Sheet4_170
+    21300342: FinalFantasy6Sheet4_171
+    21300344: FinalFantasy6Sheet4_172
+    21300346: FinalFantasy6Sheet4_173
+    21300348: FinalFantasy6Sheet4_174
+    21300350: FinalFantasy6Sheet4_175
+    21300352: FinalFantasy6Sheet4_176
+    21300354: FinalFantasy6Sheet4_177
+    21300356: FinalFantasy6Sheet4_178
+    21300358: FinalFantasy6Sheet4_179
+    21300360: FinalFantasy6Sheet4_180
+    21300362: FinalFantasy6Sheet4_181
+    21300364: FinalFantasy6Sheet4_182
+    21300366: FinalFantasy6Sheet4_183
+    21300368: FinalFantasy6Sheet4_184
+    21300370: FinalFantasy6Sheet4_185
+    21300372: FinalFantasy6Sheet4_186
+    21300374: FinalFantasy6Sheet4_187
+    21300376: FinalFantasy6Sheet4_188
+    21300378: FinalFantasy6Sheet4_189
+    21300380: FinalFantasy6Sheet4_190
+    21300382: FinalFantasy6Sheet4_191
+    21300384: FinalFantasy6Sheet4_192
+    21300386: FinalFantasy6Sheet4_193
+    21300388: FinalFantasy6Sheet4_194
+    21300390: FinalFantasy6Sheet4_195
+    21300392: FinalFantasy6Sheet4_196
+    21300394: FinalFantasy6Sheet4_197
+    21300396: FinalFantasy6Sheet4_198
+    21300398: FinalFantasy6Sheet4_199
+    21300400: FinalFantasy6Sheet4_200
+    21300402: FinalFantasy6Sheet4_201
+    21300404: FinalFantasy6Sheet4_202
+    21300406: FinalFantasy6Sheet4_203
+    21300408: FinalFantasy6Sheet4_204
+    21300410: FinalFantasy6Sheet4_205
+    21300412: FinalFantasy6Sheet4_206
+    21300414: FinalFantasy6Sheet4_207
+    21300416: FinalFantasy6Sheet4_208
+    21300418: FinalFantasy6Sheet4_209
+    21300420: FinalFantasy6Sheet4_210
+    21300422: FinalFantasy6Sheet4_211
+    21300424: FinalFantasy6Sheet4_212
+    21300426: FinalFantasy6Sheet4_213
+    21300428: FinalFantasy6Sheet4_214
+    21300430: FinalFantasy6Sheet4_215
+    21300432: FinalFantasy6Sheet4_216
+    21300434: FinalFantasy6Sheet4_217
+    21300436: FinalFantasy6Sheet4_218
+    21300438: FinalFantasy6Sheet4_219
+    21300440: FinalFantasy6Sheet4_220
+    21300442: FinalFantasy6Sheet4_221
+    21300444: FinalFantasy6Sheet4_222
+    21300446: FinalFantasy6Sheet4_223
+    21300448: FinalFantasy6Sheet4_224
+    21300450: FinalFantasy6Sheet4_225
+    21300452: FinalFantasy6Sheet4_226
+    21300454: FinalFantasy6Sheet4_227
+    21300456: FinalFantasy6Sheet4_228
+    21300458: FinalFantasy6Sheet4_229
+    21300460: FinalFantasy6Sheet4_230
+    21300462: FinalFantasy6Sheet4_231
+    21300464: FinalFantasy6Sheet4_232
+    21300466: FinalFantasy6Sheet4_233
+    21300468: FinalFantasy6Sheet4_234
+    21300470: FinalFantasy6Sheet4_235
+    21300472: FinalFantasy6Sheet4_236
+    21300474: FinalFantasy6Sheet4_237
+    21300476: FinalFantasy6Sheet4_238
+    21300478: FinalFantasy6Sheet4_239
+    21300480: FinalFantasy6Sheet4_240
+    21300482: FinalFantasy6Sheet4_241
+    21300484: FinalFantasy6Sheet4_242
+    21300486: FinalFantasy6Sheet4_243
+    21300488: FinalFantasy6Sheet4_244
+    21300490: FinalFantasy6Sheet4_245
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: FinalFantasy6Sheet4_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 784
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 784
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_4
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 784
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_5
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 784
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_6
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 784
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_7
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 784
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 758
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_9
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 758
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_10
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 758
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 758
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_12
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 758
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_13
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 758
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_14
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 758
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_15
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 758
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_16
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 724
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_17
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 724
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_18
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 724
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_19
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 724
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_20
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 724
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_21
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 724
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_22
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 724
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_23
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 724
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_24
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 694
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_25
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 694
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_26
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 694
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_27
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 694
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 694
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_29
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 694
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_30
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 694
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_31
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 694
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_32
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 661
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_33
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 661
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_34
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 661
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_35
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 661
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 661
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_37
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 661
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_38
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 661
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_39
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 661
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_40
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 628
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_41
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 628
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_42
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 628
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_43
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 628
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_44
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 628
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_45
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 628
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_46
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 606
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_47
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 606
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_48
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 606
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_49
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 606
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_50
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 606
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_51
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 606
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_52
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 585
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_53
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 585
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_54
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 585
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_55
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 585
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_56
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 585
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_57
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 585
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_58
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 565
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_59
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 565
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_60
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 565
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_61
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 565
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_62
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 565
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_63
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 565
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_64
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 547
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_65
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 547
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_66
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 547
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_67
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 547
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_68
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 547
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_69
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 547
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_70
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 529
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_71
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 529
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_72
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 529
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_73
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 529
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_74
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 529
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_75
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 529
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_76
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 529
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_77
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 529
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_78
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 515
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_79
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 515
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_80
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 515
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_81
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 515
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_82
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 515
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_83
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 515
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_84
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 498
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_85
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 498
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_86
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 498
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_87
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 498
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_88
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 498
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_89
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 498
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_90
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 482
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_91
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 482
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_92
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 482
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_93
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 482
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_94
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 482
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_95
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 482
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_96
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 482
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_97
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 482
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_98
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 466
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_99
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 466
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_100
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 466
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_101
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 466
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_102
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 466
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_103
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 466
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_104
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 466
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_105
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 466
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_106
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 455
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_107
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 455
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_108
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 455
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_109
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 455
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_110
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 440
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_111
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 440
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_112
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 440
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_113
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 440
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_114
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 440
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_115
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 440
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_116
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 423
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_117
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 423
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_118
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 423
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_119
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 423
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_120
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 408
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_121
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 408
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_122
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 408
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_123
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 408
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_124
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 384
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_125
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 384
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_126
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 384
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_127
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 384
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_128
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 384
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_129
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_130
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 384
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_131
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 384
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_132
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 384
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_133
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 384
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_134
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 364
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_135
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 364
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_136
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 364
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_137
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 364
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_138
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 364
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_139
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 364
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_140
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 364
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_141
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 364
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_142
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 364
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_143
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 364
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_144
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 364
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_145
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 364
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_146
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 364
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_147
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 364
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_148
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 364
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_149
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 364
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_150
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 342
+        width: 42
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_151
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 342
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_152
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 342
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_153
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 342
+        width: 42
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_154
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 325
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_155
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 325
+        width: 45
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_156
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 325
+        width: 45
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_157
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 325
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_158
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 307
+        width: 33
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_159
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 307
+        width: 49
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_160
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 307
+        width: 49
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_161
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 307
+        width: 33
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_162
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 289
+        width: 33
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_163
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 264
+        width: 84
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 4}
+        - {x: -42, y: 2}
+        - {x: -42, y: -19}
+        - {x: 7, y: -19}
+        - {x: 8, y: -18}
+        - {x: 8, y: 1}
+        - {x: 5, y: 4}
+      - - {x: 8, y: 0}
+        - {x: 8, y: -19}
+        - {x: 42, y: -19}
+        - {x: 42, y: 4}
+        - {x: 14, y: 4}
+      - - {x: -42, y: 19}
+        - {x: -42, y: 4}
+        - {x: -25, y: 4}
+        - {x: -13, y: 9}
+        - {x: -13, y: 16}
+        - {x: -22, y: 19}
+      - - {x: 26, y: 19}
+        - {x: -8, y: 19}
+        - {x: -11, y: 14}
+        - {x: -11, y: 10}
+        - {x: -4, y: 4}
+        - {x: 1, y: 4}
+        - {x: 7, y: 7}
+        - {x: 39, y: 9}
+        - {x: 42, y: 11}
+        - {x: 42, y: 16}
+    - name: FinalFantasy6Sheet4_164
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 264
+        width: 84
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 4}
+        - {x: -40, y: 4}
+        - {x: -42, y: 2}
+        - {x: -42, y: -19}
+        - {x: -9, y: -19}
+        - {x: -8, y: -18}
+        - {x: -8, y: -1}
+      - - {x: -7, y: 4}
+        - {x: -8, y: 3}
+        - {x: -8, y: -19}
+        - {x: 42, y: -19}
+        - {x: 42, y: 2}
+        - {x: 38, y: 4}
+      - - {x: -31, y: 19}
+        - {x: -42, y: 15}
+        - {x: -42, y: 11}
+        - {x: -40, y: 9}
+        - {x: -10, y: 4}
+        - {x: 3, y: 4}
+        - {x: 10, y: 10}
+        - {x: 10, y: 19}
+      - - {x: 12, y: 16}
+        - {x: 12, y: 12}
+        - {x: 14, y: 8}
+        - {x: 31, y: 4}
+        - {x: 42, y: 4}
+        - {x: 42, y: 19}
+        - {x: 20, y: 19}
+        - {x: 14, y: 18}
+    - name: FinalFantasy6Sheet4_165
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 289
+        width: 33
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_166
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 247
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_167
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 247
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_168
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 247
+        width: 20
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_169
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 247
+        width: 20
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_170
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 247
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_171
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 247
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_172
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 229
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_173
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 229
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_174
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 229
+        width: 22
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_175
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 229
+        width: 22
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_176
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 229
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_177
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 229
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_178
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 204
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_179
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 204
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_180
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_181
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_182
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_183
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_184
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 165
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_185
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 165
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_186
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 165
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_187
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 165
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_188
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 165
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_189
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 165
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_190
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 165
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_191
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 165
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_192
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 146
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_193
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 146
+        width: 31
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_194
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 146
+        width: 31
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_195
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 146
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_196
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 131
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_197
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 131
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_198
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 131
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_199
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 131
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_200
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 131
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_201
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 131
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_202
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 131
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_203
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 131
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_204
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 107
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_205
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 107
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_206
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 107
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_207
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 107
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_208
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 107
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_209
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 107
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_210
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 107
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_211
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 107
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_212
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 86
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_213
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 86
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_214
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 86
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_215
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 86
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_216
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 86
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_217
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 86
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_218
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 86
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_219
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 86
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_220
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 66
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_221
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 66
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_222
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 66
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_223
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 66
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_224
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 66
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_225
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 66
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_226
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 66
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_227
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 66
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_228
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 47
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_229
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 47
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_230
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 47
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_231
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 47
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_232
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 47
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_233
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 47
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_234
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 47
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_235
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 47
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_236
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 27
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_237
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 27
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_238
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 27
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_239
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 27
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_240
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 27
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_241
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 27
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_242
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 27
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_243
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 27
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_244
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 5
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: FinalFantasy6Sheet4_245
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 5
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
