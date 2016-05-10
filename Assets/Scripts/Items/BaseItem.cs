@@ -8,6 +8,7 @@ public class BaseItem {
     private int _value;
     private List<BaseStat> _stats;
     private ItemTypes _type;
+    
 
     public BaseItem()
     {

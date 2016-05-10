@@ -12,6 +12,14 @@ public class InventoryWindow : MonoBehaviour {
     public int slotCountLength;
     public GameObject itemSlotPrefab;
     public ToggleGroup itemSlotToggleGroup;
+    public Sprite [] itemSprites;
+
+    public GameObject draggedIcon;
+    public BaseItem draggedItem;
+    public bool dragged = false;
+    private const int mousePosOffset = 20;
+    
+    private string slotName;
 
     private int xPos;
     private int yPos;
@@ -23,14 +31,39 @@ public class InventoryWindow : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        itemSprites =  Resources.LoadAll<Sprite>("FinalFantasy6Sheet4");
         CreateInventorySlotsInWindow();
         AddItemsFromInventory();
     }
+    
+    
 	
 	// Update is called once per frame
 	void Update () {
+        // TODO Fix mouse movement
+        if(dragged){
+            Vector3 mousePosition = (Input.mousePosition - GameObject.FindGameObjectWithTag("Canvas").GetComponent<RectTransform>().localPosition);
+            draggedIcon.GetComponent<RectTransform>().localPosition = new Vector3(mousePosition.x + mousePosOffset, mousePosition.y - mousePosOffset, mousePosition.z);
+        }
 	
 	}
+    
+    
+    public void ShowDraggedItem(string name){
+        slotName = name;
+        dragged = true;
+        draggedIcon.SetActive(true);
+        draggedItem = playerInventory[int.Parse(name)];
+        draggedIcon.GetComponent<Image>().sprite = ReturnItemIcon(draggedItem);
+    }
+    
+    public string AddItemToSlot(GameObject slot){
+        slot.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ReturnItemIcon(playerInventory[int.Parse(slotName)]);
+        draggedIcon.SetActive(false);
+        draggedItem = null;
+        dragged = false;
+        return slotName;
+    }
 
     private void CreateInventorySlotsInWindow()
     {
@@ -66,7 +99,30 @@ public class InventoryWindow : MonoBehaviour {
             {
                 inventorySlots[i].name = i.ToString();
                 //change empty slot with actual item
+                inventorySlots[i].transform.GetChild(0).gameObject.SetActive(true);
+                inventorySlots[i].transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ReturnItemIcon(playerInventory[i]);
             }
         }
     }
+    
+    private Sprite ReturnItemIcon(BaseItem item){
+        Sprite icon = new Sprite();
+        if(item.ItemType == BaseItem.ItemTypes.Ingredients){
+            icon = itemSprites[70];
+        } else if (item.ItemType == BaseItem.ItemTypes.Potions) {
+             icon = itemSprites[10];
+        } else if (item.ItemType == BaseItem.ItemTypes.Junk){
+            icon = itemSprites[40];
+        }
+        return icon;
+    }
+    
+    public void SwapItem(GameObject slot){
+        BaseItem swapItem = playerInventory[int.Parse(slot.name)];
+        slot.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ReturnItemIcon(draggedItem);
+        slot.name = slotName;
+        draggedItem = swapItem;
+        draggedIcon.GetComponent<Image>().sprite = ReturnItemIcon(draggedItem);
+        slotName = playerInventory.FindIndex(x => x == draggedItem).ToString();
+        }
 }
