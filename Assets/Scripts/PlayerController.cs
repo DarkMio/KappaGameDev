@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour {
     public int speed; // in Pixels per Second...
     [TooltipAttribute("Max Distance within a context-menu snaps.")]
     public float contextDist;
+	public AudioClip openChest;
+	public AudioSource audio;
 
 	void Start () {
 	    _movement = Vector3.zero;
@@ -69,6 +71,8 @@ public class PlayerController : MonoBehaviour {
         if(trigger != null && closestDist <= trigger.triggerDistance) { // trigger tells the trigger distance
             trigger.TriggerMenu();
             playerInput = false;
+			audio.PlayOneShot (openChest);
+			Debug.Log ("Chest opened");
         } else if(trigger == null) {
             Debug.Log("Trigger -> null");
         }
