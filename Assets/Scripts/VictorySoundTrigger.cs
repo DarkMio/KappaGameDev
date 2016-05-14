@@ -14,8 +14,10 @@ public class VictorySoundTrigger : MonoBehaviour {
 
 	void OnTriggerEnter(Collider c) {
 		Debug.Log ("Trigger enter");
-		audio.PlayOneShot (victory);
-		bgm.Pause ();
+		if (!audio.isPlaying) {
+			audio.PlayOneShot (victory);
+			bgm.Pause ();
+		}
 	}
 
 	void Update() {

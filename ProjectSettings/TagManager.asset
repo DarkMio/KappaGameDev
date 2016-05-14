@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Canvas
   - Box Menu
+  - Context Menu
+  - NPC
   layers:
   - Default
   - TransparentFX
