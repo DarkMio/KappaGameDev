@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class BasePlayer : MonoBehaviour {
 
-    private List<BaseStat> _playerStats = new List<BaseStat>();
 
     private List<BaseItem> _inventory = new List<BaseItem>();
 

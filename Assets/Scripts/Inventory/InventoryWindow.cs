@@ -107,9 +107,9 @@ public class InventoryWindow : MonoBehaviour {
     
     private Sprite ReturnItemIcon(BaseItem item){
         Sprite icon = new Sprite();
-        if(item.ItemType == BaseItem.ItemTypes.Ingredients){
+        if(item.ItemType == BaseItem.ItemTypes.Ingredient){
             icon = itemSprites[70];
-        } else if (item.ItemType == BaseItem.ItemTypes.Potions) {
+        } else if (item.ItemType == BaseItem.ItemTypes.Potion) {
              icon = itemSprites[10];
         } else if (item.ItemType == BaseItem.ItemTypes.Junk){
             icon = itemSprites[40];
