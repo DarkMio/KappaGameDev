@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Canvas
+<<<<<<< HEAD
+=======
+  - Box Menu
+  - Context Menu
+  - NPC
+>>>>>>> a55de0636a1769f092c14196d5a987dc18e684d7
   layers:
   - Default
   - TransparentFX
