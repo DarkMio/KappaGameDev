@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using NodeEditorFramework;
 using NodeEditorFramework.Utilities;
 
-namespace NodeEditorFramework.Standard
-{
+namespace NodeEditorFramework.Standard {
+    [System.Serializable]
     [Node (false, "Dialogue/Random Branch")]
     public class RandomBranchNode : Node 
     {

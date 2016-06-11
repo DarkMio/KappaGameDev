@@ -9,6 +9,7 @@ using UnityEditor;
 using UnityEngine.UI;
 
 namespace NodeEditorFramework.Standard {
+    [System.Serializable]
     [Node(false, "Dialogue/Basic Dialogue")]
     public class DialogueNode : Node {
         public const string ID = "dialogueNode";
@@ -23,8 +24,8 @@ namespace NodeEditorFramework.Standard {
 
         private int extOptions = 1;
         private int inOptions = 1;
-        private string _dialogueText = "Dialogue Main Text";
-        private List<string> _decisions = new List<string> {""};
+        public string _dialogueText = "Dialogue Main Text";
+        public List<string> _decisions = new List<string> {""};
         private Vector2 scroller;
         /*
          * @TODO: This has currently no implied logic, pls add.
@@ -149,12 +150,15 @@ namespace NodeEditorFramework.Standard {
         }
 
         public override bool Calculate() {
-            Debug.Log(_dialogueText);
-            if (!allInputsReady()) {
-                return false;
+            for (int index = 0; index < _preCheckables.Count; index++) {
+                AbstractCheckable checkable = _preCheckables[index];
+                // If the pre check is not null, then set outgoing value on it
+                if (checkable != null) {
+                    Outputs[index].SetValue<bool>(checkable.VariableCheck());
+                }
             }
-            Outputs[0].SetValue<bool>(Inputs[0].GetValue<bool>());
-            return true;
+            Debug.Log(_dialogueText);
+            return allInputsReady();
         }
     }
 }

@@ -4,6 +4,7 @@ using NodeEditorFramework;
 using UnityEditor;
 
 namespace NodeEditorFramework.Standard {
+    [System.Serializable]
     [Node(false, "Dialogue/Variable Checker")]
     public class VariableChecker : Node {
         public const string ID = "variableChecker";
