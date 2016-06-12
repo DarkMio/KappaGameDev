@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using NodeEditorFramework;
 using UnityEditor;
 
@@ -17,17 +18,18 @@ namespace NodeEditorFramework.Standard {
             get { return true; }
         }
 
-
+        [SerializeField]
         private AbstractCheckable _abstractCheckable;
 
         // Use this for initialization
         public override Node Create(Vector2 pos) {
             VariableChecker node = CreateInstance<VariableChecker>();
-            node.rect = new Rect(pos.x, pos.y, 200, 60);
+            node.rect = new Rect(pos.x, pos.y, 200, 80);
 
             node.name = "Varibale Check";
-            node.CreateInput("Parent", "Boolean");
-            node.CreateOutput("Child", "Boolean");
+            node.CreateInput("Parent", "Void");
+            node.CreateOutput("true", "Void");
+            node.CreateOutput("false", "Void");
             return node;
         }
 
@@ -43,6 +45,9 @@ namespace NodeEditorFramework.Standard {
             GUILayout.BeginVertical();
             Outputs[0].DisplayLayout();
             GUILayout.EndVertical();
+            GUILayout.EndHorizontal();
+            GUILayout.BeginHorizontal();
+            Outputs[1].DisplayLayout();
             GUILayout.EndHorizontal();
         }
 

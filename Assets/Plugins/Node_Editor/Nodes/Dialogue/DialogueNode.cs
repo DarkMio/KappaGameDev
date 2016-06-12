@@ -22,7 +22,9 @@ namespace NodeEditorFramework.Standard {
             get { return true; }
         }
 
+        [SerializeField]
         private int extOptions = 1;
+        [SerializeField]
         private int inOptions = 1;
         public string _dialogueText = "Dialogue Main Text";
         public List<string> _decisions = new List<string> {""};
@@ -30,6 +32,7 @@ namespace NodeEditorFramework.Standard {
         /*
          * @TODO: This has currently no implied logic, pls add.
          */
+        [SerializeField]
         private List<AbstractCheckable> _preCheckables = new List<AbstractCheckable> {null};
 
         public override Node Create(Vector2 pos) {
@@ -38,8 +41,8 @@ namespace NodeEditorFramework.Standard {
             node.rect = new Rect(pos.x, pos.y, 300, 200 + 50*max);
             node.name = "Dialogue Node";
 
-            node.CreateInput("Parent", "Boolean");
-            node.CreateOutput("Child", "Boolean");
+            node.CreateInput("Parent", "Void");
+            node.CreateOutput("Child", "Void");
             return node;
         }
 
@@ -102,7 +105,7 @@ namespace NodeEditorFramework.Standard {
             GUILayout.BeginVertical();
             if (GUILayout.Button("Add Parent")) {
                 inOptions++;
-                CreateInput("Parent", "Boolean");
+                CreateInput("Parent", "Void");
                 EditorUtility.SetDirty(this);
             }
 
@@ -110,7 +113,7 @@ namespace NodeEditorFramework.Standard {
             GUILayout.BeginVertical();
             if (GUILayout.Button("Add Child")) {
                 extOptions++;
-                CreateOutput("Child", "Boolean");
+                CreateOutput("Child", "Void");
                 _decisions.Add("");
                 _preCheckables.Add(null);
                 EditorUtility.SetDirty(this);
@@ -150,14 +153,6 @@ namespace NodeEditorFramework.Standard {
         }
 
         public override bool Calculate() {
-            for (int index = 0; index < _preCheckables.Count; index++) {
-                AbstractCheckable checkable = _preCheckables[index];
-                // If the pre check is not null, then set outgoing value on it
-                if (checkable != null) {
-                    Outputs[index].SetValue<bool>(checkable.VariableCheck());
-                }
-            }
-            Debug.Log(_dialogueText);
             return allInputsReady();
         }
     }

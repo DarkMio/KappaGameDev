@@ -15,7 +15,7 @@ public class NodeInterface : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-		_canvas = NodeEditorFramework.NodeEditorSaveManager.LoadNodeCanvas("Assets/Plugins/Node_Editor/Node_Editor/Resources/Saves/Test_Dialogue.asset", false);
+		_canvas = NodeEditorFramework.NodeEditorSaveManager.LoadNodeCanvas("Assets/Plugins/Node_Editor/Resources/Saves/Test_Dialogue.asset", false);
 		NodeEditor.RecalculateAll (_canvas);
         Debug.Log(_canvas);
 		Debug.Log ("Nodegraph loaded.");
@@ -47,8 +47,28 @@ public class NodeInterface : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	}
+    void OnGUI () {
+        // Make a background box
+        DialogueNode node = (DialogueNode) _currentNode;
+        GUI.Box(new Rect(10,10,400,300), "Loader Menu");
+        GUI.Label(new Rect(20, 40, 380, 60), node._dialogueText);
+        var offset = 100;
+
+        for (int index = 0; index < node._decisions.Count; index++) {
+            var decision = node._decisions[index];
+            if (GUI.Button(new Rect(20, offset, 380, 20), decision)) {
+                GetNext(index);
+            }
+            offset += 20;
+        }
+    }
+
+    /**
+     * Needs to be worked on so it's useful.
+     */
+    private void GetNext(int nextChoice) {
+        _currentNode = _currentNode.Outputs[nextChoice].connections[0].body;
+    }
 
     public void GetNext() {
         if (_currentNode == null) {

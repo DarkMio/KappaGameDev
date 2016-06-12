@@ -147,4 +147,12 @@ namespace NodeEditorFramework
 		public string OutputKnob_TexPath { get { return "Textures/Out_Knob.png"; } }
 	}
 
+    public class VoidType : ITypeDeclaration {
+        public string name { get { return "Void"; } }
+        public Type Type { get { return typeof(void); } }
+        public Color col { get { return new Color(0.7f, 0.7f, 0.7f, 1f); } }
+        public string InputKnob_TexPath { get { return "Textures/In_Knob.png"; } }
+		public string OutputKnob_TexPath { get { return "Textures/Out_Knob.png"; } }
+    }
+
 }
