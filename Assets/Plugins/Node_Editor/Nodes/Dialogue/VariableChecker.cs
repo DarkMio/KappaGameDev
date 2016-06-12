@@ -18,6 +18,8 @@ namespace NodeEditorFramework.Standard {
             get { return true; }
         }
 
+        public Node selectedNode;
+
         [SerializeField]
         private AbstractCheckable _abstractCheckable;
 
@@ -52,7 +54,9 @@ namespace NodeEditorFramework.Standard {
         }
 
         public override bool Calculate() {
-            return true;
+            var check = _abstractCheckable.VariableCheck();
+            selectedNode = check ? Outputs[0].connections[0].body : Outputs[1].connections[0].body;
+            return check;
         }
     }
 }
