@@ -19,12 +19,12 @@ namespace NodeEditorFramework.Standard {
             node.rect = new Rect (pos.x, pos.y, 100, 120);
             node.name = "RND Branch";
 
-            node.CreateInput ("Source", "Boolean");
+            node.CreateInput ("Source", "Void");
 
-            node.CreateOutput ("Branch", "Boolean");
-            node.CreateOutput ("Branch", "Boolean");
-            node.CreateOutput ("Branch", "Boolean");
-            node.CreateOutput ("Branch", "Boolean");
+            node.CreateOutput ("Branch", "Void");
+            node.CreateOutput ("Branch", "Void");
+            node.CreateOutput ("Branch", "Void");
+            node.CreateOutput ("Branch", "Void");
 
             return node;
         }

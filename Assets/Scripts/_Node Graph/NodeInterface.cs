@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System.Threading;
 using NodeEditorFramework;
 using NodeEditorFramework.Standard;
@@ -13,7 +14,7 @@ public class NodeInterface : MonoBehaviour {
     private Node _currentNode;
     
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		_canvas = NodeEditorFramework.NodeEditorSaveManager.LoadNodeCanvas("Assets/Plugins/Node_Editor/Resources/Saves/Boolean_Dialogue.asset", false);
 		NodeEditor.RecalculateAll (_canvas);
         Debug.Log(_canvas);
@@ -42,11 +43,21 @@ public class NodeInterface : MonoBehaviour {
 
         for (int index = 0; index < node._decisions.Count; index++) {
             var decision = node._decisions[index];
-           
-            if (GUI.Button(new Rect(20, offset, 380, 20), decision)) {
-                GetNext(index);
+            if (decision == "") {
+                continue;
+            }
+            var isEnabled = node.CheckConstraintAt(index);
+            var isEnabledText = isEnabled ? "" : " [too dumb]";
+            if (GUI.Button(new Rect(20, offset, 380, 20), decision + isEnabledText)) {
+                if (isEnabled) {
+                    GetNext(index);
+                }
             }
             offset += 30;
+        }
+
+        if(GUI.Button(new Rect(20, 280, 380, 20), "Reset")) {
+            Reset();
         }
     }
 
@@ -54,6 +65,7 @@ public class NodeInterface : MonoBehaviour {
      * Needs to be worked on so it's useful.
      */
     private void GetNext(int nextChoice) {
+        Debug.Log(nextChoice);
         Node nextNode = _currentNode.Outputs[nextChoice].connections[0].body;
         Traverse(nextNode, null);
     }
@@ -62,6 +74,7 @@ public class NodeInterface : MonoBehaviour {
         if (nextNode == lastNode) {
             throw new LockRecursionException("Recursion runs over the same object over and over again.");
         }
+
         if (nextNode is DialogueRoot) {
             DialogueRoot root = (DialogueRoot) nextNode;
             Traverse(root.Outputs[0].connections[0].body, nextNode);
@@ -75,6 +88,6 @@ public class NodeInterface : MonoBehaviour {
     }
 
     public void Reset() {
-        Start();
+        Awake();
     }
 }

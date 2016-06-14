@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Runtime.CompilerServices;
+using UnityEditor;
 
 namespace NodeEditorFramework.Standard {
     [System.Serializable]
     [Node(false, "Dialogue/Dialogue Root")]
     public class DialogueRoot : Node {
         public const string ID = "rootNode";
-
-        public override string GetID {
-            get { return ID; }
-        }
+        public override string GetID {get {return ID;}}
 
         public Node firstNode;
 
@@ -26,7 +25,9 @@ namespace NodeEditorFramework.Standard {
         }
 
         public override bool Calculate() {
-            firstNode = Outputs[0].connections[0].body;
+            if (Outputs[0].connections.Count > 0) {
+                firstNode = Outputs[0].connections[0].body;
+            }
             return allInputsReady();
         }
 

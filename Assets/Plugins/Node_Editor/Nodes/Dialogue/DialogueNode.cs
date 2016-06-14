@@ -22,10 +22,8 @@ namespace NodeEditorFramework.Standard {
             get { return true; }
         }
 
-        [SerializeField]
-        private int extOptions = 1;
-        [SerializeField]
-        private int inOptions = 1;
+        private int extOptions {get { return Outputs.Count; } } // Totally should
+        private int inOptions {get { return Inputs.Count; } }   // be removed.
         public string _dialogueText = "Dialogue Main Text";
         public List<string> _decisions = new List<string> {""};
         private Vector2 scroller;
@@ -104,19 +102,17 @@ namespace NodeEditorFramework.Standard {
             GUILayout.BeginHorizontal();
             GUILayout.BeginVertical();
             if (GUILayout.Button("Add Parent")) {
-                inOptions++;
                 CreateInput("Parent", "Void");
-                EditorUtility.SetDirty(this);
+                NodeGUI();
             }
 
             GUILayout.EndVertical();
             GUILayout.BeginVertical();
             if (GUILayout.Button("Add Child")) {
-                extOptions++;
                 CreateOutput("Child", "Void");
                 _decisions.Add("");
                 _preCheckables.Add(null);
-                EditorUtility.SetDirty(this);
+                NodeGUI();
             }
             GUILayout.EndVertical();
             GUILayout.EndHorizontal();
@@ -124,18 +120,12 @@ namespace NodeEditorFramework.Standard {
             GUILayout.BeginHorizontal();
             GUILayout.BeginVertical();
             if (GUILayout.Button("Remove Parent")) {
-                inOptions--;
-                Inputs.RemoveAt(inOptions);
-                Inputs.TrimExcess();
-                EditorUtility.SetDirty(this);
+                DeleteInput(Inputs[inOptions - 1]);
             }
             GUILayout.EndVertical();
             GUILayout.BeginVertical();
             if (GUILayout.Button("Remove Child")) {
-                extOptions--;
-                Outputs.RemoveAt(extOptions);
-                Outputs.TrimExcess();
-                EditorUtility.SetDirty(this);
+                DeleteOutput(Outputs[extOptions - 1]);
             }
             GUILayout.EndVertical();
             GUILayout.EndHorizontal();
@@ -143,8 +133,8 @@ namespace NodeEditorFramework.Standard {
             GUILayout.BeginHorizontal();
             GUILayout.BeginVertical();
             if (GUILayout.Button("Calculate")) {
+                Debug.Log(CheckConstraintAt(1));
                 Calculate();
-                EditorUtility.SetDirty(this);
             }
             GUILayout.EndVertical();
             GUILayout.EndHorizontal();
@@ -154,6 +144,27 @@ namespace NodeEditorFramework.Standard {
 
         public override bool Calculate() {
             return allInputsReady();
+        }
+
+        /**
+         * Returns false if:
+         * - Checkable is false
+         * Return true if:
+         * - Checkable is null
+         * - Checkable is true
+         * Throws an IndexOutOfRangeException if index is out of bounds.
+         */
+        public bool CheckConstraintAt(int index) {
+            Calculate();
+            if (_preCheckables.Count <= index) {
+                throw new IndexOutOfRangeException("Out of bounds: index at " + index);
+            }
+            if (_preCheckables[index] == null) {
+                return true;
+            }
+            var boolean = _preCheckables[index].VariableCheck();
+            Debug.Log(boolean);
+            return boolean;
         }
     }
 }

@@ -54,8 +54,11 @@ namespace NodeEditorFramework.Standard {
         }
 
         public override bool Calculate() {
-            var check = _abstractCheckable.VariableCheck();
-            selectedNode = check ? Outputs[0].connections[0].body : Outputs[1].connections[0].body;
+            var check = false;
+            if (_abstractCheckable != null) {
+                check = _abstractCheckable.VariableCheck();
+                selectedNode = check ? Outputs[0].connections[0].body : Outputs[1].connections[0].body;
+            }
             return check;
         }
     }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 using NodeEditorFramework;
 using NodeEditorFramework.Utilities;
+using UnityEditor;
 
 namespace NodeEditorFramework
 {
@@ -351,6 +352,13 @@ namespace NodeEditorFramework
 			return NodeOutput.Create (this, outputName, outputType, nodeSide, sidePosition);
 		}
 
+	    public void DeleteOutput(NodeOutput output) {
+	        Outputs.Remove(output);
+            Outputs.TrimExcess();
+	        output.Delete();
+	        NodeGUI();
+	    }
+
 		/// <summary>
 		/// Aligns the OutputKnob on it's NodeSide with the last GUILayout control drawn.
 		/// </summary>
@@ -385,6 +393,13 @@ namespace NodeEditorFramework
 		{
 			return NodeInput.Create (this, inputName, inputType, nodeSide, sidePosition);
 		}
+
+	    public void DeleteInput(NodeInput input) {
+	        Inputs.Remove(input);
+            Inputs.TrimExcess();
+            input.Delete();
+	        NodeGUI();
+	    }
 
 		/// <summary>
 		/// Aligns the InputKnob on it's NodeSide with the last GUILayout control drawn.
