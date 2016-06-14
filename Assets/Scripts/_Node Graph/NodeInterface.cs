@@ -15,7 +15,8 @@ public class NodeInterface : MonoBehaviour {
     
 	// Use this for initialization
 	void Awake () {
-		_canvas = NodeEditorFramework.NodeEditorSaveManager.LoadNodeCanvas("Assets/Plugins/Node_Editor/Resources/Saves/Boolean_Dialogue.asset", false);
+		// _canvas = NodeEditorFramework.NodeEditorSaveManager.LoadNodeCanvas("Assets/Plugins/Node_Editor/Resources/Saves/Boolean_Dialogue.asset", false);
+	    _canvas = NodeEditorSaveManager.LoadSceneNodeCanvas("SomeSaveName", true);
 		NodeEditor.RecalculateAll (_canvas);
         Debug.Log(_canvas);
 		Debug.Log ("Nodegraph loaded.");

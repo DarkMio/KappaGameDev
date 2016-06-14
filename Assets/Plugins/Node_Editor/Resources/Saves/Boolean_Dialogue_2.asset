@@ -9,37 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e0c2324a9ab1224ebe3edad393e3544, type: 3}
-  m_Name: LastSession
+  m_Name: Boolean_Dialogue_2
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 11449454}
-  - {fileID: 11406326}
-  - {fileID: 11471274}
-  - {fileID: 11460178}
-  - {fileID: 11428528}
+  - {fileID: 11412298}
+  - {fileID: 11408526}
+  - {fileID: 11439912}
+  - {fileID: 11417136}
+  - {fileID: 11479064}
   editorStates:
-  - {fileID: 11484490}
+  - {fileID: 11486306}
   livesInScene: 0
---- !u!114 &11400336
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
-  m_Name: Child
-  m_EditorClassIdentifier: 
-  body: {fileID: 11471274}
-  side: 2
-  sidePosition: 150
-  sideOffset: 0
-  connections:
-  - {fileID: 11474726}
-  typeID: Void
-  calculationBlockade: 0
---- !u!114 &11406326
+--- !u!114 &11408526
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -57,69 +38,9 @@ MonoBehaviour:
     width: 100
     height: 40
   nodeKnobs:
-  - {fileID: 11480584}
-  firstNode: {fileID: 11471274}
---- !u!114 &11428528
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85c17aca38d4a6e468e3d70d0d367009, type: 3}
-  m_Name: Varibale Check
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: -711
-    y: -918
-    width: 200
-    height: 80
-  nodeKnobs:
-  - {fileID: 11474726}
-  - {fileID: 11443316}
-  - {fileID: 11466070}
-  selectedNode: {fileID: 11419444, guid: 3f58bf4ed71adfb4591511e2cb1f1568, type: 2}
-  _abstractCheckable: {fileID: 0}
---- !u!114 &11437220
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
-  m_Name: Child
-  m_EditorClassIdentifier: 
-  body: {fileID: 11460178}
-  side: 2
-  sidePosition: 150
-  sideOffset: 0
-  connections: []
-  typeID: Void
-  calculationBlockade: 0
---- !u!114 &11443316
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
-  m_Name: true
-  m_EditorClassIdentifier: 
-  body: {fileID: 11428528}
-  side: 2
-  sidePosition: 49
-  sideOffset: 0
-  connections:
-  - {fileID: 11482214}
-  typeID: Void
-  calculationBlockade: 0
---- !u!114 &11449454
+  - {fileID: 11428196}
+  firstNode: {fileID: 11467836, guid: bab0557f21dfd904184d0750e75e7093, type: 2}
+--- !u!114 &11412298
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -137,14 +58,14 @@ MonoBehaviour:
     width: 300
     height: 250
   nodeKnobs:
-  - {fileID: 11482214}
-  - {fileID: 11469214}
+  - {fileID: 11469500}
+  - {fileID: 11427050}
   _dialogueText: This is true
   _decisions:
   - 
   _preCheckables:
   - {fileID: 0}
---- !u!114 &11460178
+--- !u!114 &11417136
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -162,33 +83,14 @@ MonoBehaviour:
     width: 300
     height: 250
   nodeKnobs:
-  - {fileID: 11474248}
-  - {fileID: 11437220}
+  - {fileID: 11483200}
+  - {fileID: 11457500}
   _dialogueText: This is false
   _decisions:
   - 
   _preCheckables:
   - {fileID: 0}
---- !u!114 &11466070
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
-  m_Name: false
-  m_EditorClassIdentifier: 
-  body: {fileID: 11428528}
-  side: 2
-  sidePosition: 67
-  sideOffset: 0
-  connections:
-  - {fileID: 11474248}
-  typeID: Void
-  calculationBlockade: 0
---- !u!114 &11469214
+--- !u!114 &11427050
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -199,14 +101,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
   m_Name: Child
   m_EditorClassIdentifier: 
-  body: {fileID: 11449454}
+  body: {fileID: 11412298}
   side: 2
   sidePosition: 150
   sideOffset: 0
   connections: []
   typeID: Void
   calculationBlockade: 0
---- !u!114 &11471274
+--- !u!114 &11428196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Root
+  m_EditorClassIdentifier: 
+  body: {fileID: 11408526}
+  side: 2
+  sidePosition: 31
+  sideOffset: 0
+  connections:
+  - {fileID: 11489052}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11428500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: false
+  m_EditorClassIdentifier: 
+  body: {fileID: 11479064}
+  side: 2
+  sidePosition: 67
+  sideOffset: 0
+  connections:
+  - {fileID: 11483200}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11439912
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -224,14 +164,14 @@ MonoBehaviour:
     width: 300
     height: 250
   nodeKnobs:
-  - {fileID: 11499942}
-  - {fileID: 11400336}
+  - {fileID: 11489052}
+  - {fileID: 11484066}
   _dialogueText: This is text
   _decisions:
   - This is button
   _preCheckables:
   - {fileID: 0}
---- !u!114 &11474248
+--- !u!114 &11450384
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -242,30 +182,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
   m_Name: Parent
   m_EditorClassIdentifier: 
-  body: {fileID: 11460178}
-  side: 4
-  sidePosition: 150
-  sideOffset: 0
-  connection: {fileID: 11466070}
-  typeID: Void
---- !u!114 &11474726
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
-  m_Name: Parent
-  m_EditorClassIdentifier: 
-  body: {fileID: 11428528}
+  body: {fileID: 11479064}
   side: 4
   sidePosition: 49
   sideOffset: 0
-  connection: {fileID: 11400336}
+  connection: {fileID: 11484066}
   typeID: Void
---- !u!114 &11480584
+--- !u!114 &11457500
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -274,17 +197,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
-  m_Name: Root
+  m_Name: Child
   m_EditorClassIdentifier: 
-  body: {fileID: 11406326}
+  body: {fileID: 11417136}
   side: 2
-  sidePosition: 31
+  sidePosition: 150
   sideOffset: 0
-  connections:
-  - {fileID: 11499942}
+  connections: []
   typeID: Void
   calculationBlockade: 0
---- !u!114 &11482214
+--- !u!114 &11469500
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -295,13 +217,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
   m_Name: Parent
   m_EditorClassIdentifier: 
-  body: {fileID: 11449454}
+  body: {fileID: 11412298}
   side: 4
   sidePosition: 150
   sideOffset: 0
-  connection: {fileID: 11443316}
+  connection: {fileID: 11485818}
   typeID: Void
---- !u!114 &11484490
+--- !u!114 &11479064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c17aca38d4a6e468e3d70d0d367009, type: 3}
+  m_Name: Varibale Check
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -711
+    y: -918
+    width: 200
+    height: 80
+  nodeKnobs:
+  - {fileID: 11450384}
+  - {fileID: 11485818}
+  - {fileID: 11428500}
+  selectedNode: {fileID: 11455590, guid: 3f58bf4ed71adfb4591511e2cb1f1568, type: 2}
+  _abstractCheckable: {fileID: 0}
+--- !u!114 &11483200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 11417136}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 11428500}
+  typeID: Void
+--- !u!114 &11484066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 11439912}
+  side: 2
+  sidePosition: 150
+  sideOffset: 0
+  connections:
+  - {fileID: 11450384}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11485818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: true
+  m_EditorClassIdentifier: 
+  body: {fileID: 11479064}
+  side: 2
+  sidePosition: 49
+  sideOffset: 0
+  connections:
+  - {fileID: 11469500}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11486306
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -315,10 +315,10 @@ MonoBehaviour:
   canvas: {fileID: 11400000}
   parentEditor: {fileID: 0}
   drawing: 1
-  selectedNode: {fileID: 11428528}
+  selectedNode: {fileID: 11407232, guid: bab0557f21dfd904184d0750e75e7093, type: 2}
   panOffset: {x: 635.799, y: 795.59985}
   zoom: 1
---- !u!114 &11499942
+--- !u!114 &11489052
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -329,9 +329,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
   m_Name: Parent
   m_EditorClassIdentifier: 
-  body: {fileID: 11471274}
+  body: {fileID: 11439912}
   side: 4
   sidePosition: 150
   sideOffset: 0
-  connection: {fileID: 11480584}
+  connection: {fileID: 11428196}
   typeID: Void
