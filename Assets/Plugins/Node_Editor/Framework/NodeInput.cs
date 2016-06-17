@@ -78,13 +78,16 @@ namespace NodeEditorFramework
 		protected override void ReloadTexture () 
 		{
 			CheckType ();
-			knobTexture = typeData.InputKnob;
+			knobTexture = typeData.InKnobTex;
 		}
 
 		private void CheckType () 
 		{
-			if (_typeData == null || !_typeData.isValid ())
+			if (_typeData == null || !_typeData.isValid ()) 
+				_typeData = ConnectionTypes.GetTypeData (typeID);
+			if (_typeData == null || !_typeData.isValid ()) 
 			{
+				ConnectionTypes.FetchTypes ();
 				_typeData = ConnectionTypes.GetTypeData (typeID);
 				if (_typeData == null || !_typeData.isValid ())
 					throw new UnityException ("Could not find type " + typeID + "!");

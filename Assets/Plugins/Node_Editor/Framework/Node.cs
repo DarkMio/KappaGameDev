@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 using NodeEditorFramework;
 using NodeEditorFramework.Utilities;
-using UnityEditor;
 
 namespace NodeEditorFramework
 {
@@ -122,9 +121,9 @@ namespace NodeEditorFramework
 
 		#endregion
 
-		#region Undeclared Members
+		#region Dynamic Members
 
-		#region Node Type methods (abstract)
+		#region Node Type Methods
 
 		/// <summary>
 		/// Get the ID of the Node
@@ -140,13 +139,19 @@ namespace NodeEditorFramework
 		/// Draw the Node immediately
 		/// </summary>
 		protected internal abstract void NodeGUI ();
+
+		/// <summary>
+		/// Used to display a custom node property editor in the side window of the NodeEditorWindow
+		/// Optionally override this to implement
+		/// </summary>
+		public virtual void DrawNodePropertyEditor () { }
 		
 		/// <summary>
 		/// Calculate the outputs of this Node
 		/// Return Success/Fail
 		/// Might be dependant on previous nodes
 		/// </summary>
-		public abstract bool Calculate ();
+		public virtual bool Calculate () { return true; }
 
 		#endregion
 
@@ -262,16 +267,10 @@ namespace NodeEditorFramework
 													startDir,
 													input.GetGUIKnob ().center,
 													input.GetDirection (),
-													output.typeData.col);
+													output.typeData.Color);
 				}
 			}
 		}
-
-		/// <summary>
-		/// Used to display a custom node property editor in the side window of the NodeEditorWindow
-		/// Optionally override this to implement
-		/// </summary>
-		public virtual void DrawNodePropertyEditor() { }
 
 		#endregion
 		
@@ -352,7 +351,10 @@ namespace NodeEditorFramework
 			return NodeOutput.Create (this, outputName, outputType, nodeSide, sidePosition);
 		}
 
-	    public void DeleteOutput(NodeOutput output) {
+		/// <summary>
+		/// Deletes a given output from a node properly.
+		/// </summery>
+		public void DeleteOutput(NodeOutput output) {
 	        Outputs.Remove(output);
             Outputs.TrimExcess();
 	        output.Delete();
@@ -394,7 +396,10 @@ namespace NodeEditorFramework
 			return NodeInput.Create (this, inputName, inputType, nodeSide, sidePosition);
 		}
 
-	    public void DeleteInput(NodeInput input) {
+		/// <summary>
+		/// Deletes a given input from this node properly.
+		/// </summary>
+		public void DeleteInput(NodeInput input) {
 	        Inputs.Remove(input);
             Inputs.TrimExcess();
             input.Delete();
@@ -491,13 +496,10 @@ namespace NodeEditorFramework
 			for (int cnt = 0; cnt < Inputs.Count; cnt++) 
 			{
 				NodeOutput connection = Inputs [cnt].connection;
-				if (connection != null) 
+				if (connection != null && connection.body.isInLoop ()) 
 				{
-					if (connection.body.isInLoop ())
-					{
-						StopRecursiveSearchLoop ();
-						return true;
-					}
+					StopRecursiveSearchLoop ();
+					return true;
 				}
 			}
 			EndRecursiveSearchLoop ();
@@ -519,16 +521,10 @@ namespace NodeEditorFramework
 			for (int cnt = 0; cnt < Inputs.Count; cnt++) 
 			{
 				NodeOutput connection = Inputs [cnt].connection;
-				if (connection != null) 
+				if (connection != null && connection.body.allowsLoopRecursion (otherNode)) 
 				{
-					if (connection.body != startRecursiveSearchNode)
-					{
-						if (connection.body.allowsLoopRecursion (otherNode))
-						{
-							StopRecursiveSearchLoop ();
-							return true;
-						}
-					}
+					StopRecursiveSearchLoop ();
+					return true;
 				}
 			}
 			EndRecursiveSearchLoop ();

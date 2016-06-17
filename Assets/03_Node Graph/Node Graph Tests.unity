@@ -85,6 +85,80 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &26113552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Root
+  m_EditorClassIdentifier: 
+  body: {fileID: 2099325103}
+  side: 2
+  sidePosition: 31
+  sideOffset: 0
+  connections:
+  - {fileID: 1939572251}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &32582737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1556483351}
+  side: 4
+  sidePosition: 49
+  sideOffset: 0
+  connection: {fileID: 631283710}
+  typeID: Void
+--- !u!114 &187960911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 1439064649}
+  side: 2
+  sidePosition: 150
+  sideOffset: 0
+  connections:
+  - {fileID: 1891120422}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &188794382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 612321176}
+  side: 2
+  sidePosition: 200
+  sideOffset: 0
+  connections:
+  - {fileID: 1883031352}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!1 &279156777
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +308,417 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &431634979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: true
+  m_EditorClassIdentifier: 
+  body: {fileID: 1577620357}
+  side: 2
+  sidePosition: 49
+  sideOffset: 0
+  connections:
+  - {fileID: 442850032}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &442850032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 984130789}
+  side: 4
+  sidePosition: 66
+  sideOffset: 0
+  connection: {fileID: 431634979}
+  typeID: Void
+--- !u!114 &453504583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 2137116216}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 512601193}
+  typeID: Void
+--- !u!114 &506339574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: true
+  m_EditorClassIdentifier: 
+  body: {fileID: 1556483351}
+  side: 2
+  sidePosition: 49
+  sideOffset: 0
+  connections:
+  - {fileID: 1919694993}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &512601193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: false
+  m_EditorClassIdentifier: 
+  body: {fileID: 1556483351}
+  side: 2
+  sidePosition: 67
+  sideOffset: 0
+  connections:
+  - {fileID: 453504583}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &516052396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: false
+  m_EditorClassIdentifier: 
+  body: {fileID: 1577620357}
+  side: 2
+  sidePosition: 67
+  sideOffset: 0
+  connections:
+  - {fileID: 1449203297}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &518644056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Ingredient Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -1401.7991
+    y: -311.59985
+    width: 300
+    height: 92
+  nodeKnobs:
+  - {fileID: 1327963605}
+  ingredientName: Gelbes Blatt
+  _preCheckables: {fileID: 0}
+--- !u!114 &544969987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 763774900}
+  side: 2
+  sidePosition: 150
+  sideOffset: 0
+  connections:
+  - {fileID: 921211361}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &587347225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1577620357}
+  side: 4
+  sidePosition: 49
+  sideOffset: 0
+  connection: {fileID: 2106518790}
+  typeID: Void
+--- !u!114 &612321176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 30
+    y: -360
+    width: 300
+    height: 300
+  nodeKnobs:
+  - {fileID: 921211361}
+  - {fileID: 2142000975}
+  - {fileID: 188794382}
+  _dialogueText: You fire it up, come along - and take a hit from the bong. Don't
+    strain, I love you Mary Jane.
+  _decisions:
+  - Mary Jane loves you, too.
+  - You not only love Mary Jane, but the g'damn Cocaina, too.
+  - Nobody loves you, sadly.
+  _preCheckables:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &616841962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 804682430}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 1408902389}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &631283710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 1256600108}
+  side: 2
+  sidePosition: 200
+  sideOffset: 0
+  connections:
+  - {fileID: 32582737}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &690204258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Ingredient Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -1399.7991
+    y: -1.5998535
+    width: 300
+    height: 92
+  nodeKnobs:
+  - {fileID: 1501283253}
+  ingredientName: "Saftige Kr\xE4uter"
+  _preCheckables: {fileID: 0}
+--- !u!114 &698361099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 984130789}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections: []
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &727911292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 2060572255}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 760672996}
+  typeID: Void
+--- !u!114 &737995364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 1320149048}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections: []
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &738065119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: true
+  m_EditorClassIdentifier: 
+  body: {fileID: 1887194929}
+  side: 2
+  sidePosition: 49
+  sideOffset: 0
+  connections:
+  - {fileID: 1539363222}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &760672996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 763774900}
+  side: 2
+  sidePosition: 200
+  sideOffset: 0
+  connections:
+  - {fileID: 727911292}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &763774900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -420
+    y: -160
+    width: 300
+    height: 300
+  nodeKnobs:
+  - {fileID: 1939572251}
+  - {fileID: 544969987}
+  - {fileID: 760672996}
+  _dialogueText: You've come across a tiny tree. The tiny tree looks suspicious at
+    you and asks you if you'd like to take a hit from the bong.
+  _decisions:
+  - Of course, pick it, pack it.
+  - You're not sure if your mom agrees with your life decisions.
+  _preCheckables:
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &774201648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ab6487237ff124ea4c2aa5de9ce3fb, type: 3}
+  m_Name: MainEditorState
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 2008958513}
+  parentEditor: {fileID: 0}
+  drawing: 1
+  selectedNode: {fileID: 1556483351}
+  panOffset: {x: -236.60019, y: 37.800045}
+  zoom: 1.2
+--- !u!114 &774225696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 984130789}
+  side: 4
+  sidePosition: 84
+  sideOffset: 0
+  connection: {fileID: 1295364865}
+  typeID: Void
 --- !u!1 &790116174
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +760,526 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &804682430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Ingredient Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -1399.7991
+    y: -150.59985
+    width: 300
+    height: 92
+  nodeKnobs:
+  - {fileID: 616841962}
+  ingredientName: Orangenes Blatt
+  _preCheckables: {fileID: 0}
+--- !u!114 &843430350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 2046242734}
+  side: 4
+  sidePosition: 84
+  sideOffset: 0
+  connection: {fileID: 1295364865}
+  typeID: Void
+--- !u!114 &882077822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: false
+  m_EditorClassIdentifier: 
+  body: {fileID: 1887194929}
+  side: 2
+  sidePosition: 67
+  sideOffset: 0
+  connections:
+  - {fileID: 1770143929}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &913753792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 814.5
+    y: 4.3999925
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 1770143929}
+  _dialogueText: Sucks m8, but you can always 420 blaze it sample text.
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
+--- !u!114 &921211361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 612321176}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 544969987}
+  typeID: Void
+--- !u!114 &942720811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 480
+    y: -480
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 1277660508}
+  _dialogueText: You feel like a great adventurer and fell asleep on your couch. The
+    hero this world really needed.
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
+--- !u!114 &955928429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 1058751916}
+  side: 4
+  sidePosition: 66
+  sideOffset: 0
+  connection: {fileID: 1327963605}
+  typeID: Void
+--- !u!114 &984130789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Ingredient Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -252.29907
+    y: -268.59985
+    width: 300
+    height: 128
+  nodeKnobs:
+  - {fileID: 442850032}
+  - {fileID: 774225696}
+  - {fileID: 698361099}
+  ingredientName: Damn healthy Muffin
+  _preCheckables: {fileID: 0}
+--- !u!114 &1002697667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 20.5
+    y: 64
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 1519921619}
+  _dialogueText: Get lost, kid.
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
+--- !u!114 &1017633241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Root
+  m_EditorClassIdentifier: 
+  body: {fileID: 1296486523}
+  side: 2
+  sidePosition: 31
+  sideOffset: 0
+  connections:
+  - {fileID: 1025773951}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &1025773951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1439064649}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 1017633241}
+  typeID: Void
+--- !u!114 &1058751916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Ingredient Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -952.799
+    y: -249.59985
+    width: 300
+    height: 128
+  nodeKnobs:
+  - {fileID: 955928429}
+  - {fileID: 1408902389}
+  - {fileID: 2106518790}
+  ingredientName: Gesundes Elixir
+  _preCheckables: {fileID: 0}
+--- !u!114 &1079315437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 480
+    y: -480
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 1363546015}
+  _dialogueText: You feel like a great adventurer and fell asleep on your couch. The
+    hero this world really needed.
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
+--- !u!114 &1256600108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 30
+    y: -360
+    width: 300
+    height: 300
+  nodeKnobs:
+  - {fileID: 1891120422}
+  - {fileID: 1507668817}
+  - {fileID: 631283710}
+  _dialogueText: You fire it up, come along - and take a hit from the bong. Don't
+    strain, I love you Mary Jane.
+  _decisions:
+  - Mary Jane loves you, too.
+  - You not only love Mary Jane, but the g'damn Cocaina, too.
+  - Nobody loves you, sadly.
+  _preCheckables:
+  - {fileID: 2111921838}
+  - {fileID: 790116175}
+  - {fileID: 0}
+--- !u!114 &1277660508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 942720811}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 2142000975}
+  typeID: Void
+--- !u!114 &1295364865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 1903011886}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 774225696}
+  - {fileID: 843430350}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &1296486523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4ef77a7d401bd4494e7367b91d6cb7, type: 3}
+  m_Name: Dialogue Root
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -633.5
+    y: -41.000015
+    width: 100
+    height: 40
+  nodeKnobs:
+  - {fileID: 1017633241}
+  firstNode: {fileID: 1439064649}
+--- !u!114 &1320149048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Ingredient Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -1401.7991
+    y: 146.40015
+    width: 300
+    height: 92
+  nodeKnobs:
+  - {fileID: 737995364}
+  ingredientName: Mary Jane
+  _preCheckables: {fileID: 0}
+--- !u!114 &1327963605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 518644056}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 955928429}
+  - {fileID: 1394078529}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &1363546015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1079315437}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 1507668817}
+  typeID: Void
+--- !u!114 &1376421675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0c2324a9ab1224ebe3edad393e3544, type: 3}
+  m_Name: Dialogue Graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 2099325103}
+  - {fileID: 763774900}
+  - {fileID: 612321176}
+  - {fileID: 1887194929}
+  - {fileID: 913753792}
+  - {fileID: 1702321036}
+  - {fileID: 942720811}
+  - {fileID: 2060572255}
+  editorStates:
+  - {fileID: 1726899126}
+  livesInScene: 1
+--- !u!114 &1394078529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 1903011886}
+  side: 4
+  sidePosition: 66
+  sideOffset: 0
+  connection: {fileID: 1327963605}
+  typeID: Void
+--- !u!114 &1408902389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 1058751916}
+  side: 4
+  sidePosition: 84
+  sideOffset: 0
+  connection: {fileID: 616841962}
+  typeID: Void
+--- !u!114 &1439064649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -420
+    y: -160
+    width: 300
+    height: 300
+  nodeKnobs:
+  - {fileID: 1025773951}
+  - {fileID: 187960911}
+  - {fileID: 1807230627}
+  _dialogueText: You've come across a tiny tree. The tiny tree looks suspicious at
+    you and asks you if you'd like to take a hit from the bong.
+  _decisions:
+  - Of course, pick it, pack it.
+  - You're not sure if your mom agrees with your life decisions.
+  _preCheckables:
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &1449203297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 2046242734}
+  side: 4
+  sidePosition: 66
+  sideOffset: 0
+  connection: {fileID: 516052396}
+  typeID: Void
 --- !u!1 &1455744615
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +1342,101 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1501283253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 690204258}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 1801685309}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &1507668817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 1256600108}
+  side: 2
+  sidePosition: 150
+  sideOffset: 0
+  connections:
+  - {fileID: 1363546015}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &1519921619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1002697667}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 1807230627}
+  typeID: Void
+--- !u!114 &1539363222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1702321036}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 738065119}
+  typeID: Void
+--- !u!114 &1556483351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c17aca38d4a6e468e3d70d0d367009, type: 3}
+  m_Name: Varibale Check
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 463.99997
+    y: -105.00001
+    width: 200
+    height: 80
+  nodeKnobs:
+  - {fileID: 32582737}
+  - {fileID: 506339574}
+  - {fileID: 512601193}
+  selectedNode: {fileID: 0}
+  _abstractCheckable: {fileID: 790116175}
 --- !u!1 &1576375571
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +1477,472 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1577620357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c17aca38d4a6e468e3d70d0d367009, type: 3}
+  m_Name: Varibale Check
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -564.2991
+    y: -250.59985
+    width: 200
+    height: 80
+  nodeKnobs:
+  - {fileID: 587347225}
+  - {fileID: 431634979}
+  - {fileID: 516052396}
+  selectedNode: {fileID: 0}
+  _abstractCheckable: {fileID: 0}
+--- !u!1 &1595252891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1595252893}
+  - 114: {fileID: 1595252892}
+  m_Layer: 0
+  m_Name: CraftingInterface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1595252892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1595252891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d016d93a269aaf4f84f0ec34edc7f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 2012093842}
+--- !u!4 &1595252893
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1595252891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.2329774, y: 192.90909, z: -285.48053}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+--- !u!114 &1600619167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ab6487237ff124ea4c2aa5de9ce3fb, type: 3}
+  m_Name: MainEditorState
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 2012093842}
+  parentEditor: {fileID: 0}
+  drawing: 1
+  selectedNode: {fileID: 0}
+  panOffset: {x: 549.7999, y: 584.59973}
+  zoom: 1.6
+--- !u!114 &1689040335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 803.7
+    y: -257.6
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 1919694993}
+  _dialogueText: Noice, 3sum party with Jane, Cocaina and you. Your mind isn't the
+    brightest and you find yourself running around naked outside. Good job.
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
+--- !u!114 &1702321036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 803.7
+    y: -257.6
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 1539363222}
+  _dialogueText: Noice, 3sum party with Jane, Cocaina and you. Your mind isn't the
+    brightest and you find yourself running around naked outside. Good job.
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
+--- !u!114 &1726182039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 2046242734}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections: []
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &1726899126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ab6487237ff124ea4c2aa5de9ce3fb, type: 3}
+  m_Name: MainEditorState
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 1376421675}
+  parentEditor: {fileID: 0}
+  drawing: 1
+  selectedNode: {fileID: 0}
+  panOffset: {x: -450.20023, y: 49.800045}
+  zoom: 1.2
+--- !u!114 &1770143929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 913753792}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 882077822}
+  typeID: Void
+--- !u!114 &1801685309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 1903011886}
+  side: 4
+  sidePosition: 84
+  sideOffset: 0
+  connection: {fileID: 1501283253}
+  typeID: Void
+--- !u!114 &1807230627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 1439064649}
+  side: 2
+  sidePosition: 200
+  sideOffset: 0
+  connections:
+  - {fileID: 1519921619}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &1883031352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1887194929}
+  side: 4
+  sidePosition: 49
+  sideOffset: 0
+  connection: {fileID: 188794382}
+  typeID: Void
+--- !u!114 &1887194929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c17aca38d4a6e468e3d70d0d367009, type: 3}
+  m_Name: Varibale Check
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 463.99997
+    y: -105.00001
+    width: 200
+    height: 80
+  nodeKnobs:
+  - {fileID: 1883031352}
+  - {fileID: 738065119}
+  - {fileID: 882077822}
+  selectedNode: {fileID: 0}
+  _abstractCheckable: {fileID: 0}
+--- !u!114 &1891120422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1256600108}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 187960911}
+  typeID: Void
+--- !u!114 &1903011886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Ingredient Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -951.7991
+    y: -34.599854
+    width: 300
+    height: 128
+  nodeKnobs:
+  - {fileID: 1394078529}
+  - {fileID: 1801685309}
+  - {fileID: 1295364865}
+  ingredientName: Muffin
+  _preCheckables: {fileID: 0}
+--- !u!114 &1919694993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1689040335}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 506339574}
+  typeID: Void
+--- !u!114 &1939572251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 763774900}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 26113552}
+  typeID: Void
+--- !u!114 &2008958513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0c2324a9ab1224ebe3edad393e3544, type: 3}
+  m_Name: SomeSaveName
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 1296486523}
+  - {fileID: 1439064649}
+  - {fileID: 2137116216}
+  - {fileID: 1689040335}
+  - {fileID: 1079315437}
+  - {fileID: 1002697667}
+  - {fileID: 1256600108}
+  - {fileID: 1556483351}
+  editorStates:
+  - {fileID: 774201648}
+  livesInScene: 1
+--- !u!114 &2012093842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0c2324a9ab1224ebe3edad393e3544, type: 3}
+  m_Name: Crafting Graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 518644056}
+  - {fileID: 804682430}
+  - {fileID: 690204258}
+  - {fileID: 1320149048}
+  - {fileID: 1058751916}
+  - {fileID: 1903011886}
+  - {fileID: 1577620357}
+  - {fileID: 2046242734}
+  - {fileID: 984130789}
+  editorStates:
+  - {fileID: 1600619167}
+  livesInScene: 1
+--- !u!114 &2046242734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Ingredient Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -236.29907
+    y: -71.59985
+    width: 300
+    height: 128
+  nodeKnobs:
+  - {fileID: 1449203297}
+  - {fileID: 843430350}
+  - {fileID: 1726182039}
+  ingredientName: Trash
+  _preCheckables: {fileID: 0}
+--- !u!114 &2060572255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 20.5
+    y: 64
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 727911292}
+  _dialogueText: Get lost, kid.
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
+--- !u!114 &2099325103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4ef77a7d401bd4494e7367b91d6cb7, type: 3}
+  m_Name: Dialogue Root
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -633.5
+    y: -41.000015
+    width: 100
+    height: 40
+  nodeKnobs:
+  - {fileID: 26113552}
+  firstNode: {fileID: 763774900}
+--- !u!114 &2106518790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 1058751916}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 587347225}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!1 &2111921837
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,3 +1984,113 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &2119670741
+GameObject:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2119670743}
+  - 114: {fileID: 2119670742}
+  - 114: {fileID: 2119670745}
+  - 114: {fileID: 2119670744}
+  m_Layer: 0
+  m_Name: NodeEditor_SceneSaveHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2119670742
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119670741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1cd8579a6c9ec4b85d9d62cd5ba58b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savedNodeCanvas: {fileID: 2008958513}
+--- !u!4 &2119670743
+Transform:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119670741}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+--- !u!114 &2119670744
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119670741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1cd8579a6c9ec4b85d9d62cd5ba58b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savedNodeCanvas: {fileID: 1376421675}
+--- !u!114 &2119670745
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119670741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1cd8579a6c9ec4b85d9d62cd5ba58b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savedNodeCanvas: {fileID: 2012093842}
+--- !u!114 &2137116216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 814.5
+    y: 4.3999925
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 453504583}
+  _dialogueText: Sucks m8, but you can always 420 blaze it sample text.
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
+--- !u!114 &2142000975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 612321176}
+  side: 2
+  sidePosition: 150
+  sideOffset: 0
+  connections:
+  - {fileID: 1277660508}
+  typeID: Void
+  calculationBlockade: 0

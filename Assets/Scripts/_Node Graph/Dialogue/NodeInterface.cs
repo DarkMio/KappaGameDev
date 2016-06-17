@@ -13,7 +13,6 @@ public class NodeInterface : MonoBehaviour {
     private NodeCanvas _canvas;
     private Node _currentNode;
     
-	// Use this for initialization
 	void Awake () {
 		// _canvas = NodeEditorFramework.NodeEditorSaveManager.LoadNodeCanvas("Assets/Plugins/Node_Editor/Resources/Saves/Boolean_Dialogue.asset", false);
 	    _canvas = NodeEditorSaveManager.LoadSceneNodeCanvas("SomeSaveName", true);
@@ -30,7 +29,6 @@ public class NodeInterface : MonoBehaviour {
 	    }
 	}
 	
-	// Update is called once per frame
     void OnGUI () {
         if (_currentNode == null) {
             Debug.Log("No root found.");
