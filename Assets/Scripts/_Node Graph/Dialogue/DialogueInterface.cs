@@ -12,18 +12,32 @@ public class DialogueInterface : MonoBehaviour {
         Dirty
     };
 
-    public InterfaceState state = InterfaceState.Dirty;
-    public NodeCanvas canvas;
+    private InterfaceState state = InterfaceState.Dirty;
+    [HideInInspector]
+    private NodeCanvas canvas;
     private Node _currentNode;
     public GameObject baseCanvas;
     public GameObject dialogueField;
     public GameObject choiceField;
 
+    [HideInInspector]
+    public string saveName;
+    [HideInInspector]
+    public int saveChoice;
+    [HideInInspector]
+    public string[] saveFiles;
+
+
     private List<GameObject> buttons = new List<GameObject>();
 
 	void Awake () {
+	    if (string.IsNullOrEmpty(saveName)) {
+	        Debug.LogError("FATAL: No canvas given.");
+	        return;
+	    }
+
+	    canvas = NodeEditorSaveManager.LoadSceneNodeCanvas(saveName, false);
 		NodeEditor.RecalculateAll (canvas);
-        Debug.Log(canvas);
 		Debug.Log ("Nodegraph loaded.");
 	    if (canvas.nodes.Count <= 0) {
 	        return;
@@ -145,43 +159,35 @@ public class DialogueInterface : MonoBehaviour {
 [CustomEditor(typeof(DialogueInterface))]
 public class DialogueInterfaceEditor : Editor
 {
-    [SerializeField]
-    private string[] _saves;
-    [SerializeField]
-    private int _choice = 0;
     public override void OnInspectorGUI()
     {
-
-        if (_saves == null)
-        {
-            _saves = NodeEditorSaveManager.GetSceneSaves();
+        DialogueInterface dialogue = target as DialogueInterface;
+        if (string.IsNullOrEmpty(dialogue.saveName)) {
+            dialogue.saveFiles = NodeEditorSaveManager.GetSceneSaves();
         }
 
-        if (_saves.Length == 0)
-        {
+        if (dialogue.saveFiles.Length == 0) {
             return;
         }
+
+
         EditorGUILayout.BeginHorizontal();
         GUILayout.Label("Nodegraph:");
-        var newChoice = EditorGUILayout.Popup(_choice, _saves);
+
+        var newChoice = EditorGUILayout.Popup(dialogue.saveChoice, dialogue.saveFiles);
         EditorGUILayout.EndHorizontal();
-        if (newChoice != _choice)
-        {
-            _choice = newChoice;
-            var dialogue = target as DialogueInterface;
-            dialogue.canvas = NodeEditorSaveManager.LoadSceneNodeCanvas(_saves[_choice], false);
+        if (newChoice != dialogue.saveChoice) {
+            dialogue.saveChoice = newChoice;
+            dialogue.saveName = dialogue.saveFiles[dialogue.saveChoice];
             dialogue.Reset();
         }
         EditorGUILayout.BeginHorizontal();
-        if (GUILayout.Button("Force Reloading"))
-        {
-            var dialogue = target as DialogueInterface;
-            dialogue.canvas = NodeEditorSaveManager.LoadSceneNodeCanvas(_saves[_choice], false);
+        if (GUILayout.Button("Force Reloading")) {
+            dialogue.saveName = dialogue.saveFiles[dialogue.saveChoice];
             dialogue.Reset();
         }
-        if (GUILayout.Button("Reload saves"))
-        {
-            _saves = NodeEditorSaveManager.GetSceneSaves();
+        if (GUILayout.Button("Reload saves")) {
+            dialogue.saveFiles = NodeEditorSaveManager.GetSceneSaves();
         }
         EditorGUILayout.EndHorizontal();
         DrawDefaultInspector();
