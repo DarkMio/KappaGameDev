@@ -2,6 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
+
 public class CraftingInterface : MonoBehaviour {
     private NodeCanvas canvas;
 

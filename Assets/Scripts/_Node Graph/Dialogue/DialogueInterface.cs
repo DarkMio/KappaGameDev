@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections.Generic;
 using System.Threading;
 using NodeEditorFramework;
@@ -13,13 +14,15 @@ public class DialogueInterface : MonoBehaviour {
     };
 
     private InterfaceState state = InterfaceState.Dirty;
-    [HideInInspector]
     private NodeCanvas canvas;
     private Node _currentNode;
     public GameObject baseCanvas;
     public GameObject dialogueField;
     public GameObject choiceField;
 
+    /**
+     * To make the custom inspector for graph selection consistent
+     */
     [HideInInspector]
     public string saveName;
     [HideInInspector]
@@ -42,7 +45,7 @@ public class DialogueInterface : MonoBehaviour {
 	    if (canvas.nodes.Count <= 0) {
 	        return;
 	    }
-	    foreach (Node node in canvas.nodes) {
+	    foreach (Node node in canvas.nodes) { // searching for appropiate root
 	        if(node is DialogueRoot) {
 	            Traverse(node, null);
 	            break;
@@ -52,14 +55,15 @@ public class DialogueInterface : MonoBehaviour {
 
     void OnGUI() {
         if (_currentNode == null) {
-            Debug.Log("No root found.");
-            return;
+            throw new NullReferenceException("There is no root present inside the node graph.");
         }
         BuildUI();
 
+        #if UNITY_EDITOR  // debug button, compile directive for inside unity editor.
         if (GUI.Button(new Rect(5, 5, 60, 20), "Reset")) {
             Reset();
         }
+        #endif
     }
 
     void BuildUI() {
@@ -67,17 +71,28 @@ public class DialogueInterface : MonoBehaviour {
             return;
         }
         state = InterfaceState.Fresh;
+        if (baseCanvas == null || dialogueField == null || choiceField == null) {
+            Debug.LogError("FATAL: DialogueInterface has no sufficient references on baseCanvas, dialogueField or choiceField");
+            return;
+        }
 
-        DialogueNode node = (DialogueNode) _currentNode;
-        Text element = dialogueField.GetComponent<Text>();
+        var node = _currentNode as DialogueNode;
+
+        // Set dialogue text
+        var element = dialogueField.GetComponent<Text>();
+        // ReSharper disable once PossibleNullReferenceException
         element.text = node._dialogueText;
 
+        // delete all buttons at first
         foreach (GameObject button in buttons) {
             Destroy(button);
         }
 
-
-        for (int i = 0; i < node._decisions.Count; i++) {
+        // careful: Outputs is the amount of VALID decisions
+        // while decisions contains all node decisions - which could be inactive due to disabled outputs
+        // so we want the iteration to go along the Outputs.Count - but we want the decision to that output,
+        // which is seperate by implementation
+        for (var i = 0; i < node.Outputs.Count; i++) {
             var decision = node._decisions[i];
             if (decision == "") {
                 continue;
@@ -95,26 +110,27 @@ public class DialogueInterface : MonoBehaviour {
         // figure out of the button is enabled or not.
         var isEnabled = node.CheckConstraintAt(i);
         var isEnabledText = isEnabled ? "" : " [too dumb]";
-        GameObject buttonPanel = Instantiate(choiceField) as GameObject;  // build a button
+        var buttonPanel = Instantiate(choiceField) as GameObject;  // build a button
         buttons.Add(buttonPanel);  // register the button
-        RectTransform transform = buttonPanel.transform as RectTransform;
+        var rectTransform = buttonPanel.transform as RectTransform;
         buttonPanel.transform.SetParent(baseCanvas.transform);  // nest it properly in the object hirachy
-        transform.anchoredPosition = Vector2.down * (i % 3) * (transform.rect.height + 10);  // move it around a bit
+        // ReSharper disable once PossibleNullReferenceException
+        rectTransform.anchoredPosition = Vector2.down * (i % 3) * (rectTransform.rect.height + 10);  // move it around a bit
 
-        int rows = (node._decisions.Count - 1)/3;
-        int pos = i/3;
+        var rows = (node.Outputs.Count - 1)/3;
+        var pos = i/3;
         if (rows > 0) { // if we have more than one single row, we have to move it (move it!)
-            transform.anchoredPosition += Vector2.left * 340;
-            transform.anchoredPosition += Vector2.right * pos * 340;
+            rectTransform.anchoredPosition += Vector2.left * 340;
+            rectTransform.anchoredPosition += Vector2.right * pos * 340;
         }
 
-        Text buttonText = buttonPanel.GetComponentInChildren<Text>();
+        var buttonText = buttonPanel.GetComponentInChildren<Text>();
         if (buttonText == null) {
             Debug.LogError("FATAL: Nodegraph ButtonText is null");
         } else {
             buttonText.text = decision + isEnabledText;
         }
-        Button button = buttonPanel.GetComponent<Button>();
+        var button = buttonPanel.GetComponent<Button>();
         button.onClick.AddListener(() => { // And register an EventListener when the button is clicked.
             state = InterfaceState.Dirty;
             if (isEnabled) {
@@ -135,15 +151,16 @@ public class DialogueInterface : MonoBehaviour {
         }
 
         if (nextNode is DialogueRoot) {
-            DialogueRoot root = (DialogueRoot) nextNode;
+            var root = (DialogueRoot) nextNode;
             if (root.Outputs.Count > 0 && root.Outputs[0].connections.Count > 0) {
                 Traverse(root.Outputs[0].connections[0].body, nextNode);
             } else {
                 Debug.LogError("FATAL: Root not connected?");
             }
         } else if (nextNode is VariableChecker) {
-            VariableChecker node = (VariableChecker) nextNode;
+            var node = (VariableChecker) nextNode;
             node.Calculate();  // on calulate, it checks the checkable and continues downwards
+            // ReSharper disable once TailRecursiveCall
             Traverse(node.selectedNode, nextNode);
         } else if (nextNode is DialogueNode) {
             _currentNode = nextNode;
@@ -161,7 +178,10 @@ public class DialogueInterfaceEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        DialogueInterface dialogue = target as DialogueInterface;
+        var dialogue = target as DialogueInterface;
+        if (dialogue == null) {
+            return;
+        }
         if (string.IsNullOrEmpty(dialogue.saveName)) {
             dialogue.saveFiles = NodeEditorSaveManager.GetSceneSaves();
         }

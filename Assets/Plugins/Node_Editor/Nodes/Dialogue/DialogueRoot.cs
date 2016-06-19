@@ -4,6 +4,10 @@ using System.Runtime.CompilerServices;
 using UnityEditor;
 
 namespace NodeEditorFramework.Standard {
+    /**
+     * Root node. There is unfourtionaly no way to implement a singleton (or simliar)
+     * Should only be present once per canvas. Needs some calculation at some point to see if its only one (connected) root.
+     */
     [System.Serializable]
     [Node(false, "Dialogue/Dialogue Root")]
     public class DialogueRoot : Node {
@@ -24,6 +28,10 @@ namespace NodeEditorFramework.Standard {
             Outputs[0].DisplayLayout();
         }
 
+        /**
+         * On calculation it sets its first connection (hopefully), so it's easily accessible.
+         * This is just for convenience.
+         */
         public override bool Calculate() {
             if (Outputs.Count > 0 && Outputs[0].connections.Count > 0) {
                 firstNode = Outputs[0].connections[0].body;
