@@ -29,9 +29,12 @@ public class CraftingInterface : MonoBehaviour
 }
 
 [CustomEditor(typeof(CraftingInterface))]
+[System.Serializable]
 public class CraftingInterfaceInspector : Editor
 {
+    [SerializeField]
     private string[] _saves;
+    [SerializeField]
     private int _choice = 0;
     public override void OnInspectorGUI()
     {

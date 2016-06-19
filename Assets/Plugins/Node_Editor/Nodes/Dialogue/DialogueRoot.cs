@@ -25,7 +25,7 @@ namespace NodeEditorFramework.Standard {
         }
 
         public override bool Calculate() {
-            if (Outputs[0].connections.Count > 0) {
+            if (Outputs.Count > 0 && Outputs[0].connections.Count > 0) {
                 firstNode = Outputs[0].connections[0].body;
             }
             return allInputsReady();
