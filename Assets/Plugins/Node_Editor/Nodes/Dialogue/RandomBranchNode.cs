@@ -5,14 +5,18 @@ using NodeEditorFramework;
 using NodeEditorFramework.Utilities;
 
 namespace NodeEditorFramework.Standard {
+    /**
+     * A random branch node - chooses, by random, one of four outputs
+     */
     [System.Serializable]
     [Node (false, "Dialogue/Random Branch")]
-    public class RandomBranchNode : Node 
+    public class RandomBranchNode : Node
     {
         public const string ID = "randomBranchNode";
         public override string GetID { get { return ID; } }
+        public NodeOutput selection;
 
-        public override Node Create (Vector2 pos) 
+        public override Node Create (Vector2 pos)
         {
             RandomBranchNode node = CreateInstance<RandomBranchNode> ();
 
@@ -29,7 +33,7 @@ namespace NodeEditorFramework.Standard {
             return node;
         }
 
-        protected internal override void NodeGUI () 
+        protected internal override void NodeGUI ()
         {
             Inputs[0].DisplayLayout ();
 
@@ -37,7 +41,7 @@ namespace NodeEditorFramework.Standard {
                 output.DisplayLayout ();
         }
 
-        public override bool Calculate () 
+        public override bool Calculate ()
         {
             List<NodeOutput> connectedOutputs = new List<NodeOutput> ();
             foreach (NodeOutput output in Outputs)
@@ -50,10 +54,8 @@ namespace NodeEditorFramework.Standard {
             if (connectedOutputs.Count > 0)
             { // Select a random branch from the connected ones and unblock it so it gets calculated
                 int randomSelected = Random.Range (0, connectedOutputs.Count);
-                NodeOutput selectedOutput = connectedOutputs[randomSelected];
-                selectedOutput.calculationBlockade = false;
-                // Just pass the previous value to the selected branch
-                selectedOutput.SetValue (Inputs[0].GetValue ());
+                selection = connectedOutputs[randomSelected];
+                selection.calculationBlockade = false;
             }
             return true;
         }

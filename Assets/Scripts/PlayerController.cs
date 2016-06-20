@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
     [TooltipAttribute("Max Distance within a context-menu snaps.")]
     public float contextDist;
 	public AudioClip openChest;
-	public AudioSource audio;
+	public AudioSource audioSource;
 	public TextAsset textFile;
 	public string[] dialogs;
 	public GameObject Text;
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 			dialogs = (textFile.text.Split ('\n'));
 		}
 	}
-	
+
 	void Update () {
         if(playerInput) {
             _movement.z += Input.GetAxis("Vertical") * speed * Time.deltaTime;
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour {
 			dialogWindow.GetComponent<RectTransform> ().anchoredPosition3D = new Vector3 (0, 1000, 0);
 		}
 	}
-    
+
     private void LateUpdate() {
         // Clamp the current movement
         Vector3 clamped_movement = new Vector3((int)_movement.x, 0, (int)_movement.z);
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour {
             }
         }
     }
-    
+
     /**
      * Checks if there is any context menu around to open
      */
@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour {
                 closest = obj;
                 closestDist = Vector3.Distance(transform.position, obj.transform.position);
             }
-            
+
             // Get the distance
             float compareDist = Vector3.Distance(transform.position, obj.transform.position);
             if(compareDist < closestDist) { // compare and overwrite it
@@ -84,19 +84,19 @@ public class PlayerController : MonoBehaviour {
         if(debugDraws) {
             Debug.DrawLine(transform.position, closest.transform.position, Color.red, 2f, false);
         }
-        
+
         MenuTrigger trigger = closest.GetComponent<MenuTrigger>();
         if(trigger != null && closestDist <= trigger.triggerDistance) { // trigger tells the trigger distance
             trigger.TriggerMenu();
             playerInput = false;
-			audio.PlayOneShot (openChest);
+			audioSource.PlayOneShot (openChest);
 			Debug.Log ("Chest opened");
         } else if(trigger == null) {
             Debug.Log("Trigger -> null");
         }
         return closest;
     }
-    
+
     public void enablePlayercontroller() {
         playerInput = true;
     }
@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour {
 			dialogs [n] = dialogs [0];
 			dialogs [0] = randDialog;
 		}
-			
+
 		return closest;
 	}
 }
