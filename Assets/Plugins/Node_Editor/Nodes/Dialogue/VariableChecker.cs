@@ -5,6 +5,11 @@ using NodeEditorFramework;
 using UnityEditor;
 
 namespace NodeEditorFramework.Standard {
+
+    /**
+     * A simple node which has a true / false output.
+     * It takes a checkable and decides based on that.
+     */
     [System.Serializable]
     [Node(false, "Dialogue/Variable Checker")]
     public class VariableChecker : Node {
@@ -37,19 +42,19 @@ namespace NodeEditorFramework.Standard {
 
         // Update is called once per frame
         protected internal override void NodeGUI() {
-            GUILayout.BeginHorizontal ();
+            GUILayout.BeginHorizontal ();  // first the object field.
             _abstractCheckable = (AbstractCheckable) EditorGUILayout.ObjectField(_abstractCheckable, typeof(AbstractCheckable), true);
             GUILayout.EndHorizontal();
-            GUILayout.BeginHorizontal();
-		    GUILayout.BeginVertical ();
+            GUILayout.BeginHorizontal();  // second row.
+		    GUILayout.BeginVertical ();   // sole input
             Inputs[0].DisplayLayout();
             GUILayout.EndVertical();
             GUILayout.BeginVertical();
-            Outputs[0].DisplayLayout();
+            Outputs[0].DisplayLayout();  // true output
             GUILayout.EndVertical();
             GUILayout.EndHorizontal();
-            GUILayout.BeginHorizontal();
-            Outputs[1].DisplayLayout();
+            GUILayout.BeginHorizontal(); // third row
+            Outputs[1].DisplayLayout();  // false output
             GUILayout.EndHorizontal();
         }
 

@@ -9,6 +9,11 @@ using UnityEditor;
 using UnityEngine.UI;
 
 namespace NodeEditorFramework.Standard {
+    /**
+     * Dialogue Node featuring a precheck per output.
+     * This system is designed to take a unique path down the graph from a root node.
+     * Multiple connections per output are getting ignored (by the interface) - so ignore them.
+     */
     [System.Serializable]
     [Node(false, "Dialogue/Basic Dialogue")]
     public class DialogueNode : Node {
@@ -27,9 +32,7 @@ namespace NodeEditorFramework.Standard {
         public string _dialogueText = "Dialogue Main Text";
         public List<string> _decisions = new List<string> {""};
         private Vector2 scroller;
-        /*
-         * @TODO: This has currently no implied logic, pls add.
-         */
+
         [SerializeField]
         private List<AbstractCheckable> _preCheckables = new List<AbstractCheckable> {null};
 
@@ -55,7 +58,7 @@ namespace NodeEditorFramework.Standard {
 
             for (int i = 0; i < max; i++) {
                 // until max is reached we do...
-                
+
                 GUILayout.BeginHorizontal(); // new row to throw our pre check in
                 GUILayout.BeginVertical();
                 GUILayout.EndVertical();
