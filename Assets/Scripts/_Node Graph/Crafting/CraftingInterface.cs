@@ -1,24 +1,34 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using NodeEditorFramework;
-using NodeEditorFramework.Standard;
+﻿using NodeEditorFramework;
 using UnityEditor;
+using UnityEngine;
+
 
 public class CraftingInterface : MonoBehaviour {
-    public NodeCanvas canvas;
-    
-	void Awake () {
-	    if (canvas == null) {
-	        return;
-	    }
+    private NodeCanvas canvas;
 
-	    NodeEditor.RecalculateAll(canvas);
-	    Debug.Log("NodeGraph loaded.");
-	}
+    /**
+     * To make the custom inspector for graph selection consistent
+     */
+    [HideInInspector]
+    public int saveChoice = 0;
+    [HideInInspector]
+    public string[] saveChoices;
+    [HideInInspector]
+    public string saveName;
 
+    private void Awake() {
+        if (string.IsNullOrEmpty(saveName)) {
+            return;
+        }
+
+        canvas = NodeEditorSaveManager.LoadSceneNodeCanvas(saveName, false);
+        NodeEditor.RecalculateAll(canvas);
+        Debug.Log("NodeGraph loaded.");
+    }
+
+    /**
+     * Method to reset this object properly (for example to invalidate all UI)
+     */
     public void Reset() {
         Awake();
     }
@@ -26,35 +36,30 @@ public class CraftingInterface : MonoBehaviour {
 
 [CustomEditor(typeof(CraftingInterface))]
 public class CraftingInterfaceInspector : Editor {
-    private string[] _saves;
-    private int _choice = 0;
     public override void OnInspectorGUI() {
+        CraftingInterface crafting = target as CraftingInterface;
 
-        if (_saves == null) {
-            _saves = NodeEditorSaveManager.GetSceneSaves();
+        if (crafting.saveChoices == null) {
+            crafting.saveChoices = NodeEditorSaveManager.GetSceneSaves();
         }
 
-        if (_saves.Length == 0) {
+        if (crafting.saveChoices.Length == 0) {
             return;
         }
         EditorGUILayout.BeginHorizontal();
         GUILayout.Label("Nodegraph:");
-        var newChoice = EditorGUILayout.Popup(_choice, _saves);
+        var newChoice = EditorGUILayout.Popup(crafting.saveChoice, crafting.saveChoices);
         EditorGUILayout.EndHorizontal();
-        if (newChoice != _choice) {
-            _choice = newChoice;
-            var crafting = target as CraftingInterface;
-            crafting.canvas = NodeEditorSaveManager.LoadSceneNodeCanvas(_saves[_choice], false);
+        if (newChoice != crafting.saveChoice) {
+            crafting.saveChoice = newChoice;
             crafting.Reset();
         }
         EditorGUILayout.BeginHorizontal();
         if (GUILayout.Button("Force Reloading")) {
-            var crafting = target as CraftingInterface;
-            crafting.canvas = NodeEditorSaveManager.LoadSceneNodeCanvas(_saves[_choice], false);
             crafting.Reset();
         }
         if (GUILayout.Button("Reload saves")) {
-            _saves = NodeEditorSaveManager.GetSceneSaves();
+            crafting.saveChoices = NodeEditorSaveManager.GetSceneSaves();
         }
         EditorGUILayout.EndHorizontal();
         DrawDefaultInspector();

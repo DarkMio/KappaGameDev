@@ -6,12 +6,12 @@ using System.Collections.Generic;
 using NodeEditorFramework;
 using NodeEditorFramework.Utilities;
 
-namespace NodeEditorFramework 
+namespace NodeEditorFramework
 {
 	/// <summary>
 	/// Manager handling all save and load operations on NodeCanvases and NodeEditorStates of the Node Editor, both as assets and in the scene
 	/// </summary>
-	public static class NodeEditorSaveManager 
+	public static class NodeEditorSaveManager
 	{
 		#region Scene Saving
 
@@ -20,7 +20,7 @@ namespace NodeEditorFramework
 		/// <summary>
 		/// Fetches the saveHolder of the current scene if not already found or creates it and stores it into sceneSaveHolder
 		/// </summary>
-		private static void FetchSceneSaveHolder () 
+		private static void FetchSceneSaveHolder ()
 		{
 			if (sceneSaveHolder == null)
 			{
@@ -31,7 +31,7 @@ namespace NodeEditorFramework
 				sceneSaveHolder = GameObject.Find ("NodeEditor_SceneSaveHolder");
 				if (sceneSaveHolder == null)
 					sceneSaveHolder = new GameObject ("NodeEditor_SceneSaveHolder");
-				sceneSaveHolder.hideFlags = HideFlags.HideInHierarchy | HideFlags.HideInInspector;
+			    sceneSaveHolder.hideFlags = HideFlags.None; // HideFlags.HideInHierarchy | HideFlags.HideInInspector;
 			}
 		}
 
@@ -65,7 +65,7 @@ namespace NodeEditorFramework
 				return;
 			}
 		#if UNITY_EDITOR // Make sure the canvas has no reference to an asset
-			if (!createWorkingCopy && UnityEditor.AssetDatabase.Contains (nodeCanvas)) 
+			if (!createWorkingCopy && UnityEditor.AssetDatabase.Contains (nodeCanvas))
 			{
 				Debug.LogWarning ("Forced to create working copy of '" + saveName + "' when saving to scene because it already exists as an asset!");
 				nodeCanvas = CreateWorkingCopy (nodeCanvas, true);
@@ -78,7 +78,7 @@ namespace NodeEditorFramework
 			NodeCanvasSceneSave sceneSave = FindSceneSave (saveName);
 			if (sceneSave == null)
 				sceneSave = sceneSaveHolder.AddComponent<NodeCanvasSceneSave> ();
-			
+
 			// Store the canvas and editor states or optionally their working copies
 			sceneSave.savedNodeCanvas = nodeCanvas;
 			if (createWorkingCopy)
@@ -130,7 +130,7 @@ namespace NodeEditorFramework
 		/// <summary>
 		/// Saves the the given NodeCanvas along with the given NodeEditorStates if specified as a new asset, optionally as working copies
 		/// </summary>
-		public static void SaveNodeCanvas (string path, NodeCanvas nodeCanvas, bool createWorkingCopy) 
+		public static void SaveNodeCanvas (string path, NodeCanvas nodeCanvas, bool createWorkingCopy)
 		{
 		#if !UNITY_EDITOR
 			throw new System.NotImplementedException ();
@@ -183,7 +183,7 @@ namespace NodeEditorFramework
 		/// <summary>
 		/// Loads the NodeCanvas from the asset file at path and optionally creates a working copy of it before returning
 		/// </summary>
-		public static NodeCanvas LoadNodeCanvas (string path, bool createWorkingCopy) 
+		public static NodeCanvas LoadNodeCanvas (string path, bool createWorkingCopy)
 		{
 			if (!File.Exists (path)) throw new UnityException ("Cannot Load NodeCanvas: File '" + path + "' deos not exist!");
 
@@ -219,16 +219,16 @@ namespace NodeEditorFramework
 		/// <summary>
 		/// Adds the specified hidden subAssets to the mainAsset
 		/// </summary>
-		public static void AddSubAssets (ScriptableObject[] subAssets, ScriptableObject mainAsset) 
+		public static void AddSubAssets (ScriptableObject[] subAssets, ScriptableObject mainAsset)
 		{
 			foreach (ScriptableObject subAsset in subAssets)
-				AddSubAsset (subAsset, mainAsset); 
+				AddSubAsset (subAsset, mainAsset);
 		}
 
 		/// <summary>
 		/// Adds the specified hidden subAsset to the mainAsset
 		/// </summary>
-		public static void AddSubAsset (ScriptableObject subAsset, ScriptableObject mainAsset) 
+		public static void AddSubAsset (ScriptableObject subAsset, ScriptableObject mainAsset)
 		{
 			if (subAsset != null && mainAsset != null)
 			{
@@ -240,7 +240,7 @@ namespace NodeEditorFramework
 		/// <summary>
 		/// Adds the specified hidden subAsset to the mainAsset at path
 		/// </summary>
-		public static void AddSubAsset (ScriptableObject subAsset, string path) 
+		public static void AddSubAsset (ScriptableObject subAsset, string path)
 		{
 			if (subAsset != null && !string.IsNullOrEmpty (path))
 			{
@@ -262,7 +262,7 @@ namespace NodeEditorFramework
 		/// </summary>
 		public static void Compress (ref NodeCanvas nodeCanvas)
 		{
-			for (int nodeCnt = 0; nodeCnt < nodeCanvas.nodes.Count; nodeCnt++) 
+			for (int nodeCnt = 0; nodeCnt < nodeCanvas.nodes.Count; nodeCnt++)
 			{
 				Node node = nodeCanvas.nodes[nodeCnt];
 				node.Inputs = new List<NodeInput> ();
@@ -275,17 +275,17 @@ namespace NodeEditorFramework
 		/// </summary>
 		public static void Uncompress (ref NodeCanvas nodeCanvas)
 		{
-			for (int nodeCnt = 0; nodeCnt < nodeCanvas.nodes.Count; nodeCnt++) 
+			for (int nodeCnt = 0; nodeCnt < nodeCanvas.nodes.Count; nodeCnt++)
 			{
 				Node node = nodeCanvas.nodes[nodeCnt];
 				node.Inputs = new List<NodeInput> ();
 				node.Outputs = new List<NodeOutput> ();
-				for (int knobCnt = 0; knobCnt < node.nodeKnobs.Count; knobCnt++) 
+				for (int knobCnt = 0; knobCnt < node.nodeKnobs.Count; knobCnt++)
 				{
 					NodeKnob knob = node.nodeKnobs[knobCnt];
 					if (knob is NodeInput)
 						node.Inputs.Add (knob as NodeInput);
-					else if (knob is NodeOutput) 
+					else if (knob is NodeOutput)
 						node.Outputs.Add (knob as NodeOutput);
 				}
 			}
@@ -299,7 +299,7 @@ namespace NodeEditorFramework
 		/// Creates a working copy of the specified nodeCanvas, and optionally also of it's associated editorStates.
 		/// This breaks the link of this object to any stored assets and references. That means, that all changes to this object will have to be explicitly saved.
 		/// </summary>
-		public static NodeCanvas CreateWorkingCopy (NodeCanvas nodeCanvas, bool editorStates) 
+		public static NodeCanvas CreateWorkingCopy (NodeCanvas nodeCanvas, bool editorStates)
 		{
 			nodeCanvas.Validate ();
 			nodeCanvas = Clone (nodeCanvas);
@@ -308,7 +308,7 @@ namespace NodeEditorFramework
 			// This will only iterate over the 'source instances'
 			List<ScriptableObject> allSOs = new List<ScriptableObject> ();
 			List<ScriptableObject> clonedSOs = new List<ScriptableObject> ();
-			for (int nodeCnt = 0; nodeCnt < nodeCanvas.nodes.Count; nodeCnt++) 
+			for (int nodeCnt = 0; nodeCnt < nodeCanvas.nodes.Count; nodeCnt++)
 			{
 				Node node = nodeCanvas.nodes[nodeCnt];
 				node.CheckNodeKnobMigration ();
@@ -325,7 +325,7 @@ namespace NodeEditorFramework
 			}
 
 			// Replace every reference to any of the initial SOs of the first list with the respective clones of the second list
-			for (int nodeCnt = 0; nodeCnt < nodeCanvas.nodes.Count; nodeCnt++) 
+			for (int nodeCnt = 0; nodeCnt < nodeCanvas.nodes.Count; nodeCnt++)
 			{ // Clone Nodes, structural content and additional scriptableObjects
 				Node node = nodeCanvas.nodes[nodeCnt];
 				// Replace node and additional ScriptableObjects
@@ -335,7 +335,7 @@ namespace NodeEditorFramework
 				// We're going to restore these from NodeKnobs if desired (!compressed)
 				clonedNode.Inputs = new List<NodeInput> ();
 				clonedNode.Outputs = new List<NodeOutput> ();
-				for (int knobCnt = 0; knobCnt < clonedNode.nodeKnobs.Count; knobCnt++) 
+				for (int knobCnt = 0; knobCnt < clonedNode.nodeKnobs.Count; knobCnt++)
 				{ // Clone generic NodeKnobs
 					NodeKnob knob = clonedNode.nodeKnobs[knobCnt] = ReplaceSO (allSOs, clonedSOs, clonedNode.nodeKnobs[knobCnt]);
 					knob.body = clonedNode;
@@ -363,17 +363,17 @@ namespace NodeEditorFramework
 		/// Creates a working copy of the specified editorStates. Also remains the link of the canvas to these associated editorStates.
 		/// This breaks the link of this object to any stored assets and references. That means, that all changes to this object will have to be explicitly saved.
 		/// </summary>
-		private static NodeEditorState[] CreateWorkingCopy (NodeEditorState[] editorStates, NodeCanvas associatedNodeCanvas) 
+		private static NodeEditorState[] CreateWorkingCopy (NodeEditorState[] editorStates, NodeCanvas associatedNodeCanvas)
 		{
 			if (editorStates == null)
 				return new NodeEditorState[0];
 			editorStates = (NodeEditorState[])editorStates.Clone ();
-			for (int stateCnt = 0; stateCnt < editorStates.Length; stateCnt++) 
+			for (int stateCnt = 0; stateCnt < editorStates.Length; stateCnt++)
 			{
 				if (editorStates[stateCnt] == null)
 					continue;
 				NodeEditorState state = editorStates[stateCnt] = Clone (editorStates[stateCnt]);
-				if (state == null) 
+				if (state == null)
 				{
 					Debug.LogError ("Failed to create a working copy for an NodeEditorState during the loading process of " + associatedNodeCanvas.name + "!");
 					continue;
@@ -389,7 +389,7 @@ namespace NodeEditorFramework
 		/// <summary>
 		/// Clones the specified SO, preserving its name
 		/// </summary>
-		private static T Clone<T> (T SO) where T : ScriptableObject 
+		private static T Clone<T> (T SO) where T : ScriptableObject
 		{
 			string soName = SO.name;
 			SO = Object.Instantiate<T> (SO);
@@ -409,7 +409,7 @@ namespace NodeEditorFramework
 		/// <summary>
 		/// Clones SO and writes both the initial and cloned versions into the respective list
 		/// </summary>
-		private static T AddClonedSO<T> (List<ScriptableObject> scriptableObjects, List<ScriptableObject> clonedScriptableObjects, T initialSO) where T : ScriptableObject 
+		private static T AddClonedSO<T> (List<ScriptableObject> scriptableObjects, List<ScriptableObject> clonedScriptableObjects, T initialSO) where T : ScriptableObject
 		{
 			if (initialSO == null)
 				return null;
@@ -420,10 +420,10 @@ namespace NodeEditorFramework
 		}
 
 		/// <summary>
-		/// First two parameters contains SOs and their respective clones. 
+		/// First two parameters contains SOs and their respective clones.
 		/// Returns the clone of initialSO found in the cloned list at the respective position of initialSO in the initial list
 		/// </summary>
-		private static T ReplaceSO<T> (List<ScriptableObject> scriptableObjects, List<ScriptableObject> clonedScriptableObjects, T initialSO) where T : ScriptableObject 
+		private static T ReplaceSO<T> (List<ScriptableObject> scriptableObjects, List<ScriptableObject> clonedScriptableObjects, T initialSO) where T : ScriptableObject
 		{
 			if (initialSO == null)
 				return null;
@@ -442,7 +442,7 @@ namespace NodeEditorFramework
 		/// <summary>
 		/// Extracts the state with the specified name out of the canvas, takes a random different one and renames it or creates a new one with that name if not found
 		/// </summary>
-		public static NodeEditorState ExtractEditorState (NodeCanvas canvas, string stateName) 
+		public static NodeEditorState ExtractEditorState (NodeCanvas canvas, string stateName)
 		{
 			NodeEditorState state = null;
 			if (canvas.editorStates.Length > 0)
