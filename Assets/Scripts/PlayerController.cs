@@ -18,14 +18,14 @@ public class PlayerController : MonoBehaviour {
 	public TextAsset textFile;
 	public string[] dialogs;
 	public GameObject Text;
-	public GameObject dialogWindow;
+	// public GameObject dialogWindow;
 	public int dialogTime;
 	private float dialogStartTime;
 
 	void Start () {
 	    _movement = Vector3.zero;
-		dialogWindow = GameObject.Find ("DialogWindow");
-		dialogWindow.GetComponent<RectTransform> ().anchoredPosition3D = new Vector3 (0, 1000, 0);
+		// dialogWindow = GameObject.Find ("DialogWindow");
+		// dialogWindow.GetComponent<RectTransform> ().anchoredPosition3D = new Vector3 (0, 1000, 0);
 		Text = GameObject.Find ("Text");
 		if (textFile != null) {
 			dialogs = (textFile.text.Split ('\n'));
@@ -41,10 +41,11 @@ public class PlayerController : MonoBehaviour {
 				checkNPCDialog ();
             }
         }
-
+        /*
 		if ((Time.time - dialogStartTime) > dialogTime) {
 			dialogWindow.GetComponent<RectTransform> ().anchoredPosition3D = new Vector3 (0, 1000, 0);
 		}
+        */
 	}
 
     private void LateUpdate() {
@@ -128,7 +129,7 @@ public class PlayerController : MonoBehaviour {
 			Debug.Log (randDialog);
 			dialogStartTime = Time.time;
 			Text.GetComponent<Text> ().text = randDialog;
-			dialogWindow.GetComponent<RectTransform> ().anchoredPosition3D = new Vector3 (0, 0, 0);
+			// dialogWindow.GetComponent<RectTransform> ().anchoredPosition3D = new Vector3 (0, 0, 0);
 			dialogs [n] = dialogs [0];
 			dialogs [0] = randDialog;
 		}

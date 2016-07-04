@@ -18,9 +18,4 @@ public class DwellerRandomDialogue : MonoBehaviour {
 	    dialogue.saveChoice = 0;
         dialogue.Reset();
 	}
-
-	// Update is called once per frame
-	void Update () {
-
-	}
 }

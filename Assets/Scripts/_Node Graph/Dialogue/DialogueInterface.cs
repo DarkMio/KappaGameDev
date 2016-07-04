@@ -21,6 +21,15 @@ public class DialogueInterface : MonoBehaviour {
     public GameObject choiceField;
     public bool isExhausted = false; // no more dialogue.
 
+    // Following block is for the typing magic.
+    public float interval = 4;
+    public string cursorChar = "|";
+    public int charsPerFrame = 4;
+    public float typeInterval = 100;
+    public float timeStampType = Time.time;
+    public float timeStampBlink = Time.time;
+    private GUITextManager guiManager;
+
     /**
      * To make the custom inspector for graph selection consistent
      */
@@ -53,6 +62,7 @@ public class DialogueInterface : MonoBehaviour {
 	        }
 	    }
 	    isExhausted = false;
+        guiManager = new GUITextManager(this);
 	}
 
     void OnGUI() {
@@ -69,6 +79,12 @@ public class DialogueInterface : MonoBehaviour {
     }
 
     void BuildUI() {
+        // Set dialogue text
+        var element = dialogueField.GetComponent<Text>();
+        guiManager.text = ((DialogueNode)_currentNode)._dialogueText;
+        guiManager.Update();
+        element.text = guiManager.currentText;
+
         if (state == InterfaceState.Fresh) {
             return;
         }
@@ -79,11 +95,6 @@ public class DialogueInterface : MonoBehaviour {
         }
 
         var node = _currentNode as DialogueNode;
-
-        // Set dialogue text
-        var element = dialogueField.GetComponent<Text>();
-        // ReSharper disable once PossibleNullReferenceException
-        element.text = node._dialogueText;
 
         // delete all buttons at first
         foreach (GameObject button in buttons) {
@@ -176,6 +187,70 @@ public class DialogueInterface : MonoBehaviour {
     public void Reset() {
         state = InterfaceState.Dirty;
         Awake();
+    }
+
+    private class GUITextManager {
+        private DialogueInterface parent;
+        string _finalText;
+        public string currentText;
+        private int charCount;
+
+        private bool blinkTextCharacter = false;
+        public string text {
+            set {
+                if (_finalText != value) {
+                    blinkTextCharacter = false;
+                    _finalText = value;
+                    currentText = "";
+                    charCount = 0;
+                }
+            }
+        }
+
+        public GUITextManager(DialogueInterface parent) {
+            this.parent = parent;
+            _finalText = "";
+            parent.interval = 0.5f;
+            parent.cursorChar = "|";
+            parent.charsPerFrame = 2;
+            parent.typeInterval = 1.4f;
+            parent.timeStampType = Time.time;
+            parent.timeStampBlink = Time.time;
+        }
+
+        public void Update() {
+            Type();
+            BlinkText();
+        }
+
+        void Type() {
+            if(Time.time - parent.timeStampType >= parent.typeInterval || currentText.Length >= _finalText.Length) {
+                return;
+            }
+            parent.timeStampType = Time.time;
+            if (blinkTextCharacter) {
+                currentText = currentText.Substring(0, Math.Max(0, currentText.Length - parent.cursorChar.Length));
+            }
+            int toWrite = Mathf.RoundToInt(UnityEngine.Random.value * (parent.charsPerFrame+1) % parent.charsPerFrame); // Random a range of characters to write
+            charCount += toWrite;
+            currentText = _finalText.Substring(0, Math.Min(charCount, _finalText.Length));
+            if (blinkTextCharacter) {
+                currentText += parent.cursorChar;
+            }
+        }
+
+        void BlinkText() {
+            if(Time.time - parent.timeStampBlink >= parent.interval) {
+                parent.timeStampBlink = Time.time;
+                if(!blinkTextCharacter) {
+                    currentText = currentText + parent.cursorChar;
+                    blinkTextCharacter = true;
+                } else {
+                    currentText = currentText.Substring(0,currentText.Length - parent.cursorChar.Length);
+                    blinkTextCharacter = false;
+                }
+            }
+        }
     }
 }
 
