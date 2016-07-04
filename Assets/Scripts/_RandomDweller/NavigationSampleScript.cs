@@ -8,6 +8,10 @@ public class NavigationSampleScript : MonoBehaviour {
 
     public float timeTillResearch;
     public float movementLength;
+    public Transform door;
+    public bool die;
+
+    private DialogueInterface dialogue;
 
     private enum SearchEnum {
         UP,
@@ -19,6 +23,7 @@ public class NavigationSampleScript : MonoBehaviour {
         LEFT,
         UP_LEFT,
     }
+
     // Use this for initialization
 	void Start () {
 	    agent = this.GetComponent<NavMeshAgent>();
@@ -31,13 +36,30 @@ public class NavigationSampleScript : MonoBehaviour {
 	        movementLength = 32f;
 	    }
 
+	    door = GameObject.FindGameObjectWithTag("Door").transform;
+
 	    SearchTarget();
+
+	    dialogue = GetComponent<DialogueInterface>();
 	}
 
 	// Update is called once per frame
 	void Update () {
+	    if (dialogue != null && dialogue.isExhausted) {
+	        die = true;
+	    }
+	    if (die) { // if it's time to die, go there and die pls.
+	        agent.destination = door.transform.position;
+	        Vector2 distance = new Vector2(transform.position.x - door.transform.position.x,
+	            transform.position.z - door.transform.position.z);
+	        if (distance.magnitude < 5) {
+	            var thing = GetComponentInParent<SpawnRandomDweller>();
+	            if (thing != null) {
+	                thing.Kill();
+	            }
+	        }
+	    }
 	    float currentTime = (time + timeTillResearch) - Time.timeSinceLevelLoad;
-	    Debug.Log(time + timeTillResearch - Time.timeSinceLevelLoad);
 	    if (currentTime < 0) {
 	        time = Time.timeSinceLevelLoad;
 	        SearchTarget();

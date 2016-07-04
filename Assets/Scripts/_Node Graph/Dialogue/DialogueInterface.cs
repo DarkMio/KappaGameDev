@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class DialogueInterface : MonoBehaviour {
     public enum InterfaceState {
         Fresh,
-        Dirty
+        Dirty,
     };
 
     private InterfaceState state = InterfaceState.Dirty;
@@ -19,6 +19,7 @@ public class DialogueInterface : MonoBehaviour {
     public GameObject baseCanvas;
     public GameObject dialogueField;
     public GameObject choiceField;
+    public bool isExhausted = false; // no more dialogue.
 
     /**
      * To make the custom inspector for graph selection consistent
@@ -51,6 +52,7 @@ public class DialogueInterface : MonoBehaviour {
 	            break;
 	        }
 	    }
+	    isExhausted = false;
 	}
 
     void OnGUI() {
@@ -101,6 +103,10 @@ public class DialogueInterface : MonoBehaviour {
             BuildButton(node, i, decision);
         }
 
+        if (node.Outputs.Count == 0) {
+            isExhausted = true;
+        }
+
     }
 
     /**
@@ -115,7 +121,7 @@ public class DialogueInterface : MonoBehaviour {
         var rectTransform = buttonPanel.transform as RectTransform;
         buttonPanel.transform.SetParent(baseCanvas.transform);  // nest it properly in the object hirachy
         // ReSharper disable once PossibleNullReferenceException
-        rectTransform.anchoredPosition = Vector2.down * (i % 3) * (rectTransform.rect.height + 10);  // move it around a bit
+        rectTransform.anchoredPosition = Vector2.down * (i % 3) * (rectTransform.rect.height + 10) * 0.5f;  // move it around a bit
 
         var rows = (node.Outputs.Count - 1)/3;
         var pos = i/3;
