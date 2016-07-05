@@ -32,6 +32,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -77,9 +78,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 08c13f614d74ce240b91c8f16541376d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8d8e30734ffb494429ac8b2e14a345a8, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.17
+  m_Volume: 0.39
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -155,6 +156,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueNames:
   - 01_dweller_fish
+  - 02_dweller_games
+  - 03_dweller_story
 --- !u!114 &11454256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,6 +184,8 @@ MonoBehaviour:
   saveChoice: 0
   saveFiles:
   - 01_dweller_fish
+  - 02_dweller_games
+  - 03_dweller_story
 --- !u!114 &11460444
 MonoBehaviour:
   m_ObjectHideFlags: 1

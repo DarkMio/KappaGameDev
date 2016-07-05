@@ -82,18 +82,18 @@ public class DialogueInterface : MenuTrigger {
         }
         #endif
     }
-    
+
     void OnDestroy() {
         Destroy(dialogueField);
     }
-    
+
     public override void TriggerMenu() {
         Debug.Log("Triggered");
         if(dialogueField == null) {
             dialogueField = Instantiate(dialoguePrefab);
             dialogueField.transform.parent = baseCanvas.transform;
         }
-        
+
     }
 
     void BuildUI() {
@@ -211,6 +211,10 @@ public class DialogueInterface : MenuTrigger {
             Traverse(node.selectedNode, nextNode);
         } else if (nextNode is DialogueNode) {
             _currentNode = nextNode;
+        } else if (nextNode is RandomBranchNode) {
+            var node = (RandomBranchNode) nextNode;
+            var otp = nextNode.Outputs[UnityEngine.Random.Range(0, nextNode.Outputs.Count)];
+            Traverse(otp.connections[0].body, nextNode);
         }
     }
 
@@ -224,7 +228,7 @@ public class DialogueInterface : MenuTrigger {
         string _finalText;
         public string currentText;
         private int charCount;
-        
+
         public bool isWriting = false;
 
         private bool blinkTextCharacter = false;
@@ -238,7 +242,7 @@ public class DialogueInterface : MenuTrigger {
                     charCount = 0;
                 }
             }
-            
+
             get {
                 return _finalText;
             }

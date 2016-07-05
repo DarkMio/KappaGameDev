@@ -13,7 +13,7 @@ public class DwellerRandomDialogue : MonoBehaviour {
 	    dialogue = GetComponent<DialogueInterface>();
 	    dialogue.baseCanvas = GameObject.FindGameObjectWithTag("Base UI");
 	    dialogue.dialogueField = GameObject.FindGameObjectWithTag("Dialogue Text");
-	    int select = Random.Range(0, dialogueNames.Count - 1);
+	    int select = Random.Range(0, dialogueNames.Count);
 	    dialogue.saveName = dialogueNames[select];
 	    dialogue.saveChoice = 0;
         dialogue.Reset();
