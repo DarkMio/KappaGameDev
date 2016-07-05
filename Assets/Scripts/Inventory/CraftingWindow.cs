@@ -31,7 +31,8 @@ public class CraftingWindow : MonoBehaviour
     private GameObject itemSlot;
     private int itemSlotCount;
     private List<GameObject> inventorySlots;
-    private List<BaseItem> playerInventory;
+    private List<BaseItem> craftingInventory;
+    public Button myButton;
 
 
 
@@ -39,6 +40,7 @@ public class CraftingWindow : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        myButton = GameObject.Find("CraftButton").GetComponent<Button>();
         itemSprites = Resources.LoadAll<Sprite>("FinalFantasy6Sheet4");
         CreateInventorySlotsInWindow();
     }
@@ -80,22 +82,22 @@ public class CraftingWindow : MonoBehaviour
     private void AddItemsFromInventory()
     {
         BasePlayer basePlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BasePlayer>();
-        playerInventory = basePlayerScript.ReturnPlayerInventory();
-        for (int i = 0; i < playerInventory.Count; i++)
+        craftingInventory = basePlayerScript.ReturnPlayerInventory();
+        for (int i = 0; i < craftingInventory.Count; i++)
         {
             if (inventorySlots[i].name == "Empty")
             {
                 inventorySlots[i].name = i.ToString();
                 //change empty slot with actual item
                 inventorySlots[i].transform.GetChild(0).gameObject.SetActive(true);
-                inventorySlots[i].transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ReturnItemIcon(playerInventory[i]);
+                inventorySlots[i].transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ReturnItemIcon(craftingInventory[i]);
             }
         }
     }
 
     public string AddItemToSlot(GameObject slot)
     {
-        slot.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ReturnItemIcon(playerInventory[int.Parse(slotName)]);
+        slot.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ReturnItemIcon(craftingInventory[int.Parse(slotName)]);
         draggedIcon.SetActive(false);
         draggedItem = null;
         dragged = false;
@@ -119,12 +121,12 @@ public class CraftingWindow : MonoBehaviour
 
     public void SwapItem(GameObject slot)
     {
-        BaseItem swapItem = playerInventory[int.Parse(slot.name)];
+        BaseItem swapItem = craftingInventory[int.Parse(slot.name)];
         slot.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ReturnItemIcon(draggedItem);
         slot.name = slotName;
         draggedItem = swapItem;
         draggedIcon.GetComponent<Image>().sprite = ReturnItemIcon(draggedItem);
-        slotName = playerInventory.FindIndex(x => x == draggedItem).ToString();
+        slotName = craftingInventory.FindIndex(x => x == draggedItem).ToString();
     }
 
     public void ShowDraggedItem(string name)
@@ -132,7 +134,7 @@ public class CraftingWindow : MonoBehaviour
         slotName = name;
         dragged = true;
         draggedIcon.SetActive(true);
-        draggedItem = playerInventory[int.Parse(name)];
+        draggedItem = craftingInventory[int.Parse(name)];
         Image img = draggedIcon.GetComponent<Image>();
         var itemImage = ReturnItemIcon(draggedItem);
         img.sprite = itemImage;

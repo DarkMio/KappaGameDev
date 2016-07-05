@@ -27,6 +27,7 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
         BasePlayer basePlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BasePlayer>();
         playerInventory = basePlayerScript.ReturnPlayerInventory();
         myButton = GameObject.Find("CraftButton").GetComponent<Button>();
+        canvas = NodeEditorSaveManager.LoadSceneNodeCanvas("CraftingCanvas", false);
 
     }
 
@@ -88,8 +89,9 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
         {
             Debug.Log(recipe.ingredientName);
             myButton.interactable = false;
-            playerInventory.Add(new BaseItem("Antidote"));
-            //playerInventory.Add(new BaseItem((Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == recipe.ingredientName)) as IngredientNode)));
+            playerInventory.Clear();
+            playerInventory.Add(new BaseItem((Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == recipe.ingredientName)) as IngredientNode)));
+            craftingInterface.ResetHistory();
         } else
         {
             Debug.Log("Hahaha here is your trash");
