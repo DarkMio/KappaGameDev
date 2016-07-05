@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: 13x34_hero
+  m_Name: boiler_filled
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _ALPHATEST_ON
+  m_ShaderKeywords: _ALPHATEST_ON _NORMALMAP
   m_LightmapFlags: 5
   m_CustomRenderQueue: 2450
   stringTagMap:
@@ -20,14 +20,14 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 8f6e94502a003b74e94e3d9e71384464, type: 3}
+          m_Texture: {fileID: 2800000, guid: ad743599ec95ab045973e01db21c7c23, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 89ae2bf774670124895a1e3f51f9f289, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -79,13 +79,6 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _SpecGlossMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -98,11 +91,7 @@ Material:
       data:
         first:
           name: _Cutoff
-        second: 0.124
-      data:
-        first:
-          name: PixelSnap
-        second: 0
+        second: 0.379
       data:
         first:
           name: _Parallax
@@ -148,7 +137,3 @@ Material:
         first:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _SpecColor
-        second: {r: 0.2, g: 0.2, b: 0.2, a: 1}
