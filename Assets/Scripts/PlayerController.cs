@@ -119,9 +119,11 @@ public class PlayerController : MonoBehaviour {
 				closestDist = compareDist;
 			}
 		}
+        /*
 		if(debugDraws) {
 			Debug.DrawLine(transform.position, closest.transform.position, Color.red, 2f, false);
 		}
+        */
 
 		if (closestDist <= 50) {
 			int n = Random.Range (1, dialogs.Length);

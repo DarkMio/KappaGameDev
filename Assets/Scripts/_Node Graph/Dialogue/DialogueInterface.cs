@@ -7,7 +7,7 @@ using NodeEditorFramework.Standard;
 using UnityEditor;
 using UnityEngine.UI;
 
-public class DialogueInterface : MonoBehaviour {
+public class DialogueInterface : MenuTrigger {
     public enum InterfaceState {
         Fresh,
         Dirty,
@@ -18,6 +18,7 @@ public class DialogueInterface : MonoBehaviour {
     private Node _currentNode;
     public GameObject baseCanvas;
     public GameObject dialogueField;
+    public GameObject dialoguePrefab;
     public GameObject choiceField;
     public bool isExhausted = false; // no more dialogue.
 
@@ -63,6 +64,8 @@ public class DialogueInterface : MonoBehaviour {
 	    }
 	    isExhausted = false;
         guiManager = new GUITextManager(this);
+        dialogueField = GameObject.FindGameObjectWithTag("Dialogue Text");
+        triggerDistance = 50;
 	}
 
     void OnGUI() {
@@ -77,10 +80,26 @@ public class DialogueInterface : MonoBehaviour {
         }
         #endif
     }
+    
+    void OnDestroy() {
+        Destroy(dialogueField);
+    }
+    
+    public override void TriggerMenu() {
+        Debug.Log("Triggered");
+        if(dialogueField == null) {
+            dialogueField = Instantiate(dialoguePrefab);
+            dialogueField.transform.parent = baseCanvas.transform;
+        }
+        
+    }
 
     void BuildUI() {
+        if(dialogueField == null || !dialogueField.activeSelf) {
+            return;
+        }
         // Set dialogue text
-        var element = dialogueField.GetComponent<Text>();
+        var element = dialogueField.GetComponentInChildren<Text>();
         guiManager.text = ((DialogueNode)_currentNode)._dialogueText;
         guiManager.Update();
         element.text = guiManager.currentText;
@@ -205,6 +224,10 @@ public class DialogueInterface : MonoBehaviour {
                     charCount = 0;
                 }
             }
+            
+            get {
+                return _finalText;
+            }
         }
 
         public GUITextManager(DialogueInterface parent) {
@@ -224,12 +247,9 @@ public class DialogueInterface : MonoBehaviour {
         }
 
         void Type() {
-            if(Time.time - parent.timeStampType >= parent.typeInterval || currentText.Length >= _finalText.Length) {
-                return;
-            }
             parent.timeStampType = Time.time;
             if (blinkTextCharacter) {
-                currentText = currentText.Substring(0, Math.Max(0, currentText.Length - parent.cursorChar.Length));
+                currentText = currentText.Substring(0, currentText.Length - parent.cursorChar.Length);
             }
             int toWrite = Mathf.RoundToInt(UnityEngine.Random.value * (parent.charsPerFrame+1) % parent.charsPerFrame); // Random a range of characters to write
             charCount += toWrite;
@@ -244,11 +264,10 @@ public class DialogueInterface : MonoBehaviour {
                 parent.timeStampBlink = Time.time;
                 if(!blinkTextCharacter) {
                     currentText = currentText + parent.cursorChar;
-                    blinkTextCharacter = true;
                 } else {
-                    currentText = currentText.Substring(0,currentText.Length - parent.cursorChar.Length);
-                    blinkTextCharacter = false;
+                    currentText = currentText.Substring(0, currentText.Length - parent.cursorChar.Length);
                 }
+                blinkTextCharacter = !blinkTextCharacter;
             }
         }
     }
