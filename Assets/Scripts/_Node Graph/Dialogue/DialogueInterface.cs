@@ -7,10 +7,10 @@ using NodeEditorFramework.Standard;
 using UnityEditor;
 using UnityEngine.UI;
 
-public class DialogueInterface : MonoBehaviour {
+public class DialogueInterface : MenuTrigger {
     public enum InterfaceState {
         Fresh,
-        Dirty
+        Dirty,
     };
 
     private InterfaceState state = InterfaceState.Dirty;
@@ -18,7 +18,19 @@ public class DialogueInterface : MonoBehaviour {
     private Node _currentNode;
     public GameObject baseCanvas;
     public GameObject dialogueField;
+    public GameObject dialoguePrefab;
     public GameObject choiceField;
+    public bool isExhausted = false; // no more dialogue.
+
+    // Following block is for the typing magic.
+    public float interval = 4;
+    public string cursorChar = "|";
+    public int charsPerFrame = 4;
+    public float typeInterval = 100;
+    public float timeStampType = Time.time;
+    public float timeStampBlink = Time.time;
+    private GUITextManager guiManager;
+    private AudioSource audio;
 
     /**
      * To make the custom inspector for graph selection consistent
@@ -51,6 +63,11 @@ public class DialogueInterface : MonoBehaviour {
 	            break;
 	        }
 	    }
+	    isExhausted = false;
+        guiManager = new GUITextManager(this);
+        audio = GetComponent<AudioSource>();
+        dialogueField = GameObject.FindGameObjectWithTag("Dialogue Text");
+        triggerDistance = 50;
 	}
 
     void OnGUI() {
@@ -66,7 +83,38 @@ public class DialogueInterface : MonoBehaviour {
         #endif
     }
 
+    void OnDestroy() {
+        Destroy(dialogueField);
+    }
+
+    public override void TriggerMenu() {
+        Debug.Log("Triggered");
+        if(dialogueField == null) {
+            dialogueField = Instantiate(dialoguePrefab);
+            dialogueField.transform.parent = baseCanvas.transform;
+        }
+
+    }
+
     void BuildUI() {
+        if(dialogueField == null || !dialogueField.activeSelf) {
+            return;
+        }
+        // Set dialogue text
+        var element = dialogueField.GetComponentInChildren<Text>();
+        guiManager.text = ((DialogueNode)_currentNode)._dialogueText;
+        guiManager.Update();
+        element.text = guiManager.currentText;
+        if(guiManager.isWriting) {
+            if(!audio.isPlaying) {
+                GetComponent<AudioSource>().Play();
+            }
+        } else {
+            if(audio.isPlaying) {
+                GetComponent<AudioSource>().Stop();
+            }
+        }
+
         if (state == InterfaceState.Fresh) {
             return;
         }
@@ -77,11 +125,6 @@ public class DialogueInterface : MonoBehaviour {
         }
 
         var node = _currentNode as DialogueNode;
-
-        // Set dialogue text
-        var element = dialogueField.GetComponent<Text>();
-        // ReSharper disable once PossibleNullReferenceException
-        element.text = node._dialogueText;
 
         // delete all buttons at first
         foreach (GameObject button in buttons) {
@@ -101,6 +144,10 @@ public class DialogueInterface : MonoBehaviour {
             BuildButton(node, i, decision);
         }
 
+        if (node.Outputs.Count == 0) {
+            isExhausted = true;
+        }
+
     }
 
     /**
@@ -115,7 +162,7 @@ public class DialogueInterface : MonoBehaviour {
         var rectTransform = buttonPanel.transform as RectTransform;
         buttonPanel.transform.SetParent(baseCanvas.transform);  // nest it properly in the object hirachy
         // ReSharper disable once PossibleNullReferenceException
-        rectTransform.anchoredPosition = Vector2.down * (i % 3) * (rectTransform.rect.height + 10);  // move it around a bit
+        rectTransform.anchoredPosition = Vector2.down * (i % 3) * (rectTransform.rect.height + 10) * 0.5f;  // move it around a bit
 
         var rows = (node.Outputs.Count - 1)/3;
         var pos = i/3;
@@ -164,12 +211,84 @@ public class DialogueInterface : MonoBehaviour {
             Traverse(node.selectedNode, nextNode);
         } else if (nextNode is DialogueNode) {
             _currentNode = nextNode;
+        } else if (nextNode is RandomBranchNode) {
+            var node = (RandomBranchNode) nextNode;
+            var otp = nextNode.Outputs[UnityEngine.Random.Range(0, nextNode.Outputs.Count)];
+            Traverse(otp.connections[0].body, nextNode);
         }
     }
 
     public void Reset() {
         state = InterfaceState.Dirty;
         Awake();
+    }
+
+    private class GUITextManager {
+        private DialogueInterface parent;
+        string _finalText;
+        public string currentText;
+        private int charCount;
+
+        public bool isWriting = false;
+
+        private bool blinkTextCharacter = false;
+        public string text {
+            set {
+                if (_finalText != value) {
+                    blinkTextCharacter = false;
+                    isWriting = false;
+                    _finalText = value;
+                    currentText = "";
+                    charCount = 0;
+                }
+            }
+
+            get {
+                return _finalText;
+            }
+        }
+
+        public GUITextManager(DialogueInterface parent) {
+            this.parent = parent;
+            _finalText = "";
+            parent.interval = 0.5f;
+            parent.cursorChar = "|";
+            parent.charsPerFrame = 2;
+            parent.typeInterval = 1.4f;
+            parent.timeStampType = Time.time;
+            parent.timeStampBlink = Time.time;
+        }
+
+        public void Update() {
+            Type();
+            BlinkText();
+            isWriting = _finalText.Length > currentText.Length;
+        }
+
+        void Type() {
+            parent.timeStampType = Time.time;
+            if (blinkTextCharacter) {
+                currentText = currentText.Substring(0, currentText.Length - parent.cursorChar.Length);
+            }
+            int toWrite = Mathf.RoundToInt(UnityEngine.Random.value * (parent.charsPerFrame+1) % parent.charsPerFrame); // Random a range of characters to write
+            charCount += toWrite;
+            currentText = _finalText.Substring(0, Math.Min(charCount, _finalText.Length));
+            if (blinkTextCharacter) {
+                currentText += parent.cursorChar;
+            }
+        }
+
+        void BlinkText() {
+            if(Time.time - parent.timeStampBlink >= parent.interval) {
+                parent.timeStampBlink = Time.time;
+                if(!blinkTextCharacter) {
+                    currentText = currentText + parent.cursorChar;
+                } else {
+                    currentText = currentText.Substring(0, currentText.Length - parent.cursorChar.Length);
+                }
+                blinkTextCharacter = !blinkTextCharacter;
+            }
+        }
     }
 }
 
