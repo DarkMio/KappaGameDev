@@ -30,6 +30,7 @@ public class DialogueInterface : MenuTrigger {
     public float timeStampType = Time.time;
     public float timeStampBlink = Time.time;
     private GUITextManager guiManager;
+    private AudioSource audio;
 
     /**
      * To make the custom inspector for graph selection consistent
@@ -64,6 +65,7 @@ public class DialogueInterface : MenuTrigger {
 	    }
 	    isExhausted = false;
         guiManager = new GUITextManager(this);
+        audio = GetComponent<AudioSource>();
         dialogueField = GameObject.FindGameObjectWithTag("Dialogue Text");
         triggerDistance = 50;
 	}
@@ -103,6 +105,15 @@ public class DialogueInterface : MenuTrigger {
         guiManager.text = ((DialogueNode)_currentNode)._dialogueText;
         guiManager.Update();
         element.text = guiManager.currentText;
+        if(guiManager.isWriting) {
+            if(!audio.isPlaying) {
+                GetComponent<AudioSource>().Play();
+            }
+        } else {
+            if(audio.isPlaying) {
+                GetComponent<AudioSource>().Stop();
+            }
+        }
 
         if (state == InterfaceState.Fresh) {
             return;
@@ -213,12 +224,15 @@ public class DialogueInterface : MenuTrigger {
         string _finalText;
         public string currentText;
         private int charCount;
+        
+        public bool isWriting = false;
 
         private bool blinkTextCharacter = false;
         public string text {
             set {
                 if (_finalText != value) {
                     blinkTextCharacter = false;
+                    isWriting = false;
                     _finalText = value;
                     currentText = "";
                     charCount = 0;
@@ -244,6 +258,7 @@ public class DialogueInterface : MenuTrigger {
         public void Update() {
             Type();
             BlinkText();
+            isWriting = _finalText.Length > currentText.Length;
         }
 
         void Type() {
