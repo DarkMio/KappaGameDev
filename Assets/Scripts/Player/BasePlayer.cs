@@ -1,34 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using NodeEditorFramework;
+using NodeEditorFramework.Standard;
 
 public class BasePlayer : MonoBehaviour {
 
 
     private List<BaseItem> _inventory = new List<BaseItem>();
+    private NodeCanvas canvas;
+    private IngredientNode iNode;
 
 
-	void Start () {
-        for (int i = 0; i  < 10; i++)
-        {
-            BaseItem _item = new BaseItem();
-            _inventory.Add(_item);
-            Debug.Log(_inventory[i].ItemName);
-            Debug.Log(_inventory[i].ItemDescription);
-            Debug.Log(_inventory[i].ItemType);
-            Debug.Log(_inventory[i].ItemValue);
-            Debug.Log(_inventory[i].ItemStats[0].StatName);
-            Debug.Log(_inventory[i].ItemStats[0].StatDescription);
-            Debug.Log(_inventory[i].ItemStats[0].StatType);
-        }
-        Debug.Log(_inventory.Count);
+
+    void Start () {
+         canvas = NodeEditorSaveManager.LoadSceneNodeCanvas("CraftingCanvas", false);
+         Debug.Log(canvas);
+         IngredientNode iNode = Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == "Green Herb")) as IngredientNode;
+         BaseItem item_ = new BaseItem(iNode);
+         _inventory.Add(item_);
+        iNode = Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == "Blue Herb")) as IngredientNode;
+        item_ = new BaseItem(iNode);
+        _inventory.Add(item_);
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+    }
 
     public List<BaseItem> ReturnPlayerInventory()
     {

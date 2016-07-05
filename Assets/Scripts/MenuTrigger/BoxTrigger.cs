@@ -4,10 +4,11 @@ using System.Collections;
 public class BoxTrigger : MenuTrigger {
 	public float distance;
 	public GameObject boxMenu;
+
 	// Use this for initialization
 	void Start () {
 		triggerDistance = distance;
-	}
+    }
 	
 	void Awake() {
 		Start();
