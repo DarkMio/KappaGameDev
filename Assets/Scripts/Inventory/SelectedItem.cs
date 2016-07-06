@@ -44,6 +44,7 @@ public class SelectedItem : MonoBehaviour, IDragHandler, IPointerDownHandler {
             this.transform.name = "Empty";
         }
     }
+
     
     public void OnPointerDown(PointerEventData eventData){
         InventoryWindow inventoryWindow = GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>();

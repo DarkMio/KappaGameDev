@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using NodeEditorFramework;
+using NodeEditorFramework.Standard;
 
 public class BaseItem {
     
@@ -10,21 +12,23 @@ public class BaseItem {
     private ItemTypes _type;
     
 
-    public BaseItem()
+    public BaseItem(IngredientNode iNode)
     {
-        ItemName = "Item" + Random.Range(0, 101);
-        ItemDescription = ItemName + " is an awesome item!";
-        ItemValue = Random.Range(10, 500);
-        ItemType = ItemTypes.Ingredients;
-        ItemStats = new List<BaseStat>();
-        ItemStats.Add(new BaseIntellect());
-        ItemStats.Add(new BaseStrength());
-    // Stats müssen noch erstellt werden und dann hinzugefügt werden
+        ItemName = iNode.ingredientName;
+        ItemDescription = iNode.description;
+        ItemValue = iNode.price;
+    }
+
+    public BaseItem(string v)
+    {
+        ItemName = v;
+        ItemDescription = "Hello Test";
+        ItemValue = 50;
     }
     
     public enum ItemTypes{
-        Ingredients,
-        Potions,
+        Ingredient,
+        Potion,
         Junk
             //ItemTypes needed
     }

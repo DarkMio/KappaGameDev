@@ -29,7 +29,7 @@ public class InventoryListWindow : MonoBehaviour
 
     private void CreateInventorySlotsInWindow()
     {
-        for (int i = 0; i < 20; i++) //GameObject find and look for the playerInventory and get the count of the inventory
+        for (int i = 0; i < 33; i++) //GameObject find and look for the playerInventory and get the count of the inventory
         {
             itemSlot = (GameObject)Instantiate(itemSlotPrefab);
             itemSlot.name = i.ToString();
