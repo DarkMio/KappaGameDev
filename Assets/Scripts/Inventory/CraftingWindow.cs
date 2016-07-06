@@ -78,6 +78,15 @@ public class CraftingWindow : MonoBehaviour
             }
         }
     }
+    
+    public void DisrespectYourSurroundings() {
+        Debug.Log("Metal tune starts here.");
+        foreach (GameObject item in inventorySlots)
+        {
+            Destroy(item);
+        }
+        CreateInventorySlotsInWindow();
+    }
 
     private void AddItemsFromInventory()
     {
