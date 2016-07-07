@@ -14,12 +14,12 @@ public class SelectedItem : MonoBehaviour, IDragHandler, IPointerDownHandler {
 	void Start () {
         selectedItemText = GameObject.Find("SelectedItemText").GetComponent<Text>();
         BasePlayer basePlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BasePlayer>();
-        playerInventory = basePlayerScript.ReturnPlayerInventory();
+        // playerInventory = basePlayerScript.ReturnPlayerInventory();
     }
-	
+
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
     public void ShowSelectedItemText()
@@ -37,6 +37,7 @@ public class SelectedItem : MonoBehaviour, IDragHandler, IPointerDownHandler {
             }
         }
     }
+
     public void OnDrag(PointerEventData eventData){
         if(!GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>().dragged && this.name !="Empty"){
             GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>().ShowDraggedItem(this.transform.name);
@@ -45,7 +46,7 @@ public class SelectedItem : MonoBehaviour, IDragHandler, IPointerDownHandler {
         }
     }
 
-    
+
     public void OnPointerDown(PointerEventData eventData){
         InventoryWindow inventoryWindow = GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>();
         if(inventoryWindow.dragged){
@@ -53,7 +54,7 @@ public class SelectedItem : MonoBehaviour, IDragHandler, IPointerDownHandler {
                 inventoryWindow.SwapItem(this.gameObject);
             } else {
             this.transform.name = inventoryWindow.AddItemToSlot(this.gameObject);
-            this.transform.GetChild(0).gameObject.SetActive(true);  
+            this.transform.GetChild(0).gameObject.SetActive(true);
             }
 
         }

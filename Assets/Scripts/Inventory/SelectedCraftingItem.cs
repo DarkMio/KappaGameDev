@@ -25,7 +25,7 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
         Debug.Log(craftingInterface.saveName);
         selectedItemText = GameObject.Find("SelectedItemText").GetComponent<Text>();
         BasePlayer basePlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BasePlayer>();
-        playerInventory = basePlayerScript.ReturnPlayerInventory();
+        // playerInventory = basePlayerScript.ReturnPlayerInventory();
         myButton = GameObject.Find("CraftButton").GetComponent<Button>();
         canvas = NodeEditorSaveManager.LoadSceneNodeCanvas("CraftingCanvas", false);
 

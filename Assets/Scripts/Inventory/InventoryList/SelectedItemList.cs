@@ -14,7 +14,7 @@ public class SelectedItemList : MonoBehaviour
     {
         selectedItemListText = GameObject.Find("SelectedItemListText").GetComponent<Text>();
         BasePlayer basePlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BasePlayer>();
-        playerInventory = basePlayerScript.ReturnPlayerInventory();
+        // playerInventory = basePlayerScript.ReturnPlayerInventory();
     }
 
     // Update is called once per frame

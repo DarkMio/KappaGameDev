@@ -19,7 +19,7 @@ public class InventoryWindow : MonoBehaviour{
     public BaseItem draggedItem;
     public bool dragged = false;
     private const int mousePosOffset = 10;
-    
+
     private string slotName;
 
     private int xPos;
@@ -64,7 +64,7 @@ public class InventoryWindow : MonoBehaviour{
         var itemImage = ReturnItemIcon(draggedItem);
         img.sprite = itemImage;
     }
-    
+
     public string AddItemToSlot(GameObject slot){
         slot.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ReturnItemIcon(playerInventory[int.Parse(slotName)]);
         draggedIcon.SetActive(false);
@@ -100,7 +100,7 @@ public class InventoryWindow : MonoBehaviour{
     public void AddItemsFromInventory()
     {
         BasePlayer basePlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BasePlayer>();
-        playerInventory = basePlayerScript.ReturnPlayerInventory();
+        // playerInventory = basePlayerScript.ReturnPlayerInventory();
         for (int i = 0; i < playerInventory.Count; i++)
         {
             if (inventorySlots[i].name == "Empty" && !(inventorySlots[i].name == playerInventory[i].ItemName))
@@ -113,7 +113,7 @@ public class InventoryWindow : MonoBehaviour{
         }
     }
 
-    
+
     public Sprite ReturnItemIcon(BaseItem item){
         Sprite icon = new Sprite();
 
@@ -132,7 +132,7 @@ public class InventoryWindow : MonoBehaviour{
 
         return icon;
     }
-    
+
     public void SwapItem(GameObject slot){
         BaseItem swapItem = playerInventory[int.Parse(slot.name)];
         slot.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ReturnItemIcon(draggedItem);

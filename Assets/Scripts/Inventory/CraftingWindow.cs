@@ -78,7 +78,7 @@ public class CraftingWindow : MonoBehaviour
             }
         }
     }
-    
+
     public void DisrespectYourSurroundings() {
         Debug.Log("Metal tune starts here.");
         foreach (GameObject item in inventorySlots)
@@ -91,7 +91,7 @@ public class CraftingWindow : MonoBehaviour
     private void AddItemsFromInventory()
     {
         BasePlayer basePlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BasePlayer>();
-        craftingInventory = basePlayerScript.ReturnPlayerInventory();
+        // craftingInventory = basePlayerScript.ReturnPlayerInventory();
         for (int i = 0; i < craftingInventory.Count; i++)
         {
             if (inventorySlots[i].name == "Empty")

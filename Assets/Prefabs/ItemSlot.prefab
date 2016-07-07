@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11495602}
   - 114: {fileID: 11435274}
   - 114: {fileID: 11430802}
+  - 114: {fileID: 11495448}
   m_Layer: 5
   m_Name: ItemSlot
   m_TagString: Untagged
@@ -42,11 +43,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145662}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c984d0543cf1d904fa559c47a247914a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  draggingIcon: {fileID: 0}
 --- !u!114 &11435274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,6 +132,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11495448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6091d49e764d94a92506d464cd9a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedItemText: {fileID: 0}
+  draggingIcon: {fileID: 0}
+  inventoryLinkNumber: 0
 --- !u!114 &11495602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,6 +194,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 22476370}
   m_RootOrder: 0
@@ -195,6 +212,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 22403194}
   m_Father: {fileID: 0}
