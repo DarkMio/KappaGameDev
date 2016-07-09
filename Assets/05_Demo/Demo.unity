@@ -120,6 +120,34 @@ MonoBehaviour:
   selectedNode: {fileID: 0}
   panOffset: {x: -17.399792, y: -248.7999}
   zoom: 1.6
+--- !u!1 &17454119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 17454120}
+  m_Layer: 0
+  m_Name: Entry
+  m_TagString: Nav Entry
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &17454120
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 17454119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -155.6, y: 0, z: 185.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 57130588}
+  m_RootOrder: 1
 --- !u!114 &18631543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +256,25 @@ MonoBehaviour:
   _preCheckables: {fileID: 0}
   price: 10
   description: This one you probably shouldn't smoke.
+--- !u!114 &28471983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 488472958}
+  side: 2
+  sidePosition: 150
+  sideOffset: 0
+  connections:
+  - {fileID: 941206011}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!114 &31201608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,11 +398,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 57130586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 139.7, y: 0, z: -179}
+  m_LocalPosition: {x: 227.2, y: 0, z: -159}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1524997434}
+  - {fileID: 17454120}
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!1 &59730731
@@ -619,25 +667,6 @@ MonoBehaviour:
   _preCheckables: {fileID: 0}
   price: 0
   description: 
---- !u!114 &108722274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
-  m_Name: Child
-  m_EditorClassIdentifier: 
-  body: {fileID: 1019531187}
-  side: 2
-  sidePosition: 150
-  sideOffset: 0
-  connections:
-  - {fileID: 859979524}
-  typeID: Void
-  calculationBlockade: 0
 --- !u!114 &112006555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,6 +828,37 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 493741156}
   typeID: Void
+--- !u!114 &120662754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -160
+    y: -145
+    width: 300
+    height: 300
+  nodeKnobs:
+  - {fileID: 231785250}
+  - {fileID: 1620654140}
+  - {fileID: 972280907}
+  - {fileID: 1602599159}
+  _dialogueText: Do you like tales?
+  _decisions:
+  - Yes!
+  - No.
+  - 
+  _preCheckables:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &128309415
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,7 +997,7 @@ MonoBehaviour:
   connections: []
   typeID: Void
   calculationBlockade: 0
---- !u!114 &139388903
+--- !u!114 &156187035
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -945,17 +1005,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
-  m_Name: Branch
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
   m_EditorClassIdentifier: 
-  body: {fileID: 1869302994}
-  side: 2
-  sidePosition: 49
+  body: {fileID: 982555168}
+  side: 4
+  sidePosition: 150
   sideOffset: 0
-  connections:
-  - {fileID: 1353167416}
+  connection: {fileID: 964725011}
   typeID: Void
-  calculationBlockade: 0
 --- !u!114 &161106969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,7 +1215,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 166590564}
   m_LocalRotation: {x: 0.50000006, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 24, y: 208, z: -114}
+  m_LocalPosition: {x: 24, y: 246, z: -136}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
   m_Children: []
@@ -1329,8 +1387,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 175795392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 305, y: 0, z: -65}
-  m_LocalScale: {x: 50, y: 100, z: 360}
+  m_LocalPosition: {x: 328.7, y: 0, z: -65}
+  m_LocalScale: {x: 100, y: 100, z: 360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2074590964}
@@ -1550,6 +1608,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1853080706}
   m_RootOrder: 2
+--- !u!114 &199594835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1404465754}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 334773300}
+  typeID: Void
 --- !u!114 &204208398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1590,6 +1665,25 @@ MonoBehaviour:
   _preCheckables: {fileID: 0}
   price: 0
   description: 
+--- !u!114 &223500127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Branch
+  m_EditorClassIdentifier: 
+  body: {fileID: 1262899373}
+  side: 2
+  sidePosition: 49
+  sideOffset: 0
+  connections:
+  - {fileID: 1434060267}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!114 &226407668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1625,6 +1719,23 @@ MonoBehaviour:
   sidePosition: 102
   sideOffset: 0
   connection: {fileID: 680496901}
+  typeID: Void
+--- !u!114 &231785250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 120662754}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 761941064}
   typeID: Void
 --- !u!1 &233316464
 GameObject:
@@ -1704,6 +1815,31 @@ MonoBehaviour:
   moveLight: 0
   maxDistanceLength: 0.2
   maxDistanceTravel: 0
+--- !u!114 &233640660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 544.5
+    y: 447
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 1661662581}
+  _dialogueText: There was an old grandfather called Rick - he had an grandson named
+    Morty. Rick had a lot to show - which wasn't his donger all along!
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
 --- !u!1 &238915740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,6 +1977,25 @@ MonoBehaviour:
   connections: []
   typeID: Void
   calculationBlockade: 0
+--- !u!114 &277787140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Root
+  m_EditorClassIdentifier: 
+  body: {fileID: 1732896915}
+  side: 2
+  sidePosition: 31
+  sideOffset: 0
+  connections:
+  - {fileID: 478354897}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!114 &282976557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1866,6 +2021,43 @@ MonoBehaviour:
   _preCheckables: {fileID: 0}
   price: 0
   description: 
+--- !u!114 &284625336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4ef77a7d401bd4494e7367b91d6cb7, type: 3}
+  m_Name: Dialogue Root
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -609.2
+    y: -394.6
+    width: 100
+    height: 40
+  nodeKnobs:
+  - {fileID: 947860606}
+  firstNode: {fileID: 557948772}
+--- !u!114 &284977671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1629163819}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 1188967520}
+  typeID: Void
 --- !u!114 &290032105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1889,6 +2081,25 @@ MonoBehaviour:
   _preCheckables: {fileID: 0}
   price: 20
   description: For those special days, when you are down.
+--- !u!114 &291526058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Branch
+  m_EditorClassIdentifier: 
+  body: {fileID: 2016235508}
+  side: 2
+  sidePosition: 85
+  sideOffset: 0
+  connections:
+  - {fileID: 673454771}
+  typeID: Void
+  calculationBlockade: 1
 --- !u!114 &292952821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,6 +2223,25 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 1930084430}
   typeID: Void
+--- !u!114 &313088813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Branch
+  m_EditorClassIdentifier: 
+  body: {fileID: 1262899373}
+  side: 2
+  sidePosition: 67
+  sideOffset: 0
+  connections:
+  - {fileID: 2003630438}
+  typeID: Void
+  calculationBlockade: 1
 --- !u!114 &334590625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2029,7 +2259,7 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 1057373656}
   typeID: Void
---- !u!114 &338628065
+--- !u!114 &334773300
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -2037,15 +2267,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
-  m_Name: Parent
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
   m_EditorClassIdentifier: 
-  body: {fileID: 2046051989}
-  side: 4
+  body: {fileID: 1626374140}
+  side: 2
   sidePosition: 150
   sideOffset: 0
-  connection: {fileID: 909621887}
+  connections:
+  - {fileID: 199594835}
   typeID: Void
+  calculationBlockade: 0
+--- !u!114 &338442615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 540.5
+    y: -82
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 440690474}
+  _dialogueText: So there was Mary.
+  _decisions:
+  - 
+  - 
+  _preCheckables:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &340857397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2074,6 +2332,7 @@ GameObject:
   - 114: {fileID: 344375544}
   - 114: {fileID: 344375546}
   - 114: {fileID: 344375547}
+  - 114: {fileID: 344375548}
   m_Layer: 0
   m_Name: NodeEditor_SceneSaveHolder
   m_TagString: Untagged
@@ -2092,7 +2351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f1cd8579a6c9ec4b85d9d62cd5ba58b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  savedNodeCanvas: {fileID: 531025241}
+  savedNodeCanvas: {fileID: 1948996755}
 --- !u!4 &344375545
 Transform:
   m_ObjectHideFlags: 0
@@ -2130,6 +2389,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savedNodeCanvas: {fileID: 1119907912}
+--- !u!114 &344375548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 344375543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1cd8579a6c9ec4b85d9d62cd5ba58b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savedNodeCanvas: {fileID: 576591755}
 --- !u!114 &357284453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2470,6 +2741,25 @@ MonoBehaviour:
   connections: []
   typeID: Void
   calculationBlockade: 0
+--- !u!114 &414291724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 1408393830}
+  side: 2
+  sidePosition: 200
+  sideOffset: 0
+  connections:
+  - {fileID: 1177196008}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!114 &423277241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2488,6 +2778,23 @@ MonoBehaviour:
   connections: []
   typeID: Void
   calculationBlockade: 0
+--- !u!114 &440690474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 338442615}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 867558534}
+  typeID: Void
 --- !u!114 &446474631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2511,6 +2818,55 @@ MonoBehaviour:
   - {fileID: 1428296122}
   typeID: Void
   calculationBlockade: 0
+--- !u!114 &454695144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 544.5
+    y: 447
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 1857630901}
+  _dialogueText: There was an old grandfather called Rick - he had an grandson named
+    Morty. Rick had a lot to show - which wasn't his donger all along!
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
+--- !u!114 &457919781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 431.19998
+    y: -246.99998
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 1177196008}
+  _dialogueText: Cool!
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
 --- !u!1 &464937112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,6 +2985,23 @@ MonoBehaviour:
   - {fileID: 732274062}
   typeID: Void
   calculationBlockade: 0
+--- !u!114 &478354897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 557948772}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 277787140}
+  typeID: Void
 --- !u!114 &488076326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2646,7 +3019,38 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 1057373656}
   typeID: Void
---- !u!114 &491772217
+--- !u!114 &488472958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -160
+    y: -145
+    width: 300
+    height: 300
+  nodeKnobs:
+  - {fileID: 1708701767}
+  - {fileID: 28471983}
+  - {fileID: 1188967520}
+  - {fileID: 1202858192}
+  _dialogueText: Do you like tales?
+  _decisions:
+  - Yes!
+  - No.
+  - 
+  _preCheckables:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &489920919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -2657,14 +3061,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
   m_Name: Branch
   m_EditorClassIdentifier: 
-  body: {fileID: 1869302994}
+  body: {fileID: 2016235508}
   side: 2
-  sidePosition: 103
+  sidePosition: 49
   sideOffset: 0
   connections:
-  - {fileID: 534310179}
+  - {fileID: 690386457}
   typeID: Void
-  calculationBlockade: 1
+  calculationBlockade: 0
 --- !u!114 &493741156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2820,7 +3224,7 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 806712151}
   typeID: Void
---- !u!114 &524528339
+--- !u!114 &514901820
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -2831,11 +3235,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
   m_Name: Parent
   m_EditorClassIdentifier: 
-  body: {fileID: 1723095530}
+  body: {fileID: 550443167}
   side: 4
   sidePosition: 150
   sideOffset: 0
-  connection: {fileID: 1691537538}
+  connection: {fileID: 1849927312}
   typeID: Void
 --- !u!114 &526826463
 MonoBehaviour:
@@ -2854,31 +3258,7 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 1843585277}
   typeID: Void
---- !u!114 &531025241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e0c2324a9ab1224ebe3edad393e3544, type: 3}
-  m_Name: 03_dweller_story
-  m_EditorClassIdentifier: 
-  nodes:
-  - {fileID: 1126820313}
-  - {fileID: 1019531187}
-  - {fileID: 1742728499}
-  - {fileID: 2046051989}
-  - {fileID: 1869302994}
-  - {fileID: 1541899452}
-  - {fileID: 1723095530}
-  - {fileID: 1761743246}
-  - {fileID: 1304995362}
-  editorStates:
-  - {fileID: 576825410}
-  livesInScene: 1
---- !u!114 &534310179
+--- !u!114 &527315051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -2887,14 +3267,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
-  m_Name: Parent
+  m_Name: Source
   m_EditorClassIdentifier: 
-  body: {fileID: 1541899452}
+  body: {fileID: 2016235508}
   side: 4
-  sidePosition: 150
+  sidePosition: 31
   sideOffset: 0
-  connection: {fileID: 491772217}
+  connection: {fileID: 1620654140}
   typeID: Void
+--- !u!114 &550443167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -3
+    y: -251
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 514901820}
+  _dialogueText: 'Aw, that''s too bad. I wish I could find someone who shares my love
+    with fish. '
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
 --- !u!114 &550853483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2937,6 +3342,34 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 1064761783}
   typeID: Void
+--- !u!114 &557948772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -427
+    y: -582
+    width: 300
+    height: 300
+  nodeKnobs:
+  - {fileID: 478354897}
+  - {fileID: 1507914934}
+  - {fileID: 1945187976}
+  _dialogueText: Hey, do you like fish?
+  _decisions:
+  - Hell, yeah!
+  - No, I'm sorry.
+  _preCheckables:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &561903842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2963,8 +3396,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 561903842}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: -22.2, y: 0.1, z: -212.8}
-  m_LocalScale: {x: 50, y: 100, z: 500}
+  m_LocalPosition: {x: 24, y: 0, z: -239}
+  m_LocalScale: {x: 100, y: 100, z: 650}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children: []
   m_Father: {fileID: 2074590964}
@@ -3029,7 +3462,7 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &576825410
+--- !u!114 &576591755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -3037,15 +3470,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ab6487237ff124ea4c2aa5de9ce3fb, type: 3}
-  m_Name: MainEditorState
+  m_Script: {fileID: 11500000, guid: 0e0c2324a9ab1224ebe3edad393e3544, type: 3}
+  m_Name: 01_dweller_fish
   m_EditorClassIdentifier: 
-  canvas: {fileID: 531025241}
-  parentEditor: {fileID: 0}
-  drawing: 1
-  selectedNode: {fileID: 0}
-  panOffset: {x: -195.20035, y: -319.19995}
-  zoom: 1.6
+  nodes:
+  - {fileID: 1626374140}
+  - {fileID: 1404465754}
+  - {fileID: 550443167}
+  - {fileID: 982555168}
+  - {fileID: 1508724785}
+  - {fileID: 284625336}
+  editorStates:
+  - {fileID: 1209857276}
+  livesInScene: 1
 --- !u!1 &583626080
 GameObject:
   m_ObjectHideFlags: 0
@@ -3120,6 +3557,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 583626080}
+--- !u!114 &593484916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1408393830}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 1507914934}
+  typeID: Void
 --- !u!114 &609046124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3156,6 +3610,40 @@ MonoBehaviour:
   connections: []
   typeID: Void
   calculationBlockade: 0
+--- !u!114 &613404498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 722915062}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 972280907}
+  typeID: Void
+--- !u!114 &622579032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ab6487237ff124ea4c2aa5de9ce3fb, type: 3}
+  m_Name: MainEditorState
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 1948996755}
+  parentEditor: {fileID: 0}
+  drawing: 1
+  selectedNode: {fileID: 722915062}
+  panOffset: {x: -195.20035, y: -319.19995}
+  zoom: 1.2
 --- !u!114 &622816894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3381,6 +3869,42 @@ MonoBehaviour:
   connections: []
   typeID: Void
   calculationBlockade: 0
+--- !u!114 &673454771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1572239347}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 291526058}
+  typeID: Void
+--- !u!114 &674515961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Root
+  m_EditorClassIdentifier: 
+  body: {fileID: 1080354165}
+  side: 2
+  sidePosition: 31
+  sideOffset: 0
+  connections:
+  - {fileID: 1708701767}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!114 &680496901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3404,6 +3928,23 @@ MonoBehaviour:
   - {fileID: 73766163}
   typeID: Void
   calculationBlockade: 0
+--- !u!114 &690386457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1472308049}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 489920919}
+  typeID: Void
 --- !u!114 &691823288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3464,6 +4005,32 @@ MonoBehaviour:
   _preCheckables: {fileID: 0}
   price: 0
   description: 
+--- !u!114 &711443884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 540.5
+    y: -82
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 2003630438}
+  _dialogueText: So there was Mary.
+  _decisions:
+  - 
+  - 
+  _preCheckables:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &719070487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3481,6 +4048,31 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 1604665929}
   typeID: Void
+--- !u!114 &722915062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -180
+    y: 290
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 613404498}
+  - {fileID: 1898247564}
+  _dialogueText: Sad, but I really, really like to tell you this one story.
+  _decisions:
+  - Alright, Alright
+  _preCheckables:
+  - {fileID: 0}
 --- !u!1 &729632267
 GameObject:
   m_ObjectHideFlags: 0
@@ -3829,8 +4421,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 738985996}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 6.8, y: 0.1, z: 123.1}
-  m_LocalScale: {x: 50, y: 100, z: 639.9999}
+  m_LocalPosition: {x: 28, y: 0, z: 188}
+  m_LocalScale: {x: 150, y: 100, z: 650}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children: []
   m_Father: {fileID: 2074590964}
@@ -4014,6 +4606,25 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 112006555}
   typeID: Void
+--- !u!114 &761941064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Root
+  m_EditorClassIdentifier: 
+  body: {fileID: 1865272940}
+  side: 2
+  sidePosition: 31
+  sideOffset: 0
+  connections:
+  - {fileID: 231785250}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!114 &770958303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4079,6 +4690,25 @@ MonoBehaviour:
   _preCheckables: {fileID: 0}
   price: 0
   description: 
+--- !u!114 &810885244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 1404465754}
+  side: 2
+  sidePosition: 200
+  sideOffset: 0
+  connections:
+  - {fileID: 1900558063}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!114 &813303605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4215,23 +4845,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 856895467}
---- !u!114 &859979524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
-  m_Name: Source
-  m_EditorClassIdentifier: 
-  body: {fileID: 1869302994}
-  side: 4
-  sidePosition: 31
-  sideOffset: 0
-  connection: {fileID: 108722274}
-  typeID: Void
 --- !u!1 &860028922
 GameObject:
   m_ObjectHideFlags: 0
@@ -4290,6 +4903,25 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 18631543}
   typeID: Void
+--- !u!114 &867558534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Branch
+  m_EditorClassIdentifier: 
+  body: {fileID: 2016235508}
+  side: 2
+  sidePosition: 67
+  sideOffset: 0
+  connections:
+  - {fileID: 440690474}
+  typeID: Void
+  calculationBlockade: 1
 --- !u!114 &872542778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4395,25 +5027,6 @@ MonoBehaviour:
   sidePosition: 48
   sideOffset: 0
   connections: []
-  typeID: Void
-  calculationBlockade: 0
---- !u!114 &909621887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
-  m_Name: Child
-  m_EditorClassIdentifier: 
-  body: {fileID: 1742728499}
-  side: 2
-  sidePosition: 150
-  sideOffset: 0
-  connections:
-  - {fileID: 338628065}
   typeID: Void
   calculationBlockade: 0
 --- !u!1 &920135921
@@ -4591,6 +5204,42 @@ MonoBehaviour:
   _preCheckables: {fileID: 0}
   price: 0
   description: 
+--- !u!114 &941206011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Source
+  m_EditorClassIdentifier: 
+  body: {fileID: 1262899373}
+  side: 4
+  sidePosition: 31
+  sideOffset: 0
+  connection: {fileID: 28471983}
+  typeID: Void
+--- !u!114 &947860606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Root
+  m_EditorClassIdentifier: 
+  body: {fileID: 284625336}
+  side: 2
+  sidePosition: 31
+  sideOffset: 0
+  connections:
+  - {fileID: 1016515381}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!114 &951115757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4683,6 +5332,68 @@ MonoBehaviour:
   _preCheckables: {fileID: 0}
   price: 15
   description: Legends say it's red because it bleeds.
+--- !u!114 &964725011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 1404465754}
+  side: 2
+  sidePosition: 150
+  sideOffset: 0
+  connections:
+  - {fileID: 156187035}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &972280907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 120662754}
+  side: 2
+  sidePosition: 200
+  sideOffset: 0
+  connections:
+  - {fileID: 613404498}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &982555168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 437.4
+    y: -581.39996
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 156187035}
+  _dialogueText: :'(
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
 --- !u!114 &987800407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4926,6 +5637,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1016433142}
+--- !u!114 &1016515381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1626374140}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 947860606}
+  typeID: Void
 --- !u!114 &1018093608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4943,33 +5671,6 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 1636059387}
   typeID: Void
---- !u!114 &1019531187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
-  m_Name: Dialogue Node
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: -160
-    y: -145
-    width: 300
-    height: 250
-  nodeKnobs:
-  - {fileID: 1349033423}
-  - {fileID: 108722274}
-  _dialogueText: Do you like tales?
-  _decisions:
-  - Yes!
-  - No.
-  _preCheckables:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &1020368398
 GameObject:
   m_ObjectHideFlags: 0
@@ -5441,6 +6142,26 @@ MonoBehaviour:
   - {fileID: 550919317}
   typeID: Void
   calculationBlockade: 0
+--- !u!114 &1080354165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4ef77a7d401bd4494e7367b91d6cb7, type: 3}
+  m_Name: Dialogue Root
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -406.5
+    y: -81
+    width: 100
+    height: 40
+  nodeKnobs:
+  - {fileID: 674515961}
+  firstNode: {fileID: 488472958}
 --- !u!114 &1080763787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5564,6 +6285,7 @@ Transform:
   - {fileID: 1803550061}
   - {fileID: 1438335619}
   - {fileID: 2074590964}
+  - {fileID: 1295265700}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!114 &1114508010
@@ -5627,26 +6349,6 @@ MonoBehaviour:
   editorStates:
   - {fileID: 16040404}
   livesInScene: 1
---- !u!114 &1126820313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e4ef77a7d401bd4494e7367b91d6cb7, type: 3}
-  m_Name: Dialogue Root
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: -406.5
-    y: -81
-    width: 100
-    height: 40
-  nodeKnobs:
-  - {fileID: 1527198207}
-  firstNode: {fileID: 0}
 --- !u!114 &1139109030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5721,7 +6423,33 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 18631543}
   typeID: Void
---- !u!114 &1175356085
+--- !u!114 &1171091947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 540
+    y: -340
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 1434060267}
+  - {fileID: 1368622683}
+  _dialogueText: So, there's the tale of this one witcher, who goes around, slays
+    monsters left and right and nobody seems to like him.
+  _decisions:
+  - Okay?!
+  _preCheckables:
+  - {fileID: 0}
+--- !u!114 &1177196008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -5732,11 +6460,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
   m_Name: Parent
   m_EditorClassIdentifier: 
-  body: {fileID: 1304995362}
+  body: {fileID: 457919781}
   side: 4
   sidePosition: 150
   sideOffset: 0
-  connection: {fileID: 0}
+  connection: {fileID: 414291724}
   typeID: Void
 --- !u!1 &1179220086
 GameObject:
@@ -5823,7 +6551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1181342584
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5925,6 +6653,25 @@ MonoBehaviour:
   _preCheckables: {fileID: 0}
   price: 50
   description: Best consumed after a long night.
+--- !u!114 &1188967520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 488472958}
+  side: 2
+  sidePosition: 200
+  sideOffset: 0
+  connections:
+  - {fileID: 284977671}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!114 &1192539817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6038,6 +6785,40 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 1574643262}
   typeID: Void
+--- !u!114 &1202858192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 488472958}
+  side: 4
+  sidePosition: 200
+  sideOffset: 0
+  connection: {fileID: 1615134177}
+  typeID: Void
+--- !u!114 &1209857276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ab6487237ff124ea4c2aa5de9ce3fb, type: 3}
+  m_Name: MainEditorState
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 576591755}
+  parentEditor: {fileID: 0}
+  drawing: 1
+  selectedNode: {fileID: 0}
+  panOffset: {x: -55.799976, y: 353.00006}
+  zoom: 1.2
 --- !u!114 &1210120756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6351,6 +7132,55 @@ MonoBehaviour:
   connections: []
   typeID: Void
   calculationBlockade: 0
+--- !u!114 &1261751011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1019.5
+    y: -346
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 1315232665}
+  _dialogueText: And he has a daughter, which isn't his real daughter, because witchers
+    are infertile.
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
+--- !u!114 &1262899373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1214749a7c3ba734eaafe89cc54b6b12, type: 3}
+  m_Name: RND Branch
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 282.5
+    y: -30
+    width: 100
+    height: 120
+  nodeKnobs:
+  - {fileID: 941206011}
+  - {fileID: 223500127}
+  - {fileID: 313088813}
+  - {fileID: 1646325790}
+  - {fileID: 2081161361}
+  selection: {fileID: 0}
 --- !u!114 &1268207411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6400,6 +7230,23 @@ Transform:
   - {fileID: 1542923818}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1286821247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1584653226}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 1296929375}
+  typeID: Void
 --- !u!114 &1291822098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6417,6 +7264,54 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 493741156}
   typeID: Void
+--- !u!1 &1295265699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1295265700}
+  m_Layer: 0
+  m_Name: Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1295265700
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1295265699}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 229, y: 130, z: -186.6}
+  m_LocalScale: {x: 2, y: 4, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1684987292}
+  m_Father: {fileID: 1113247566}
+  m_RootOrder: 4
+--- !u!114 &1296929375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 1472308049}
+  side: 2
+  sidePosition: 150
+  sideOffset: 0
+  connections:
+  - {fileID: 1286821247}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!1 &1298193500
 GameObject:
   m_ObjectHideFlags: 0
@@ -6562,7 +7457,7 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 2107613331}
   typeID: Void
---- !u!114 &1304995362
+--- !u!114 &1315232665
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -6570,23 +7465,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
-  m_Name: Dialogue Node
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
   m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: -139.1
-    y: 305.2
-    width: 300
-    height: 250
-  nodeKnobs:
-  - {fileID: 1175356085}
-  - {fileID: 1877689876}
-  _dialogueText: Sad, but I really, really like to tell you this one story.
-  _decisions:
-  - 
-  _preCheckables:
-  - {fileID: 0}
+  body: {fileID: 1261751011}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 1368622683}
+  typeID: Void
 --- !u!1 &1327576860
 GameObject:
   m_ObjectHideFlags: 0
@@ -6689,7 +7576,7 @@ MonoBehaviour:
   _preCheckables: {fileID: 0}
   price: 20
   description: For those special days, when you are down.
---- !u!114 &1349033423
+--- !u!114 &1341593838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -6700,28 +7587,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
   m_Name: Parent
   m_EditorClassIdentifier: 
-  body: {fileID: 1019531187}
+  body: {fileID: 1574977837}
   side: 4
   sidePosition: 150
   sideOffset: 0
-  connection: {fileID: 1527198207}
-  typeID: Void
---- !u!114 &1353167416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
-  m_Name: Parent
-  m_EditorClassIdentifier: 
-  body: {fileID: 1742728499}
-  side: 4
-  sidePosition: 150
-  sideOffset: 0
-  connection: {fileID: 139388903}
+  connection: {fileID: 1533738360}
   typeID: Void
 --- !u!114 &1363543967
 MonoBehaviour:
@@ -6743,6 +7613,25 @@ MonoBehaviour:
   - {fileID: 1024727413}
   - {fileID: 1428697439}
   - {fileID: 1330829463}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &1368622683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 1171091947}
+  side: 2
+  sidePosition: 150
+  sideOffset: 0
+  connections:
+  - {fileID: 1315232665}
   typeID: Void
   calculationBlockade: 0
 --- !u!1 &1383982803
@@ -6841,6 +7730,35 @@ MonoBehaviour:
   - {fileID: 1980632004}
   typeID: Void
   calculationBlockade: 0
+--- !u!114 &1404465754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 5
+    y: -581
+    width: 300
+    height: 300
+  nodeKnobs:
+  - {fileID: 199594835}
+  - {fileID: 964725011}
+  - {fileID: 810885244}
+  _dialogueText: That's my flavor. Would you like to spend some time with me after
+    you've finished working and we could order a bunch of fish?
+  _decisions:
+  - Do I look like an otter?
+  - Maybe. ... urr... I mean, sure!
+  _preCheckables:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1407450886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6858,6 +7776,35 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 926175523}
   typeID: Void
+--- !u!114 &1408393830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 5
+    y: -581
+    width: 300
+    height: 300
+  nodeKnobs:
+  - {fileID: 593484916}
+  - {fileID: 1533738360}
+  - {fileID: 414291724}
+  _dialogueText: That's my flavor. Would you like to spend some time with me after
+    you've finished working and we could order a bunch of fish?
+  _decisions:
+  - Do I look like an otter?
+  - Maybe. ... urr... I mean, sure!
+  _preCheckables:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1415802438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6875,25 +7822,6 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 1139109030}
   typeID: Void
---- !u!114 &1419604710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
-  m_Name: Branch
-  m_EditorClassIdentifier: 
-  body: {fileID: 1869302994}
-  side: 2
-  sidePosition: 67
-  sideOffset: 0
-  connections:
-  - {fileID: 1634947898}
-  typeID: Void
-  calculationBlockade: 1
 --- !u!114 &1428296122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7017,6 +7945,23 @@ MonoBehaviour:
   - {fileID: 1900760586}
   typeID: Void
   calculationBlockade: 0
+--- !u!114 &1434060267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1171091947}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 223500127}
+  typeID: Void
 --- !u!1 &1438335618
 GameObject:
   m_ObjectHideFlags: 0
@@ -7108,6 +8053,32 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 1057373656}
   typeID: Void
+--- !u!114 &1472308049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 540
+    y: -340
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 690386457}
+  - {fileID: 1296929375}
+  _dialogueText: So, there's the tale of this one witcher, who goes around, slays
+    monsters left and right and nobody seems to like him.
+  _decisions:
+  - Okay?!
+  _preCheckables:
+  - {fileID: 0}
 --- !u!114 &1483008005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7125,6 +8096,31 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 46604180}
   typeID: Void
+--- !u!114 &1497355706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 540
+    y: 180
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 2125757507}
+  _dialogueText: This Toast was called Mister Toast, because he already reached adulthood
+    and was a serious toast.
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
 --- !u!114 &1507085723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7144,6 +8140,25 @@ MonoBehaviour:
   - {fileID: 1947655434}
   typeID: Void
   calculationBlockade: 0
+--- !u!114 &1507914934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 557948772}
+  side: 2
+  sidePosition: 150
+  sideOffset: 0
+  connections:
+  - {fileID: 593484916}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!114 &1508184976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7161,6 +8176,30 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 680496901}
   typeID: Void
+--- !u!114 &1508724785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 431.19998
+    y: -246.99998
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 1900558063}
+  _dialogueText: Cool!
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
 --- !u!1001 &1522832649
 Prefab:
   m_ObjectHideFlags: 0
@@ -7281,13 +8320,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1524997433}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 115, y: 0, z: -15.23}
+  m_LocalPosition: {x: 15.8, y: 0, z: -16.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 57130588}
   m_RootOrder: 0
---- !u!114 &1527198207
+--- !u!114 &1533738360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -7296,14 +8335,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
-  m_Name: Root
+  m_Name: Child
   m_EditorClassIdentifier: 
-  body: {fileID: 1126820313}
+  body: {fileID: 1408393830}
   side: 2
-  sidePosition: 31
+  sidePosition: 150
   sideOffset: 0
   connections:
-  - {fileID: 1349033423}
+  - {fileID: 1341593838}
   typeID: Void
   calculationBlockade: 0
 --- !u!114 &1537241952
@@ -7348,31 +8387,6 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 680496901}
   typeID: Void
---- !u!114 &1541899452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
-  m_Name: Dialogue Node
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 544.5
-    y: 447
-    width: 300
-    height: 250
-  nodeKnobs:
-  - {fileID: 534310179}
-  _dialogueText: There was an old grandfather called Rick - he had an grandson named
-    Morty. Rick had a lot to show - which wasn't his donger all along!
-  _decisions:
-  - 
-  _preCheckables:
-  - {fileID: 0}
 --- !u!1 &1542923817
 GameObject:
   m_ObjectHideFlags: 0
@@ -7415,6 +8429,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renderTexture: {fileID: 2100000, guid: 865d3bec070050e49923969be4fb215e, type: 2}
   filtering: 0
+--- !u!114 &1550161694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1954017251}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 1945187976}
+  typeID: Void
 --- !u!114 &1552342412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7495,6 +8526,31 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 926175523}
   typeID: Void
+--- !u!114 &1572239347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 540
+    y: 180
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 673454771}
+  _dialogueText: This Toast was called Mister Toast, because he already reached adulthood
+    and was a serious toast.
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
 --- !u!114 &1574643262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7515,6 +8571,55 @@ MonoBehaviour:
   - {fileID: 1198206014}
   typeID: Void
   calculationBlockade: 0
+--- !u!114 &1574977837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 437.4
+    y: -581.39996
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 1341593838}
+  _dialogueText: :'(
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
+--- !u!114 &1584653226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1019.5
+    y: -346
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 1286821247}
+  _dialogueText: And he has a daughter, which isn't his real daughter, because witchers
+    are infertile.
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
 --- !u!114 &1588101189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7608,6 +8713,23 @@ MonoBehaviour:
   sidePosition: 120
   sideOffset: 0
   connection: {fileID: 1636059387}
+  typeID: Void
+--- !u!114 &1602599159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 120662754}
+  side: 4
+  sidePosition: 200
+  sideOffset: 0
+  connection: {fileID: 1898247564}
   typeID: Void
 --- !u!114 &1604226319
 MonoBehaviour:
@@ -7748,6 +8870,25 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1614612837}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1615134177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 1629163819}
+  side: 2
+  sidePosition: 150
+  sideOffset: 0
+  connections:
+  - {fileID: 1202858192}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!114 &1617727793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7771,7 +8912,7 @@ MonoBehaviour:
   _preCheckables: {fileID: 0}
   price: 10
   description: This one you probably shouldn't smoke.
---- !u!114 &1634947898
+--- !u!114 &1620654140
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -7779,15 +8920,70 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
-  m_Name: Parent
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
   m_EditorClassIdentifier: 
-  body: {fileID: 1761743246}
-  side: 4
+  body: {fileID: 120662754}
+  side: 2
   sidePosition: 150
   sideOffset: 0
-  connection: {fileID: 1419604710}
+  connections:
+  - {fileID: 527315051}
   typeID: Void
+  calculationBlockade: 0
+--- !u!114 &1626374140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -427
+    y: -582
+    width: 300
+    height: 300
+  nodeKnobs:
+  - {fileID: 1016515381}
+  - {fileID: 334773300}
+  - {fileID: 1849927312}
+  _dialogueText: Hey, do you like fish?
+  _decisions:
+  - Hell, yeah!
+  - No, I'm sorry.
+  _preCheckables:
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &1629163819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -180
+    y: 290
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 284977671}
+  - {fileID: 1615134177}
+  _dialogueText: Sad, but I really, really like to tell you this one story.
+  _decisions:
+  - Alright, Alright
+  _preCheckables:
+  - {fileID: 0}
 --- !u!114 &1636059387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7922,6 +9118,25 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 1636059387}
   typeID: Void
+--- !u!114 &1646325790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Branch
+  m_EditorClassIdentifier: 
+  body: {fileID: 1262899373}
+  side: 2
+  sidePosition: 85
+  sideOffset: 0
+  connections:
+  - {fileID: 2125757507}
+  typeID: Void
+  calculationBlockade: 1
 --- !u!114 &1650181812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8106,6 +9321,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1653231155}
+--- !u!114 &1661662581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 233640660}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 1811126821}
+  typeID: Void
 --- !u!114 &1662810636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8214,6 +9446,82 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 1363543967}
   typeID: Void
+--- !u!1 &1684987291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1684987292}
+  - 33: {fileID: 1684987295}
+  - 64: {fileID: 1684987294}
+  - 23: {fileID: 1684987293}
+  m_Layer: 0
+  m_Name: Quad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1684987292
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1684987291}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 32, y: 64, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1295265700}
+  m_RootOrder: 0
+--- !u!23 &1684987293
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1684987291}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: d0fda25ca79554146a2e33f6b3cb3d2e, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &1684987294
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1684987291}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1684987295
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1684987291}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1687038496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8257,25 +9565,6 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 46604180}
   typeID: Void
---- !u!114 &1691537538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
-  m_Name: Branch
-  m_EditorClassIdentifier: 
-  body: {fileID: 1869302994}
-  side: 2
-  sidePosition: 85
-  sideOffset: 0
-  connections:
-  - {fileID: 524528339}
-  typeID: Void
-  calculationBlockade: 1
 --- !u!114 &1692306906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8428,6 +9717,23 @@ MonoBehaviour:
   _preCheckables: {fileID: 0}
   price: 0
   description: 
+--- !u!114 &1708701767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 488472958}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 674515961}
+  typeID: Void
 --- !u!114 &1723042953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8445,31 +9751,6 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 926175523}
   typeID: Void
---- !u!114 &1723095530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
-  m_Name: Dialogue Node
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 540
-    y: 180
-    width: 300
-    height: 250
-  nodeKnobs:
-  - {fileID: 524528339}
-  _dialogueText: This Toast was called Mister Toast, because he already reached adulthood
-    and was a serious toast.
-  _decisions:
-  - 
-  _preCheckables:
-  - {fileID: 0}
 --- !u!1 &1730596460
 GameObject:
   m_ObjectHideFlags: 0
@@ -8546,7 +9827,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1730596460}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1742728499
+--- !u!114 &1732896915
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -8554,24 +9835,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
-  m_Name: Dialogue Node
+  m_Script: {fileID: 11500000, guid: 4e4ef77a7d401bd4494e7367b91d6cb7, type: 3}
+  m_Name: Dialogue Root
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 540
-    y: -340
-    width: 300
-    height: 250
+    x: -609.2
+    y: -394.6
+    width: 100
+    height: 40
   nodeKnobs:
-  - {fileID: 1353167416}
-  - {fileID: 909621887}
-  _dialogueText: So, there's the tale of this one witcher, who goes around, slays
-    monsters left and right and nobody seems to like him.
-  _decisions:
-  - Okay?!
-  _preCheckables:
-  - {fileID: 0}
+  - {fileID: 277787140}
+  firstNode: {fileID: 557948772}
 --- !u!114 &1759495879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8590,32 +9865,6 @@ MonoBehaviour:
   connections: []
   typeID: Void
   calculationBlockade: 0
---- !u!114 &1761743246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
-  m_Name: Dialogue Node
-  m_EditorClassIdentifier: 
-  rect:
-    serializedVersion: 2
-    x: 540.5
-    y: -82
-    width: 300
-    height: 250
-  nodeKnobs:
-  - {fileID: 1634947898}
-  _dialogueText: So there was Mary.
-  _decisions:
-  - 
-  - 
-  _preCheckables:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &1767556689
 GameObject:
   m_ObjectHideFlags: 0
@@ -8735,8 +9984,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1803550060}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 128, y: 1, z: 80}
+  m_LocalPosition: {x: 24, y: 0, z: 0}
+  m_LocalScale: {x: 64, y: 1, z: 50}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
   m_Children: []
   m_Father: {fileID: 1113247566}
@@ -8786,6 +10035,25 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1803550060}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1811126821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Branch
+  m_EditorClassIdentifier: 
+  body: {fileID: 2016235508}
+  side: 2
+  sidePosition: 103
+  sideOffset: 0
+  connections:
+  - {fileID: 1661662581}
+  typeID: Void
+  calculationBlockade: 1
 --- !u!114 &1815513778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8936,6 +10204,25 @@ MonoBehaviour:
   - {fileID: 249848162}
   typeID: Void
   calculationBlockade: 0
+--- !u!114 &1849927312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 1626374140}
+  side: 2
+  sidePosition: 200
+  sideOffset: 0
+  connections:
+  - {fileID: 514901820}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!114 &1851463330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9074,6 +10361,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1853080705}
+--- !u!114 &1857630901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 454695144}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 2081161361}
+  typeID: Void
 --- !u!114 &1860429143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9117,8 +10421,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1861743538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -257, y: 0, z: -65}
-  m_LocalScale: {x: 50, y: 100, z: 360}
+  m_LocalPosition: {x: -281.6, y: 0, z: -65}
+  m_LocalScale: {x: 100, y: 100, z: 360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2074590964}
@@ -9183,7 +10487,7 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &1869302994
+--- !u!114 &1865272940
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -9191,40 +10495,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1214749a7c3ba734eaafe89cc54b6b12, type: 3}
-  m_Name: RND Branch
+  m_Script: {fileID: 11500000, guid: 4e4ef77a7d401bd4494e7367b91d6cb7, type: 3}
+  m_Name: Dialogue Root
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 282.5
-    y: -30
+    x: -406.5
+    y: -81
     width: 100
-    height: 120
+    height: 40
   nodeKnobs:
-  - {fileID: 859979524}
-  - {fileID: 139388903}
-  - {fileID: 1419604710}
-  - {fileID: 1691537538}
-  - {fileID: 491772217}
-  selection: {fileID: 0}
---- !u!114 &1877689876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
-  m_Name: Child
-  m_EditorClassIdentifier: 
-  body: {fileID: 1304995362}
-  side: 2
-  sidePosition: 150
-  sideOffset: 0
-  connections: []
-  typeID: Void
-  calculationBlockade: 0
+  - {fileID: 761941064}
+  firstNode: {fileID: 488472958}
 --- !u!114 &1883042905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9432,6 +10714,42 @@ MonoBehaviour:
   sidePosition: 102
   sideOffset: 0
   connection: {fileID: 1574643262}
+  typeID: Void
+--- !u!114 &1898247564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 722915062}
+  side: 2
+  sidePosition: 150
+  sideOffset: 0
+  connections:
+  - {fileID: 1602599159}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &1900558063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1508724785}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 810885244}
   typeID: Void
 --- !u!114 &1900760586
 MonoBehaviour:
@@ -9662,6 +10980,25 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 872542778}
   typeID: Void
+--- !u!114 &1945187976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Child
+  m_EditorClassIdentifier: 
+  body: {fileID: 557948772}
+  side: 2
+  sidePosition: 200
+  sideOffset: 0
+  connections:
+  - {fileID: 1550161694}
+  typeID: Void
+  calculationBlockade: 0
 --- !u!114 &1947587594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9696,6 +11033,30 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 1507085723}
   typeID: Void
+--- !u!114 &1948996755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0c2324a9ab1224ebe3edad393e3544, type: 3}
+  m_Name: 03_dweller_story
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 1472308049}
+  - {fileID: 1584653226}
+  - {fileID: 2016235508}
+  - {fileID: 233640660}
+  - {fileID: 1572239347}
+  - {fileID: 338442615}
+  - {fileID: 120662754}
+  - {fileID: 1865272940}
+  - {fileID: 722915062}
+  editorStates:
+  - {fileID: 622579032}
+  livesInScene: 1
 --- !u!114 &1951321897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9747,6 +11108,31 @@ MonoBehaviour:
   _preCheckables: {fileID: 0}
   price: 0
   description: 
+--- !u!114 &1954017251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -3
+    y: -251
+    width: 300
+    height: 250
+  nodeKnobs:
+  - {fileID: 1550161694}
+  _dialogueText: 'Aw, that''s too bad. I wish I could find someone who shares my love
+    with fish. '
+  _decisions:
+  - 
+  _preCheckables:
+  - {fileID: 0}
 --- !u!114 &1964735927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9841,7 +11227,7 @@ MonoBehaviour:
   sideOffset: 0
   connection: {fileID: 1930084430}
   typeID: Void
---- !u!114 &2046051989
+--- !u!114 &2003630438
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -9849,23 +11235,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f78a79ad7b04374e9f1cd00afbe49b0, type: 3}
-  m_Name: Dialogue Node
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 711443884}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 313088813}
+  typeID: Void
+--- !u!114 &2016235508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1214749a7c3ba734eaafe89cc54b6b12, type: 3}
+  m_Name: RND Branch
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1019.5
-    y: -346
-    width: 300
-    height: 250
+    x: 282.5
+    y: -30
+    width: 100
+    height: 120
   nodeKnobs:
-  - {fileID: 338628065}
-  _dialogueText: And he has a daughter, which isn't his real daughter, because witchers
-    are infertile.
-  _decisions:
-  - 
-  _preCheckables:
-  - {fileID: 0}
+  - {fileID: 527315051}
+  - {fileID: 489920919}
+  - {fileID: 867558534}
+  - {fileID: 291526058}
+  - {fileID: 1811126821}
+  selection: {fileID: 0}
 --- !u!114 &2056106903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9969,6 +11371,25 @@ MonoBehaviour:
   _preCheckables: {fileID: 0}
   price: 0
   description: 
+--- !u!114 &2081161361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Branch
+  m_EditorClassIdentifier: 
+  body: {fileID: 1262899373}
+  side: 2
+  sidePosition: 103
+  sideOffset: 0
+  connections:
+  - {fileID: 1857630901}
+  typeID: Void
+  calculationBlockade: 1
 --- !u!1 &2081864421
 GameObject:
   m_ObjectHideFlags: 0
@@ -10281,6 +11702,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2124600155}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2125757507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  body: {fileID: 1497355706}
+  side: 4
+  sidePosition: 150
+  sideOffset: 0
+  connection: {fileID: 1646325790}
+  typeID: Void
 --- !u!114 &2130135858
 MonoBehaviour:
   m_ObjectHideFlags: 0

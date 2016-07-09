@@ -46,6 +46,7 @@ public class DialogueInterface : MenuTrigger {
     private List<GameObject> buttons = new List<GameObject>();
 
 	void Awake () {
+
 	    if (string.IsNullOrEmpty(saveName)) {
 	        Debug.LogError("FATAL: No canvas given.");
 	        return;

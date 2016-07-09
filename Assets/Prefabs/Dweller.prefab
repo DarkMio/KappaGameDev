@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueNames:
-  - 03_dweller_story
+  - 01_dweller_story
   - 03_dweller_story
 --- !u!114 &11454256
 MonoBehaviour:
@@ -232,6 +232,9 @@ MonoBehaviour:
   saveChoice: 0
   saveFiles:
   - 03_dweller_story
+  - CraftingCanvas_2
+  - CraftingCanvas
+  - 01_dweller_fish
 --- !u!114 &11460444
 MonoBehaviour:
   m_ObjectHideFlags: 1

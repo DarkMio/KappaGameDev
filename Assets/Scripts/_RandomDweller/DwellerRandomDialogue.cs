@@ -17,5 +17,7 @@ public class DwellerRandomDialogue : MonoBehaviour {
 	    dialogue.saveName = dialogueNames[select];
 	    dialogue.saveChoice = 0;
         dialogue.Reset();
+
+	    Debug.Log("INTERFACE SHOULD LOAD: " + dialogueNames[select]);
 	}
 }

@@ -9,6 +9,8 @@ TagManager:
   - Base UI
   - Context Menu
   - Dialogue Text
+  - Canvas
+  - Nav Entry
   layers:
   - Default
   - TransparentFX
