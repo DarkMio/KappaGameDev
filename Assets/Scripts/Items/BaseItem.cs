@@ -19,12 +19,13 @@ public class BaseItem {
         ItemValue = iNode.price;
     }
 
-    public BaseItem(string v)
+    public BaseItem()
     {
-        ItemName = v;
-        ItemDescription = "Hello Test";
-        ItemValue = 50;
+        ItemName = "Trash";
+        ItemDescription = "One man's trash";
+        ItemValue = 1; 
     }
+
     
     public enum ItemTypes{
         Ingredient,

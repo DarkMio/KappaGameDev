@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c984d0543cf1d904fa559c47a247914a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  draggingIcon: {fileID: 0}
 --- !u!114 &11435274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,7 +150,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: febb4fa43d51d564bb6da7aa97bd8fe4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 140334a832fd74d46ac0bdcc94b9c2f6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -234,7 +235,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: febb4fa43d51d564bb6da7aa97bd8fe4,
+      objectReference: {fileID: 21300000, guid: 140334a832fd74d46ac0bdcc94b9c2f6,
         type: 3}
     - target: {fileID: 0}
       propertyPath: m_AnchoredPosition.x
