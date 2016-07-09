@@ -90,7 +90,6 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
 
     public void Craft()
     {
-        GetComponentInParent<CraftingWindow>().DisrespectYourSurroundings();
         Node node = craftingInterface.Retrieve();
         recipe = node as IngredientNode;
         if (recipe != null)
@@ -100,7 +99,8 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
             InventoryWindow.playerInventory.Add(new BaseItem((Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == recipe.ingredientName)) as IngredientNode)));
             craftingInterface.ResetHistory();
             InventoryWindow.itemCounter.Clear();
-        } else
+        }
+        else
         {
             myButton.interactable = false;
             removeItemsFromInventory();
