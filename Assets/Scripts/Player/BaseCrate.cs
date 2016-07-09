@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using NodeEditorFramework;
 using NodeEditorFramework.Standard;
 
-public class BasePlayer : MonoBehaviour
+public class BaseCrate : MonoBehaviour
 {
 
 
@@ -37,7 +37,7 @@ public class BasePlayer : MonoBehaviour
     {
     }
 
-    public List<BaseItem> ReturnPlayerInventory()
+    public List<BaseItem> ReturnCrateInventory()
     {
         return _inventory;
     }

@@ -28,8 +28,6 @@ public class InventoryWindow : MonoBehaviour{
     public List<GameObject> inventorySlots;
 
     public static List<BaseItem> playerInventory;
-    private List<string> invens;
-
     public static List<string> itemCounter = new List<string>();
 
 

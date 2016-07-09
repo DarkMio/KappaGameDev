@@ -25,8 +25,6 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
     {
         craftingInterface = GetComponentInParent<CraftingInterface>();
         Debug.Log(craftingInterface.saveName);
-        selectedItemText = GameObject.Find("SelectedItemText").GetComponent<Text>();
-        BasePlayer basePlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BasePlayer>();
         myButton = GameObject.Find("CraftButton").GetComponent<Button>();
         canvas = NodeEditorSaveManager.LoadSceneNodeCanvas("CraftingCanvas", false);
 
@@ -55,6 +53,7 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
     }
     public void OnDrag(PointerEventData eventData)
     {
+
         if (!GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>().dragged && this.name != "Empty")
         {
             GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>().ShowDraggedItem(this.transform.name);
