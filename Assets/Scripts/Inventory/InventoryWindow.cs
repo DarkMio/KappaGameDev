@@ -13,7 +13,6 @@ public class InventoryWindow : MonoBehaviour{
     public int slotCountLength;
     public GameObject itemSlotPrefab;
     public ToggleGroup itemSlotToggleGroup;
-    public Sprite [] itemSprites;
 
     public GameObject draggedIcon;
     public BaseItem draggedItem;
@@ -28,17 +27,21 @@ public class InventoryWindow : MonoBehaviour{
     private int itemSlotCount;
     public List<GameObject> inventorySlots;
 
-    private List<BaseItem> playerInventory;
-    private List<BaseItem> craftingInventory;
+    public static List<BaseItem> playerInventory;
+    private List<string> invens;
 
-    public Button myButton;
+    public static List<string> itemCounter = new List<string>();
 
-	// Use this for initialization
-	void Start () {
-        myButton = GameObject.Find("CraftButton").GetComponent<Button>();
-        itemSprites =  Resources.LoadAll<Sprite>("FinalFantasy6Sheet4");
+
+    // Use this for initialization
+
+
+    void Start () {
+        BasePlayer basePlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BasePlayer>();
+        playerInventory = basePlayerScript.ReturnPlayerInventory();
         CreateInventorySlotsInWindow();
         AddItemsFromInventory();
+
     }
 
 
@@ -48,10 +51,24 @@ public class InventoryWindow : MonoBehaviour{
         if(dragged){ // Harry, are you a wizzard? How can it be so easy to add the mouse-position?
             draggedIcon.GetComponent<RectTransform>().position = Input.mousePosition + new Vector3(0, -mousePosOffset);
         }
-        if (myButton.interactable == true)
+
+    }
+
+    public void DisrespectYourSurroundings()
+    {
+        Debug.Log("Inventory");
+        foreach (GameObject item in inventorySlots)
         {
-            myButton.onClick.AddListener(() => AddItemsFromInventory());
+            Destroy(item);
         }
+        CreateInventorySlotsInWindow();
+        AddItemsFromInventory();
+
+    }
+
+    public void inventoryCount()
+    {
+        AddItemsFromInventory();
     }
 
 
@@ -80,7 +97,7 @@ public class InventoryWindow : MonoBehaviour{
         yPos = startingPosY;
         for (int i = 0; i < slotCountPerPage; i++)
         {
-            itemSlot = (GameObject)Instantiate(itemSlotPrefab);
+            itemSlot = Instantiate(itemSlotPrefab);
             itemSlot.name = "Empty";
             itemSlot.GetComponent<Toggle>().group = itemSlotToggleGroup;
             inventorySlots.Add(itemSlot);
@@ -99,18 +116,16 @@ public class InventoryWindow : MonoBehaviour{
 
     public void AddItemsFromInventory()
     {
-        BasePlayer basePlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BasePlayer>();
-        // playerInventory = basePlayerScript.ReturnPlayerInventory();
-        for (int i = 0; i < playerInventory.Count; i++)
-        {
-            if (inventorySlots[i].name == "Empty" && !(inventorySlots[i].name == playerInventory[i].ItemName))
+            for (int i = 0; i < playerInventory.Count; i++)
             {
-                inventorySlots[i].name = i.ToString();
-                //change empty slot with actual item
-                inventorySlots[i].transform.GetChild(0).gameObject.SetActive(true);
-                inventorySlots[i].transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ReturnItemIcon(playerInventory[i]);
+                if (inventorySlots[i].name == "Empty" && !(inventorySlots[i].name == playerInventory[i].ItemName))
+                {
+                    inventorySlots[i].name = i.ToString();
+                    //change empty slot with actual item
+                    inventorySlots[i].transform.GetChild(0).gameObject.SetActive(true);
+                    inventorySlots[i].transform.GetChild(0).gameObject.GetComponent<Image>().sprite = ReturnItemIcon(playerInventory[i]);
+                }
             }
-        }
     }
 
 
@@ -119,15 +134,15 @@ public class InventoryWindow : MonoBehaviour{
 
         if (item.ItemName == "Green Herb")
         {
-            icon = itemSprites[50];
+            icon = Resources.Load<Sprite>("herb_green");
         }
         if (item.ItemName == "Blue Herb")
         {
-            icon = itemSprites[60];
+            icon = Resources.Load<Sprite>("herb_blue");
         }
         if(item.ItemName == "Antidote")
         {
-            icon = itemSprites[40];
+            icon = Resources.Load<Sprite>("flask_violet_full");
         }
 
         return icon;
@@ -141,6 +156,5 @@ public class InventoryWindow : MonoBehaviour{
         draggedIcon.GetComponent<Image>().sprite = ReturnItemIcon(draggedItem);
         slotName = playerInventory.FindIndex(x => x == draggedItem).ToString();
         }
-
 
 }

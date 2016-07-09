@@ -78,8 +78,8 @@ public class PlayerController : MonoBehaviour {
         if(trigger != null && closestDist <= trigger.triggerDistance) { // trigger tells the trigger distance
             trigger.TriggerMenu();
             playerInput = false;
-			audioSource.PlayOneShot (openChest);
-			Debug.Log ("Chest opened");
+			// audioSource.PlayOneShot (openChest);
+			// Debug.Log ("Chest opened");
         } else if(trigger == null) {
             Debug.Log("Trigger -> null");
         }

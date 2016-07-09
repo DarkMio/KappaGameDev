@@ -4,36 +4,46 @@ using System.Collections.Generic;
 using NodeEditorFramework;
 using NodeEditorFramework.Standard;
 
-public class BasePlayer : MonoBehaviour {
+public class BasePlayer : MonoBehaviour
+{
 
 
-    public BaseItem[] _inventory = new BaseItem[32];
+    private List<BaseItem> _inventory = new List<BaseItem>();
     private NodeCanvas canvas;
     private IngredientNode iNode;
 
 
 
-    void Start () {
-         canvas = NodeEditorSaveManager.LoadSceneNodeCanvas("CraftingCanvas", false);
+    void Start()
+    {
+        canvas = NodeEditorSaveManager.LoadSceneNodeCanvas("CraftingCanvas", false);
+        Debug.Log(canvas);
+        IngredientNode iNode = Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == "Green Herb")) as IngredientNode;
+        BaseItem item_ = new BaseItem(iNode);
+        _inventory.Add(item_);
+        iNode = Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == "Blue Herb")) as IngredientNode;
+        item_ = new BaseItem(iNode);
+        _inventory.Add(item_);
+        iNode = Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == "Green Herb")) as IngredientNode;
+        item_ = new BaseItem(iNode);
+        _inventory.Add(item_);
+        iNode = Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == "Blue Herb")) as IngredientNode;
+        item_ = new BaseItem(iNode);
+        _inventory.Add(item_);
 
-        _inventory[0] = GenerateItem("Green Herb");
-        _inventory[1] = GenerateItem("Green Herb");
-        _inventory[2] = GenerateItem("Blue Herb");
-        _inventory[3] = GenerateItem("Blue Herb");
-
-        foreach (BaseItem baseItem in _inventory) {
-            Debug.Log(baseItem);
+        Debug.Log(_inventory);
+        foreach (BaseItem item in _inventory) {
+            Debug.Log(item);
         }
-
-
     }
 
-    BaseItem GenerateItem(string name) {
-        IngredientNode iNode = Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == name)) as IngredientNode;
-        return new BaseItem(iNode);
+    // Update is called once per frame
+    void Update()
+    {
     }
 
-	// Update is called once per frame
-	void Update () {
+    public List<BaseItem> ReturnPlayerInventory()
+    {
+        return _inventory;
     }
 }

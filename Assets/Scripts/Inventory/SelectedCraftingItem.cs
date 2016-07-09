@@ -10,22 +10,23 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
 {
 
     private Text selectedItemText;
-    private List<BaseItem> playerInventory;
     public GameObject draggingIcon;
     private CraftingInterface craftingInterface;
     private IngredientNode recipe;
     private NodeCanvas canvas;
     public Button myButton;
-    private InventoryWindow test;
+    public List<string> itemCount;
+
+
 
     // Use this for initialization
+
     void Start()
     {
         craftingInterface = GetComponentInParent<CraftingInterface>();
         Debug.Log(craftingInterface.saveName);
         selectedItemText = GameObject.Find("SelectedItemText").GetComponent<Text>();
         BasePlayer basePlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BasePlayer>();
-        // playerInventory = basePlayerScript.ReturnPlayerInventory();
         myButton = GameObject.Find("CraftButton").GetComponent<Button>();
         canvas = NodeEditorSaveManager.LoadSceneNodeCanvas("CraftingCanvas", false);
 
@@ -47,7 +48,7 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
             }
             else
             {
-                selectedItemText.text = playerInventory[System.Int32.Parse(this.gameObject.name)].ItemName + ": " + playerInventory[System.Int32.Parse(this.gameObject.name)].ItemDescription;
+                selectedItemText.text = InventoryWindow.playerInventory[System.Int32.Parse(this.gameObject.name)].ItemName + ": " + InventoryWindow.playerInventory[System.Int32.Parse(this.gameObject.name)].ItemDescription;
             }
         }
     }
@@ -56,8 +57,12 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
         if (!GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>().dragged && this.name != "Empty")
         {
             GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>().ShowDraggedItem(this.transform.name);
+            string v = InventoryWindow.playerInventory[System.Int32.Parse(this.gameObject.name)].ItemName;
+            InventoryWindow.itemCounter.Remove(v);
+            //craftingInventory.Remove(v);
             this.transform.GetChild(0).gameObject.SetActive(false);
             this.transform.name = "Empty";
+
         }
     }
 
@@ -75,7 +80,9 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
             {
                 this.transform.name = inventoryWindow.AddItemToSlot(this.gameObject);
                 this.transform.GetChild(0).gameObject.SetActive(true);
-                itemsAdded(playerInventory[System.Int32.Parse(this.gameObject.name)].ItemName);
+                string v = InventoryWindow.playerInventory[System.Int32.Parse(this.gameObject.name)].ItemName;
+                itemsAdded(v);
+                InventoryWindow.itemCounter.Add(v);
             }
 
         }
@@ -83,19 +90,23 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
 
     public void Craft()
     {
-        GetComponentInParent<CraftingWindow>().DisrespectYourSurroundings();
         Node node = craftingInterface.Retrieve();
         recipe = node as IngredientNode;
         if (recipe != null)
         {
-            Debug.Log(recipe.ingredientName);
             myButton.interactable = false;
-            playerInventory.Clear();
-            playerInventory.Add(new BaseItem((Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == recipe.ingredientName)) as IngredientNode)));
+            removeItemsFromInventory();
+            InventoryWindow.playerInventory.Add(new BaseItem((Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == recipe.ingredientName)) as IngredientNode)));
             craftingInterface.ResetHistory();
-        } else
+            InventoryWindow.itemCounter.Clear();
+        }
+        else
         {
-            Debug.Log("Hahaha here is your trash");
+            myButton.interactable = false;
+            removeItemsFromInventory();
+            craftingInterface.ResetHistory();
+            InventoryWindow.itemCounter.Clear();
+            InventoryWindow.playerInventory.Add(new BaseItem());
         }
     }
 
@@ -105,7 +116,22 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
         if (craftingInterface.registeredElements.Count >= 2)
         {
             myButton.interactable = true;
-            myButton.onClick.AddListener(() => Craft());
+        }
+    }
+
+    private void removeItemsFromInventory()
+    {
+        foreach (string s in InventoryWindow.itemCounter)
+        {
+            for (int i = 0; i < InventoryWindow.playerInventory.Count; i++)
+            {
+                BaseItem item = InventoryWindow.playerInventory[i];
+                if (item.ItemName == s)
+                {
+                    InventoryWindow.playerInventory.Remove(item);
+                    break;
+                }
+            }
         }
     }
 }
