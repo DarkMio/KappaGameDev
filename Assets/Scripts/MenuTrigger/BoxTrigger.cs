@@ -4,9 +4,14 @@ using System.Collections;
 public class BoxTrigger : MenuTrigger {
 	public float distance;
 	public GameObject boxMenu;
+	public string findingTag;
+	public bool isTriggered = false;
 	// Use this for initialization
 	void Start () {
 		triggerDistance = distance;
+		if(boxMenu == null && findingTag != null) {
+			GameObject.FindWithTag(findingTag);
+		}
 	}
 	
 	void Awake() {
@@ -20,6 +25,7 @@ public class BoxTrigger : MenuTrigger {
 
 	
 	public override void TriggerMenu() {
+		isTriggered = true;
 		if(boxMenu != null) {
 			boxMenu.SetActive(true);
 		} else {

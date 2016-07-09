@@ -12,7 +12,8 @@ namespace NodeEditorFramework.Standard {
         public string ingredientName = "";
         [SerializeField]
         private AbstractCheckable _preCheckables = null;
-
+        public int price = 0;
+        public string description = "";
         public override string GetID {
             get { return ID; }
         }
@@ -32,7 +33,7 @@ namespace NodeEditorFramework.Standard {
         protected internal override void NodeGUI() {
             // if we ever manage to break the UI again, then we have scrollbars.
             scroller = GUILayout.BeginScrollView(scroller);
-            rect.height = 92 + 18* Inputs.Count; // we can calculate a fixed node size with a fixed calculation
+            rect.height = 128 + 18* Inputs.Count; // we can calculate a fixed node size with a fixed calculation
             ingredientName = GUILayout.TextField(ingredientName); // main dialogue
 
             GUILayout.BeginHorizontal(); // new row to throw our pre check in
@@ -41,6 +42,20 @@ namespace NodeEditorFramework.Standard {
             GUILayout.EndVertical();
             GUILayout.BeginVertical(); // and the output on the same line
             Outputs[0].DisplayLayout();
+            GUILayout.EndVertical();
+            GUILayout.EndHorizontal();
+
+            // node description
+            GUILayout.BeginHorizontal();
+            GUILayout.BeginVertical();
+            description = GUILayout.TextField(description);
+            GUILayout.EndVertical();
+            GUILayout.EndHorizontal();
+             
+            // node price
+            GUILayout.BeginHorizontal();
+            GUILayout.BeginVertical();
+            price = EditorGUILayout.IntField(price);
             GUILayout.EndVertical();
             GUILayout.EndHorizontal();
 
@@ -53,6 +68,7 @@ namespace NodeEditorFramework.Standard {
             }
 
             GUILayout.FlexibleSpace(); // Fills out the bottom
+
 
             // node option panel
             GUILayout.BeginHorizontal();
