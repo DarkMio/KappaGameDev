@@ -90,6 +90,7 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
 
     public void Craft()
     {
+        GetComponentInParent<CraftingWindow>().DisrespectYourSurroundings();
         Node node = craftingInterface.Retrieve();
         recipe = node as IngredientNode;
         if (recipe != null)

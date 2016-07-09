@@ -22,9 +22,15 @@ public class BasePlayer : MonoBehaviour {
         iNode = Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == "Blue Herb")) as IngredientNode;
         item_ = new BaseItem(iNode);
         _inventory.Add(item_);
+<<<<<<< HEAD
         iNode = Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == "Green Herb")) as IngredientNode;
         item_ = new BaseItem(iNode);
         _inventory.Add(item_);
+=======
+         iNode = Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == "Green Herb")) as IngredientNode;
+         item_ = new BaseItem(iNode);
+         _inventory.Add(item_);
+>>>>>>> 991c215de6cdf8c8a41df6d4ae781e87f4ea88f5
         iNode = Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == "Blue Herb")) as IngredientNode;
         item_ = new BaseItem(iNode);
         _inventory.Add(item_);
