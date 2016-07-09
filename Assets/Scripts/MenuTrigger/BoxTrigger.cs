@@ -9,9 +9,6 @@ public class BoxTrigger : MenuTrigger {
 	// Use this for initialization
 	void Start () {
 		triggerDistance = distance;
-		if(boxMenu == null && findingTag != null) {
-			GameObject.FindWithTag(findingTag);
-		}
 	}
 	
 	void Awake() {

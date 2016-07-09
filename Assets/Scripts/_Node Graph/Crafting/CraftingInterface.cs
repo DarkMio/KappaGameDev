@@ -62,7 +62,7 @@ public class CraftingInterface : MonoBehaviour {
             Debug.LogError("No canvas loaded, cannot filter!");
             return;
         }
-            if (search == null) {
+        if (search == null) {
             List<Node> nodes = canvas.nodes;
             foreach (Node node in nodes) {
                 IngredientNode iNode = node as IngredientNode;
@@ -104,10 +104,27 @@ public class CraftingInterface : MonoBehaviour {
         }
     }
 
+    public void Remove(string remove)
+    {
+        SearchState Cache = search;
+        search = null;
+        for(int i = 0; i < Cache.elements.Count; i++)
+        {
+            if (Cache.elements[i] == remove)
+            {
+                Cache.elements.Remove(remove);
+                break;
+            }
+        }
+        foreach(string s in Cache.elements)
+        {
+            this.Register(s);
+        }
+    }
+
     public void ResetHistory()
     {
         search = null;
-        
     }
 
     class SearchState {

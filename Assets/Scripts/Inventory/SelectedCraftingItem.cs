@@ -48,6 +48,7 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
             }
             else
             {
+                Debug.Log(InventoryWindow.playerInventory[System.Int32.Parse(this.gameObject.name)].ItemDescription);
                 selectedItemText.text = InventoryWindow.playerInventory[System.Int32.Parse(this.gameObject.name)].ItemName + ": " + InventoryWindow.playerInventory[System.Int32.Parse(this.gameObject.name)].ItemDescription;
             }
         }
@@ -59,9 +60,13 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
             GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>().ShowDraggedItem(this.transform.name);
             string v = InventoryWindow.playerInventory[System.Int32.Parse(this.gameObject.name)].ItemName;
             InventoryWindow.itemCounter.Remove(v);
-            //craftingInventory.Remove(v);
+            craftingInterface.Remove(v);
             this.transform.GetChild(0).gameObject.SetActive(false);
             this.transform.name = "Empty";
+            if (craftingInterface.registeredElements.Count < 2)
+            {
+                myButton.interactable = false;
+            }
 
         }
     }

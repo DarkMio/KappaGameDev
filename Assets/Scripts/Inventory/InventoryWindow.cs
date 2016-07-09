@@ -144,6 +144,10 @@ public class InventoryWindow : MonoBehaviour{
         {
             icon = Resources.Load<Sprite>("flask_violet_full");
         }
+        if(item.ItemName == "Trash")
+        {
+            icon = Resources.Load<Sprite>("trash");
+        }
 
         return icon;
     }

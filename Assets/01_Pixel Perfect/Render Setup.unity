@@ -250,16 +250,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08fe6839ea563f54381037400d34af24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInput: 1
   debugDraws: 1
   speed: 100
   contextDist: 50
   openChest: {fileID: 0}
   audioSource: {fileID: 0}
-  textFile: {fileID: 0}
-  dialogs: []
-  Text: {fileID: 822395181}
-  dialogWindow: {fileID: 1472440631}
-  dialogTime: 0
 --- !u!4 &54276779
 Transform:
   m_ObjectHideFlags: 0
@@ -645,13 +641,15 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 73140340}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 336c70e93c4eabf4da2a17816ea516bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 50
   boxMenu: {fileID: 0}
+  findingTag: 
+  isTriggered: 0
 --- !u!114 &81171765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1121,7 +1119,6 @@ MonoBehaviour:
   draggedIcon: {fileID: 928206846}
   dragged: 0
   inventorySlots: []
-  myButton: {fileID: 0}
 --- !u!114 &130926287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9274,6 +9271,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 50
   boxMenu: {fileID: 128973776}
+  findingTag: 
+  isTriggered: 0
 --- !u!1 &1761944903
 GameObject:
   m_ObjectHideFlags: 0
@@ -11253,6 +11252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 50
   boxMenu: {fileID: 128973776}
+  findingTag: 
+  isTriggered: 0
 --- !u!1 &2022591374
 GameObject:
   m_ObjectHideFlags: 0
@@ -12074,6 +12075,10 @@ Prefab:
     - target: {fileID: 179970, guid: 95d2f651064a0064ea8ca21e9aa1e76f, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499624, guid: 95d2f651064a0064ea8ca21e9aa1e76f, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95d2f651064a0064ea8ca21e9aa1e76f, type: 2}

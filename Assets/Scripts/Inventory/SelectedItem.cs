@@ -7,14 +7,11 @@ using UnityEngine.EventSystems;
 public class SelectedItem : MonoBehaviour, IDragHandler, IPointerDownHandler {
 
     private Text selectedItemText;
-    private List<BaseItem> playerInventory;
     public GameObject draggingIcon;
 
 	// Use this for initialization
 	void Start () {
         selectedItemText = GameObject.Find("SelectedItemText").GetComponent<Text>();
-        BasePlayer basePlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BasePlayer>();
-        // playerInventory = basePlayerScript.ReturnPlayerInventory();
     }
 
 	// Update is called once per frame
@@ -33,7 +30,7 @@ public class SelectedItem : MonoBehaviour, IDragHandler, IPointerDownHandler {
             }
             else
             {
-                selectedItemText.text = playerInventory[System.Int32.Parse(this.gameObject.name)].ItemName + ": " + playerInventory[System.Int32.Parse(this.gameObject.name)].ItemDescription;
+                selectedItemText.text = InventoryWindow.playerInventory[System.Int32.Parse(this.gameObject.name)].ItemName + ": " + InventoryWindow.playerInventory[System.Int32.Parse(this.gameObject.name)].ItemDescription;
             }
         }
     }

@@ -11,6 +11,7 @@ TagManager:
   - Dialogue Text
   - Canvas
   - Nav Entry
+  - Crafting
   layers:
   - Default
   - TransparentFX
