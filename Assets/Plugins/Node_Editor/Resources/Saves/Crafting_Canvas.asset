@@ -1,0 +1,2019 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0c2324a9ab1224ebe3edad393e3544, type: 3}
+  m_Name: Crafting_Canvas
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 11455640}
+  - {fileID: 11488746}
+  - {fileID: 11487164}
+  - {fileID: 11493738}
+  - {fileID: 11425632}
+  - {fileID: 11405410}
+  - {fileID: 11433062}
+  - {fileID: 11498750}
+  - {fileID: 11485514}
+  - {fileID: 11426684}
+  - {fileID: 11450678}
+  - {fileID: 11482586}
+  - {fileID: 11479110}
+  - {fileID: 11452934}
+  - {fileID: 11478046}
+  - {fileID: 11462776}
+  - {fileID: 11460182}
+  - {fileID: 11464118}
+  - {fileID: 11415252}
+  - {fileID: 11401240}
+  - {fileID: 11478002}
+  - {fileID: 11434852}
+  - {fileID: 11420050}
+  - {fileID: 11497104}
+  - {fileID: 11408930}
+  - {fileID: 11419530}
+  editorStates:
+  - {fileID: 11450254}
+  livesInScene: 0
+--- !u!114 &11401240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -150.69998
+    y: 249.59973
+    width: 300
+    height: 182
+  nodeKnobs:
+  - {fileID: 11480818}
+  - {fileID: 11487264}
+  - {fileID: 11407674}
+  - {fileID: 11482008}
+  ingredientName: Light Mystery Potion
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11401968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11488746}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11429124}
+  typeID: Void
+--- !u!114 &11404448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11408930}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 11445448}
+  - {fileID: 11499140}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11404958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11493738}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11475256}
+  typeID: Void
+--- !u!114 &11405410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 767.3998
+    y: -297.80026
+    width: 300
+    height: 164
+  nodeKnobs:
+  - {fileID: 11444722}
+  - {fileID: 11467842}
+  - {fileID: 11421316}
+  ingredientName: Greater Mystery Potion
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11407478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11433062}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11475256}
+  typeID: Void
+--- !u!114 &11407674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11401240}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11421218}
+  typeID: Void
+--- !u!114 &11408568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11425632}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections: []
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11408930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -153.89998
+    y: -80.80027
+    width: 300
+    height: 164
+  nodeKnobs:
+  - {fileID: 11404448}
+  - {fileID: 11431410}
+  - {fileID: 11431454}
+  ingredientName: Light Mana Potion
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11410764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11482586}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 11461626}
+  - {fileID: 11478554}
+  - {fileID: 11483692}
+  - {fileID: 11450498}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11411194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11493738}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11475256}
+  typeID: Void
+--- !u!114 &11414032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11478002}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 11459962}
+  - {fileID: 11437602}
+  - {fileID: 11487264}
+  - {fileID: 11447678}
+  - {fileID: 11492624}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11414292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11460182}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 11437108}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11414996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11415252}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections: []
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11415148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11450678}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 11469406}
+  - {fileID: 11425856}
+  - {fileID: 11417580}
+  - {fileID: 11419610}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11415252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1306.6998
+    y: 273.9998
+    width: 300
+    height: 182
+  nodeKnobs:
+  - {fileID: 11414996}
+  - {fileID: 11468400}
+  - {fileID: 11437108}
+  - {fileID: 11456938}
+  ingredientName: Elements Unite!
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11416816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11452934}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 11469002}
+  - {fileID: 11442540}
+  - {fileID: 11429272}
+  - {fileID: 11429144}
+  - {fileID: 11478156}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11417580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11433062}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11415148}
+  typeID: Void
+--- !u!114 &11417588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11487164}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11421218}
+  typeID: Void
+--- !u!114 &11417922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11493738}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections: []
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11418324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11464118}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11429124}
+  typeID: Void
+--- !u!114 &11419530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Ingredient Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -640
+    y: 630
+    width: 300
+    height: 128
+  nodeKnobs:
+  - {fileID: 11494506}
+  ingredientName: Trash
+  _preCheckables: {fileID: 0}
+  price: 1
+  description: One man's trash...
+--- !u!114 &11419610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11498750}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11415148}
+  typeID: Void
+--- !u!114 &11419796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11460182}
+  side: 4
+  sidePosition: 138
+  sideOffset: 0
+  connection: {fileID: 11440526}
+  typeID: Void
+--- !u!114 &11420050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Ingredient Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -640.5
+    y: 147
+    width: 300
+    height: 128
+  nodeKnobs:
+  - {fileID: 11491572}
+  ingredientName: Blue Herb
+  _preCheckables: {fileID: 0}
+  price: 20
+  description: For those special days, when you are down.
+--- !u!114 &11420286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11487164}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections: []
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11421218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11434852}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 11432618}
+  - {fileID: 11431410}
+  - {fileID: 11407674}
+  - {fileID: 11442902}
+  - {fileID: 11417588}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11421316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11405410}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11465822}
+  typeID: Void
+--- !u!114 &11425632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 767.3997
+    y: -440.60028
+    width: 300
+    height: 164
+  nodeKnobs:
+  - {fileID: 11408568}
+  - {fileID: 11469406}
+  - {fileID: 11425856}
+  ingredientName: Greater Mana Potion
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11425856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11425632}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11415148}
+  typeID: Void
+--- !u!114 &11426684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 309.79996
+    y: -96.80028
+    width: 300
+    height: 164
+  nodeKnobs:
+  - {fileID: 11465822}
+  - {fileID: 11447522}
+  - {fileID: 11475246}
+  ingredientName: Mystery Potion
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11427650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11498750}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections: []
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11429124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11478046}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 11475246}
+  - {fileID: 11401968}
+  - {fileID: 11418324}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11429144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11460182}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11416816}
+  typeID: Void
+--- !u!114 &11429272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11462776}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11416816}
+  typeID: Void
+--- !u!114 &11431410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11408930}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11421218}
+  typeID: Void
+--- !u!114 &11431454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11408930}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11491572}
+  typeID: Void
+--- !u!114 &11432618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11479110}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11421218}
+  typeID: Void
+--- !u!114 &11433062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 766.9999
+    y: -159.00027
+    width: 300
+    height: 164
+  nodeKnobs:
+  - {fileID: 11479620}
+  - {fileID: 11407478}
+  - {fileID: 11417580}
+  ingredientName: Life Potion
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11434852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Ingredient Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -640.5
+    y: 21.8
+    width: 300
+    height: 128
+  nodeKnobs:
+  - {fileID: 11421218}
+  ingredientName: Red Herb
+  _preCheckables: {fileID: 0}
+  price: 15
+  description: Legends say it's red because it bleeds.
+--- !u!114 &11437108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11415252}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11414292}
+  typeID: Void
+--- !u!114 &11437602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11497104}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11414032}
+  typeID: Void
+--- !u!114 &11440526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11479110}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 11462170}
+  - {fileID: 11419796}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11442368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11455640}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections: []
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11442540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11487164}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11416816}
+  typeID: Void
+--- !u!114 &11442902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11488746}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11421218}
+  typeID: Void
+--- !u!114 &11444722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11405410}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections: []
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11445448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11450678}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11404448}
+  typeID: Void
+--- !u!114 &11447522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11426684}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11480818}
+  typeID: Void
+--- !u!114 &11447678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11455640}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11414032}
+  typeID: Void
+--- !u!114 &11450254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ab6487237ff124ea4c2aa5de9ce3fb, type: 3}
+  m_Name: MainEditorState
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 11400000}
+  parentEditor: {fileID: 0}
+  drawing: 1
+  selectedNode: {fileID: 0}
+  panOffset: {x: -17.399792, y: -248.7999}
+  zoom: 1.6
+--- !u!114 &11450498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11460182}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11410764}
+  typeID: Void
+--- !u!114 &11450678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 308.79996
+    y: -243.60025
+    width: 300
+    height: 164
+  nodeKnobs:
+  - {fileID: 11415148}
+  - {fileID: 11445448}
+  - {fileID: 11469002}
+  ingredientName: Mana Potion
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11452934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Ingredient Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -637.5
+    y: 378
+    width: 300
+    height: 128
+  nodeKnobs:
+  - {fileID: 11416816}
+  ingredientName: Moonshade
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11455640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 310.29993
+    y: 47.59973
+    width: 300
+    height: 182
+  nodeKnobs:
+  - {fileID: 11442368}
+  - {fileID: 11478554}
+  - {fileID: 11447678}
+  - {fileID: 11455830}
+  ingredientName: Strength Potion
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11455830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11455640}
+  side: 4
+  sidePosition: 138
+  sideOffset: 0
+  connection: {fileID: 11491572}
+  typeID: Void
+--- !u!114 &11456938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11415252}
+  side: 4
+  sidePosition: 138
+  sideOffset: 0
+  connection: {fileID: 11466674}
+  typeID: Void
+--- !u!114 &11457192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11464118}
+  side: 4
+  sidePosition: 138
+  sideOffset: 0
+  connection: {fileID: 11480818}
+  typeID: Void
+--- !u!114 &11459962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11479110}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11414032}
+  typeID: Void
+--- !u!114 &11460182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 769.79974
+    y: 303.9998
+    width: 300
+    height: 182
+  nodeKnobs:
+  - {fileID: 11414292}
+  - {fileID: 11450498}
+  - {fileID: 11429144}
+  - {fileID: 11419796}
+  ingredientName: Potion of Scorching Earth
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11461330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11498750}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11475256}
+  typeID: Void
+--- !u!114 &11461626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11485514}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11410764}
+  typeID: Void
+--- !u!114 &11462092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11487164}
+  side: 4
+  sidePosition: 138
+  sideOffset: 0
+  connection: {fileID: 11491572}
+  typeID: Void
+--- !u!114 &11462170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11485514}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11440526}
+  typeID: Void
+--- !u!114 &11462776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 768.0998
+    y: 142.5998
+    width: 300
+    height: 182
+  nodeKnobs:
+  - {fileID: 11463422}
+  - {fileID: 11483692}
+  - {fileID: 11429272}
+  - {fileID: 11499140}
+  ingredientName: Potion of Burning Water
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11463422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11462776}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 11468400}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11464118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 769.9997
+    y: 475.99976
+    width: 300
+    height: 182
+  nodeKnobs:
+  - {fileID: 11466674}
+  - {fileID: 11478156}
+  - {fileID: 11418324}
+  - {fileID: 11457192}
+  ingredientName: Potion of Melting Air
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11465822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11426684}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 11467842}
+  - {fileID: 11421316}
+  - {fileID: 11487014}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11466674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11464118}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 11456938}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11467842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11405410}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11465822}
+  typeID: Void
+--- !u!114 &11468016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11488746}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections: []
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11468400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11415252}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11463422}
+  typeID: Void
+--- !u!114 &11469002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11450678}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11416816}
+  typeID: Void
+--- !u!114 &11469406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11425632}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11415148}
+  typeID: Void
+--- !u!114 &11475246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11426684}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11429124}
+  typeID: Void
+--- !u!114 &11475256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11485514}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 11404958}
+  - {fileID: 11411194}
+  - {fileID: 11407478}
+  - {fileID: 11461330}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11478002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Ingredient Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -640.5
+    y: -105
+    width: 300
+    height: 128
+  nodeKnobs:
+  - {fileID: 11414032}
+  ingredientName: Green Herb
+  _preCheckables: {fileID: 0}
+  price: 10
+  description: This one you probably shouldn't smoke.
+--- !u!114 &11478046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Ingredient Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -637.7
+    y: 492.5998
+    width: 300
+    height: 128
+  nodeKnobs:
+  - {fileID: 11429124}
+  ingredientName: Applebee
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11478156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11464118}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11416816}
+  typeID: Void
+--- !u!114 &11478554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11455640}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11410764}
+  typeID: Void
+--- !u!114 &11478832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11497104}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections: []
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11479110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -156.69998
+    y: -237.40025
+    width: 300
+    height: 164
+  nodeKnobs:
+  - {fileID: 11440526}
+  - {fileID: 11459962}
+  - {fileID: 11432618}
+  ingredientName: Light Healing Potion
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11479620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11433062}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections: []
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11480818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11401240}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 11447522}
+  - {fileID: 11457192}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11482008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11401240}
+  side: 4
+  sidePosition: 138
+  sideOffset: 0
+  connection: {fileID: 11491572}
+  typeID: Void
+--- !u!114 &11482586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Ingredient Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -639.5
+    y: 257.8
+    width: 300
+    height: 128
+  nodeKnobs:
+  - {fileID: 11410764}
+  ingredientName: Sunflower
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11483692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11462776}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11410764}
+  typeID: Void
+--- !u!114 &11485514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 309.89996
+    y: -397.80017
+    width: 300
+    height: 164
+  nodeKnobs:
+  - {fileID: 11475256}
+  - {fileID: 11462170}
+  - {fileID: 11461626}
+  ingredientName: Healing Potion
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11487014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11498750}
+  side: 4
+  sidePosition: 138
+  sideOffset: 0
+  connection: {fileID: 11465822}
+  typeID: Void
+--- !u!114 &11487164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 306.99994
+    y: 212.99976
+    width: 300
+    height: 182
+  nodeKnobs:
+  - {fileID: 11420286}
+  - {fileID: 11442540}
+  - {fileID: 11417588}
+  - {fileID: 11462092}
+  ingredientName: Wisdom Potion
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11487264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11401240}
+  side: 4
+  sidePosition: 102
+  sideOffset: 0
+  connection: {fileID: 11414032}
+  typeID: Void
+--- !u!114 &11488746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 305.69995
+    y: 370.39978
+    width: 300
+    height: 182
+  nodeKnobs:
+  - {fileID: 11468016}
+  - {fileID: 11401968}
+  - {fileID: 11442902}
+  - {fileID: 11492624}
+  ingredientName: Dexterity Potion
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11491572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11420050}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections:
+  - {fileID: 11431454}
+  - {fileID: 11492712}
+  - {fileID: 11482008}
+  - {fileID: 11455830}
+  - {fileID: 11462092}
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11492624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11488746}
+  side: 4
+  sidePosition: 138
+  sideOffset: 0
+  connection: {fileID: 11414032}
+  typeID: Void
+--- !u!114 &11492712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11497104}
+  side: 4
+  sidePosition: 120
+  sideOffset: 0
+  connection: {fileID: 11491572}
+  typeID: Void
+--- !u!114 &11493738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 767.39984
+    y: -582.2003
+    width: 300
+    height: 164
+  nodeKnobs:
+  - {fileID: 11417922}
+  - {fileID: 11404958}
+  - {fileID: 11411194}
+  ingredientName: Greater Healing Potion
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11494506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Outcome
+  m_EditorClassIdentifier: 
+  body: {fileID: 11419530}
+  side: 2
+  sidePosition: 48
+  sideOffset: 0
+  connections: []
+  typeID: Void
+  calculationBlockade: 0
+--- !u!114 &11497104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -152.69998
+    y: 79.59973
+    width: 300
+    height: 164
+  nodeKnobs:
+  - {fileID: 11478832}
+  - {fileID: 11437602}
+  - {fileID: 11492712}
+  ingredientName: Antidote
+  _preCheckables: {fileID: 0}
+  price: 50
+  description: Best consumed after a long night.
+--- !u!114 &11498750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492458bbd68c5164e98a18bceb7c0495, type: 3}
+  m_Name: Recipe Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 766
+    y: -23.600002
+    width: 300
+    height: 182
+  nodeKnobs:
+  - {fileID: 11427650}
+  - {fileID: 11461330}
+  - {fileID: 11419610}
+  - {fileID: 11487014}
+  ingredientName: Elixir
+  _preCheckables: {fileID: 0}
+  price: 0
+  description: 
+--- !u!114 &11499140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Ingredient
+  m_EditorClassIdentifier: 
+  body: {fileID: 11462776}
+  side: 4
+  sidePosition: 138
+  sideOffset: 0
+  connection: {fileID: 11404448}
+  typeID: Void

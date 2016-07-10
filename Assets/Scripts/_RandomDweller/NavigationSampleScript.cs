@@ -11,6 +11,8 @@ public class NavigationSampleScript : MonoBehaviour {
     public Transform door;
     public bool die;
 
+    public Transform entry;
+
     private DialogueInterface dialogue;
 
     private enum SearchEnum {
@@ -27,6 +29,7 @@ public class NavigationSampleScript : MonoBehaviour {
     // Use this for initialization
 	void Start () {
 	    agent = this.GetComponent<NavMeshAgent>();
+	    agent.updateRotation = false;
 	    time = Time.timeSinceLevelLoad;
 	    if (Math.Abs(timeTillResearch) < 0.1) {
 	        timeTillResearch = 3f;
@@ -41,6 +44,10 @@ public class NavigationSampleScript : MonoBehaviour {
 	    SearchTarget();
 
 	    dialogue = GetComponent<DialogueInterface>();
+
+	    entry = GameObject.FindGameObjectWithTag("Nav Entry").transform;
+	    agent.destination = entry.transform.position;
+	    time = Time.timeSinceLevelLoad + 2f;
 	}
 
 	// Update is called once per frame

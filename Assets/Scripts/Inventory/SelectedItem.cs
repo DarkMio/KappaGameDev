@@ -7,19 +7,20 @@ using UnityEngine.EventSystems;
 public class SelectedItem : MonoBehaviour, IDragHandler, IPointerDownHandler {
 
     private Text selectedItemText;
-    private List<BaseItem> playerInventory;
+    private Text selectedItemValue;
+
     public GameObject draggingIcon;
 
 	// Use this for initialization
 	void Start () {
         selectedItemText = GameObject.Find("SelectedItemText").GetComponent<Text>();
-        BasePlayer basePlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BasePlayer>();
-        playerInventory = basePlayerScript.ReturnPlayerInventory();
+        selectedItemValue = GameObject.Find("SelectedItemValue").GetComponent<Text>();
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+    // Update is called once per frame
+    void Update () {
+
 	}
 
     public void ShowSelectedItemText()
@@ -33,26 +34,44 @@ public class SelectedItem : MonoBehaviour, IDragHandler, IPointerDownHandler {
             }
             else
             {
-                selectedItemText.text = playerInventory[System.Int32.Parse(this.gameObject.name)].ItemName + ": " + playerInventory[System.Int32.Parse(this.gameObject.name)].ItemDescription;
+                selectedItemText.text = InventoryWindow.playerInventory[int.Parse(this.gameObject.name)].ItemAffix.ToString() + " " + InventoryWindow.playerInventory[int.Parse(this.gameObject.name)].ItemName + ": " + InventoryWindow.playerInventory[int.Parse(this.gameObject.name)].ItemDescription;
             }
         }
     }
+
+    public void ShowSelectedItemValue()
+    {
+        if (this.gameObject.GetComponent<Toggle>().isOn)
+        {
+            if (this.gameObject.name == "Empty")
+            {
+                selectedItemValue.text = null;
+            }
+            else
+            {
+                selectedItemValue.text = "Value: " + InventoryWindow.playerInventory[int.Parse(this.gameObject.name)].ItemValue;
+            }
+        }
+    }
+
     public void OnDrag(PointerEventData eventData){
-        if(!GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>().dragged && this.name !="Empty"){
+        if (!GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>().dragged && this.name !="Empty"){
             GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>().ShowDraggedItem(this.transform.name);
             this.transform.GetChild(0).gameObject.SetActive(false);
             this.transform.name = "Empty";
         }
     }
-    
+
+
     public void OnPointerDown(PointerEventData eventData){
         InventoryWindow inventoryWindow = GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>();
-        if(inventoryWindow.dragged){
+        if (inventoryWindow.dragged){
             if(this.name != "Empty"){
+
                 inventoryWindow.SwapItem(this.gameObject);
             } else {
             this.transform.name = inventoryWindow.AddItemToSlot(this.gameObject);
-            this.transform.GetChild(0).gameObject.SetActive(true);  
+            this.transform.GetChild(0).gameObject.SetActive(true);
             }
 
         }

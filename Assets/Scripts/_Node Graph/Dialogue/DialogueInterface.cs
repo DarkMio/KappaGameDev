@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Threading;
 using NodeEditorFramework;
 using NodeEditorFramework.Standard;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine.UI;
 
 public class DialogueInterface : MenuTrigger {
@@ -46,6 +48,7 @@ public class DialogueInterface : MenuTrigger {
     private List<GameObject> buttons = new List<GameObject>();
 
 	void Awake () {
+
 	    if (string.IsNullOrEmpty(saveName)) {
 	        Debug.LogError("FATAL: No canvas given.");
 	        return;
@@ -91,7 +94,10 @@ public class DialogueInterface : MenuTrigger {
         Debug.Log("Triggered");
         if(dialogueField == null) {
             dialogueField = Instantiate(dialoguePrefab);
-            dialogueField.transform.parent = baseCanvas.transform;
+            dialogueField.transform.SetParent(baseCanvas.transform, false);
+            // dialogueField.GetComponent<RectTransform>().SetParent(baseCanvas.GetComponent<RectTransform>());
+            // dialogueField.transform.parent = baseCanvas.transform;
+            // dialogueField.transform.localPosition = Vector3.zero;
         }
 
     }
@@ -219,8 +225,21 @@ public class DialogueInterface : MenuTrigger {
     }
 
     public void Reset() {
-        state = InterfaceState.Dirty;
         Awake();
+        state = InterfaceState.Dirty;
+    }
+
+    public void ResetCompletely(string saveName) {
+        saveFiles = NodeEditorSaveManager.GetSceneSaves();
+        this.saveName = saveName;
+        for (int i = 0; i < saveFiles.Length; i++) {
+            if (saveFiles[i] == saveName) {
+                saveChoice = i;
+                break;
+            }
+        }
+        Awake();
+        state = InterfaceState.Dirty;
     }
 
     private class GUITextManager {
@@ -292,6 +311,7 @@ public class DialogueInterface : MenuTrigger {
     }
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(DialogueInterface))]
 public class DialogueInterfaceEditor : Editor
 {
@@ -332,3 +352,4 @@ public class DialogueInterfaceEditor : Editor
         DrawDefaultInspector();
     }
 }
+#endif

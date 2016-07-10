@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using NodeEditorFramework;
+using NodeEditorFramework.Standard;
 
 public class BaseItem {
     
@@ -7,26 +9,32 @@ public class BaseItem {
     private string _description;
     private int _value;
     private List<BaseStat> _stats;
-    private ItemTypes _type;
+    private ItemAffixNew _affix;
     
+
+    public BaseItem(IngredientNode iNode)
+    {
+        ItemName = iNode.ingredientName;
+        ItemDescription = iNode.description;
+        ItemValue = iNode.price;
+    }
 
     public BaseItem()
     {
-        ItemName = "Item" + Random.Range(0, 101);
-        ItemDescription = ItemName + " is an awesome item!";
-        ItemValue = Random.Range(10, 500);
-        ItemType = ItemTypes.Ingredients;
-        ItemStats = new List<BaseStat>();
-        ItemStats.Add(new BaseIntellect());
-        ItemStats.Add(new BaseStrength());
-    // Stats müssen noch erstellt werden und dann hinzugefügt werden
+        ItemName = "Trash";
+        ItemDescription = "One man's trash";
+        ItemValue = 1; 
     }
+
     
-    public enum ItemTypes{
-        Ingredients,
-        Potions,
-        Junk
-            //ItemTypes needed
+    public enum ItemAffixNew{
+        normal,
+        weak,
+        puny,
+        strong,
+        mighty,
+        godlike,
+        perfect
     }
     
     public string ItemName{
@@ -61,12 +69,12 @@ public class BaseItem {
             _stats = value;
         }
     }
-    public ItemTypes ItemType{
+    public ItemAffixNew ItemAffix{
         get{
-            return _type;
+            return _affix;
         }
         set{
-            _type = value;
+            _affix = value;
         }
     }
 

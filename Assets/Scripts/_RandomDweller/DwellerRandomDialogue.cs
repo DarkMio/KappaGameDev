@@ -14,8 +14,9 @@ public class DwellerRandomDialogue : MonoBehaviour {
 	    dialogue.baseCanvas = GameObject.FindGameObjectWithTag("Base UI");
 	    dialogue.dialogueField = GameObject.FindGameObjectWithTag("Dialogue Text");
 	    int select = Random.Range(0, dialogueNames.Count);
-	    dialogue.saveName = dialogueNames[select];
-	    dialogue.saveChoice = 0;
-        dialogue.Reset();
+	    var saveName = dialogueNames[select];
+        dialogue.ResetCompletely(saveName);
+
+	    Debug.Log("INTERFACE SHOULD LOAD: " + saveName);
 	}
 }

@@ -7,7 +7,7 @@ using UnityEngine.UI;
  */
  [ExecuteInEditMode]
 public class PlayerController : MonoBehaviour {
-    private bool playerInput = true;
+    public bool playerInput = true;
     private Vector3 _movement;
     public bool debugDraws = true;
     public int speed; // in Pixels per Second...
@@ -15,21 +15,9 @@ public class PlayerController : MonoBehaviour {
     public float contextDist;
 	public AudioClip openChest;
 	public AudioSource audioSource;
-	public TextAsset textFile;
-	public string[] dialogs;
-	public GameObject Text;
-	// public GameObject dialogWindow;
-	public int dialogTime;
-	private float dialogStartTime;
 
 	void Start () {
 	    _movement = Vector3.zero;
-		// dialogWindow = GameObject.Find ("DialogWindow");
-		// dialogWindow.GetComponent<RectTransform> ().anchoredPosition3D = new Vector3 (0, 1000, 0);
-		Text = GameObject.Find ("Text");
-		if (textFile != null) {
-			dialogs = (textFile.text.Split ('\n'));
-		}
 	}
 
 	void Update () {
@@ -90,8 +78,8 @@ public class PlayerController : MonoBehaviour {
         if(trigger != null && closestDist <= trigger.triggerDistance) { // trigger tells the trigger distance
             trigger.TriggerMenu();
             playerInput = false;
-			audioSource.PlayOneShot (openChest);
-			Debug.Log ("Chest opened");
+			// audioSource.PlayOneShot (openChest);
+			// Debug.Log ("Chest opened");
         } else if(trigger == null) {
             Debug.Log("Trigger -> null");
         }
@@ -124,17 +112,6 @@ public class PlayerController : MonoBehaviour {
 			Debug.DrawLine(transform.position, closest.transform.position, Color.red, 2f, false);
 		}
         */
-
-		if (closestDist <= 50) {
-			int n = Random.Range (1, dialogs.Length);
-			string randDialog = dialogs [n];
-			Debug.Log (randDialog);
-			dialogStartTime = Time.time;
-			Text.GetComponent<Text> ().text = randDialog;
-			// dialogWindow.GetComponent<RectTransform> ().anchoredPosition3D = new Vector3 (0, 0, 0);
-			dialogs [n] = dialogs [0];
-			dialogs [0] = randDialog;
-		}
 
 		return closest;
 	}
