@@ -9,7 +9,6 @@ using NodeEditorFramework.Standard;
 public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHandler
 {
 
-    private Text selectedItemText;
     public GameObject draggingIcon;
     private CraftingInterface craftingInterface;
     private IngredientNode recipe;
@@ -35,28 +34,12 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
     {
     }
 
-    public void ShowSelectedItemText()
-    {
-
-        if (this.gameObject.GetComponent<Toggle>().isOn)
-        {
-            if (this.gameObject.name == "Empty")
-            {
-                selectedItemText.text = "This slot is empty.";
-            }
-            else
-            {
-                Debug.Log(InventoryWindow.playerInventory[System.Int32.Parse(this.gameObject.name)].ItemDescription);
-                selectedItemText.text = InventoryWindow.playerInventory[System.Int32.Parse(this.gameObject.name)].ItemName + ": " + InventoryWindow.playerInventory[System.Int32.Parse(this.gameObject.name)].ItemDescription;
-            }
-        }
-    }
     public void OnDrag(PointerEventData eventData)
     {
 
-        if (!GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>().dragged && this.name != "Empty")
+        if (!GameObject.Find("CraftingWindow").GetComponent<InventoryWindow>().dragged && this.name != "Empty")
         {
-            GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>().ShowDraggedItem(this.transform.name);
+            GameObject.Find("CraftingWindow").GetComponent<InventoryWindow>().ShowDraggedItem(this.transform.name);
             string v = InventoryWindow.playerInventory[System.Int32.Parse(this.gameObject.name)].ItemName;
             InventoryWindow.itemCounter.Remove(v);
             craftingInterface.Remove(v);
