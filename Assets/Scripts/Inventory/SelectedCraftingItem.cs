@@ -9,6 +9,7 @@ using NodeEditorFramework.Standard;
 public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHandler
 {
 
+    private Text selectedItemText;
     public GameObject draggingIcon;
     private CraftingInterface craftingInterface;
     private IngredientNode recipe;
@@ -37,9 +38,9 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
     public void OnDrag(PointerEventData eventData)
     {
 
-        if (!GameObject.Find("CraftingWindow").GetComponent<InventoryWindow>().dragged && this.name != "Empty")
+        if (!GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>().dragged && this.name != "Empty")
         {
-            GameObject.Find("CraftingWindow").GetComponent<InventoryWindow>().ShowDraggedItem(this.transform.name);
+            GameObject.Find("InventoryWindow").GetComponent<InventoryWindow>().ShowDraggedItem(this.transform.name);
             string v = InventoryWindow.playerInventory[System.Int32.Parse(this.gameObject.name)].ItemName;
             InventoryWindow.itemCounter.Remove(v);
             craftingInterface.Remove(v);

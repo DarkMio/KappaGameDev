@@ -22,6 +22,7 @@ public class CrateWindow : MonoBehaviour {
     private int xPos;
     private int yPos;
     private string slotName;
+    private const int mousePosOffset = 10;
 
 
 
@@ -33,7 +34,7 @@ public class CrateWindow : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        BaseCrate baseCrateScript = new BaseCrate();
+        BaseCrate baseCrateScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BaseCrate>();
         crateInventory = baseCrateScript.ReturnCrateInventory();
         CreateInventorySlotsInWindow();
         AddItemsFromInventory();
@@ -41,8 +42,11 @@ public class CrateWindow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        if (dragged)
+        { // Harry, are you a wizzard? How can it be so easy to add the mouse-position?
+            draggedIcon.GetComponent<RectTransform>().position = Input.mousePosition + new Vector3(0, -mousePosOffset);
+        }
+    }
 
     private void CreateInventorySlotsInWindow()
     {
