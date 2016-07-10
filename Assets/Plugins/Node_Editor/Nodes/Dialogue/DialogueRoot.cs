@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Runtime.CompilerServices;
-using UnityEditor;
 
 namespace NodeEditorFramework.Standard {
     /**
