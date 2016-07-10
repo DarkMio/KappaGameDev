@@ -11,9 +11,9 @@ GameObject:
   - 222: {fileID: 22285142}
   - 114: {fileID: 11495602}
   - 114: {fileID: 11435274}
-  - 114: {fileID: 11430802}
+  - 114: {fileID: 11474872}
   m_Layer: 5
-  m_Name: ItemSlot
+  m_Name: ItemCrateSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,18 +36,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &11430802
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 145662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c984d0543cf1d904fa559c47a247914a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  draggingIcon: {fileID: 0}
 --- !u!114 &11435274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,7 +78,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11430802}
+      - m_Target: {fileID: 11474872}
         m_MethodName: ShowSelectedItemText
         m_Mode: 1
         m_Arguments:
@@ -131,6 +119,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11474872
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 009caff4b7bf8d543ba8d6453c9513e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  draggingIcon: {fileID: 0}
 --- !u!114 &11495602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -219,7 +219,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11430802}
+      objectReference: {fileID: 11474872}
     - target: {fileID: 0}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ShowSelectedItemText
