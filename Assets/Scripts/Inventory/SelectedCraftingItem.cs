@@ -84,7 +84,9 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
         {
             myButton.interactable = false;
             removeItemsFromInventory();
-            InventoryWindow.playerInventory.Add(new BaseItem((Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == recipe.ingredientName)) as IngredientNode)));
+            BaseItem product = new BaseItem((Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == recipe.ingredientName)) as IngredientNode));
+            generateItemAffix(product);
+            InventoryWindow.playerInventory.Add(product);
             craftingInterface.ResetHistory();
             InventoryWindow.itemCounter.Clear();
         }
@@ -122,4 +124,49 @@ public class SelectedCraftingItem : MonoBehaviour, IDragHandler, IPointerDownHan
             }
         }
     }
+
+    private void generateItemAffix(BaseItem item)
+    {
+        int i = Random.Range(1, 10);
+        switch (i)
+        {
+            case 1:
+                item.ItemAffix = BaseItem.ItemAffixNew.puny;
+                item.ItemValue = item.ItemValue * 4;
+                break;
+
+            case 2:
+            case 3:
+                item.ItemAffix = BaseItem.ItemAffixNew.weak;
+                item.ItemValue = item.ItemValue * 5;
+                break;
+
+            case 4:
+            case 5:
+            case 6:
+                item.ItemAffix = BaseItem.ItemAffixNew.normal;
+                item.ItemValue = item.ItemValue * 6;
+                break;
+
+            case 7:
+                item.ItemAffix = BaseItem.ItemAffixNew.strong;
+                item.ItemValue = item.ItemValue * 7;
+                break;
+
+            case 8:
+                item.ItemAffix = BaseItem.ItemAffixNew.mighty;
+                item.ItemValue = item.ItemValue * 8;
+                break;
+
+            case 9:
+                item.ItemAffix = BaseItem.ItemAffixNew.godlike;
+                item.ItemValue = item.ItemValue * 9;
+                break;
+
+            case 10:
+                item.ItemAffix = BaseItem.ItemAffixNew.perfect;
+                item.ItemValue = item.ItemValue * 10;
+                break;
+        }
+        }
 }

@@ -9,7 +9,7 @@ public class BaseItem {
     private string _description;
     private int _value;
     private List<BaseStat> _stats;
-    private ItemTypes _type;
+    private ItemAffixNew _affix;
     
 
     public BaseItem(IngredientNode iNode)
@@ -27,11 +27,14 @@ public class BaseItem {
     }
 
     
-    public enum ItemTypes{
-        Ingredient,
-        Potion,
-        Junk
-            //ItemTypes needed
+    public enum ItemAffixNew{
+        normal,
+        weak,
+        puny,
+        strong,
+        mighty,
+        godlike,
+        perfect
     }
     
     public string ItemName{
@@ -66,12 +69,12 @@ public class BaseItem {
             _stats = value;
         }
     }
-    public ItemTypes ItemType{
+    public ItemAffixNew ItemAffix{
         get{
-            return _type;
+            return _affix;
         }
         set{
-            _type = value;
+            _affix = value;
         }
     }
 

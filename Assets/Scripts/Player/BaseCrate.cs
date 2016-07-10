@@ -16,20 +16,6 @@ public class BaseCrate : MonoBehaviour
 
     void Start()
     {
-        canvas = NodeEditorSaveManager.LoadSceneNodeCanvas("CraftingCanvas", false);
-        Debug.Log(canvas);
-        IngredientNode iNode = Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == "Green Herb")) as IngredientNode;
-        BaseItem item_ = new BaseItem(iNode);
-        _inventory.Add(item_);
-        iNode = Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == "Blue Herb")) as IngredientNode;
-        item_ = new BaseItem(iNode);
-        _inventory.Add(item_);
-        iNode = Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == "Green Herb")) as IngredientNode;
-        item_ = new BaseItem(iNode);
-        _inventory.Add(item_);
-        iNode = Instantiate(canvas.nodes.Find(x => ((IngredientNode)x).ingredientName == "Blue Herb")) as IngredientNode;
-        item_ = new BaseItem(iNode);
-        _inventory.Add(item_);
     }
 
     // Update is called once per frame

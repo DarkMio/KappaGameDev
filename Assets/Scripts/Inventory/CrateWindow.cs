@@ -48,6 +48,7 @@ public class CrateWindow : MonoBehaviour {
         }
     }
 
+
     private void CreateInventorySlotsInWindow()
     {
         inventorySlots = new List<GameObject>();
