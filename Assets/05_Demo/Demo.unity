@@ -3496,7 +3496,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 643980202}
-  - 114: {fileID: 643980203}
   m_Layer: 0
   m_Name: Shelf
   m_TagString: Context Menu
@@ -3517,22 +3516,6 @@ Transform:
   - {fileID: 1614612838}
   m_Father: {fileID: 1438335619}
   m_RootOrder: 0
---- !u!114 &643980203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 643980201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 336c70e93c4eabf4da2a17816ea516bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distance: 50
-  boxMenu: {fileID: 0}
-  boxMenu2: {fileID: 0}
-  findingTag: 
-  isTriggered: 0
 --- !u!114 &645034345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10567,7 +10550,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -91.97412, y: -728.85565, z: 1351.549}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
