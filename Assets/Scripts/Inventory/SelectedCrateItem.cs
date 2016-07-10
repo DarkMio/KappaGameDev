@@ -36,8 +36,8 @@ public class SelectedCrateItem : MonoBehaviour, IDragHandler, IPointerDownHandle
     }
 
     public void OnDrag(PointerEventData eventData){
-        if (!GameObject.Find("Crate").GetComponent<CrateWindow>().dragged && this.name !="Empty"){
-            GameObject.Find("Crate").GetComponent<CrateWindow>().ShowDraggedItem(this.transform.name);
+        if (!GameObject.Find("CrateWindow").GetComponent<CrateWindow>().dragged && this.name !="Empty"){
+            GameObject.Find("CrateWindow").GetComponent<CrateWindow>().ShowDraggedItem(this.transform.name);
             this.transform.GetChild(0).gameObject.SetActive(false);
             this.transform.name = "Empty";
         }
@@ -45,7 +45,7 @@ public class SelectedCrateItem : MonoBehaviour, IDragHandler, IPointerDownHandle
 
 
     public void OnPointerDown(PointerEventData eventData){
-        CrateWindow crateWindow = GameObject.Find("Crate").GetComponent<CrateWindow>();
+        CrateWindow crateWindow = GameObject.Find("CrateWindow").GetComponent<CrateWindow>();
         if (crateWindow.dragged){
             if(this.name != "Empty"){
 
