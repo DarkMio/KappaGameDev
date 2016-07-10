@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Threading;
 using NodeEditorFramework;
 using NodeEditorFramework.Standard;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine.UI;
 
 public class DialogueInterface : MenuTrigger {
@@ -309,6 +311,7 @@ public class DialogueInterface : MenuTrigger {
     }
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(DialogueInterface))]
 public class DialogueInterfaceEditor : Editor
 {
@@ -349,3 +352,4 @@ public class DialogueInterfaceEditor : Editor
         DrawDefaultInspector();
     }
 }
+#endif

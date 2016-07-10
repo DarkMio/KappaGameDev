@@ -5,7 +5,9 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using NodeEditorFramework;
 using NodeEditorFramework.Utilities;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine.UI;
 
 namespace NodeEditorFramework.Standard {
@@ -48,6 +50,8 @@ namespace NodeEditorFramework.Standard {
         }
 
         protected internal override void NodeGUI() {
+            #if UNITY_EDITOR
+
             // super hard coded to get the node UI not completely broken.
             // I figured that the NodeGUI wasn't planned to do fancy things, so this is with fixed sizes everywhere.
             var max = Mathf.Max(inOptions, extOptions);
@@ -143,6 +147,7 @@ namespace NodeEditorFramework.Standard {
             GUILayout.EndHorizontal();
 
             GUILayout.EndScrollView();
+            #endif
         }
 
         public override bool Calculate() {

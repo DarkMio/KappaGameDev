@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Threading;
 using NodeEditorFramework;
 using NodeEditorFramework.Standard;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 
@@ -180,6 +182,8 @@ public class CraftingInterface : MonoBehaviour {
     }
 }
 
+
+#if UNITY_EDITOR
 [CustomEditor(typeof(CraftingInterface))]
 public class CraftingInterfaceInspector : Editor
 {
@@ -219,3 +223,4 @@ public class CraftingInterfaceInspector : Editor
         DrawDefaultInspector();
     }
 }
+#endif

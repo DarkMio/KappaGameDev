@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using NodeEditorFramework;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 namespace NodeEditorFramework.Standard {
 
@@ -42,6 +44,8 @@ namespace NodeEditorFramework.Standard {
 
         // Update is called once per frame
         protected internal override void NodeGUI() {
+            #if UNITY_EDITOR
+
             GUILayout.BeginHorizontal ();  // first the object field.
             _abstractCheckable = (AbstractCheckable) EditorGUILayout.ObjectField(_abstractCheckable, typeof(AbstractCheckable), true);
             GUILayout.EndHorizontal();
@@ -56,6 +60,8 @@ namespace NodeEditorFramework.Standard {
             GUILayout.BeginHorizontal(); // third row
             Outputs[1].DisplayLayout();  // false output
             GUILayout.EndHorizontal();
+            #endif
+
         }
 
         public override bool Calculate() {

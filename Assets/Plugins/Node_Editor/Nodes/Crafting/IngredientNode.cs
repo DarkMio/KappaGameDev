@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 namespace NodeEditorFramework.Standard {
     [System.Serializable]
@@ -31,6 +33,8 @@ namespace NodeEditorFramework.Standard {
         }
 
         protected internal override void NodeGUI() {
+            #if UNITY_EDITOR
+
             // if we ever manage to break the UI again, then we have scrollbars.
             scroller = GUILayout.BeginScrollView(scroller);
             rect.height = 128 + 18* Inputs.Count; // we can calculate a fixed node size with a fixed calculation
@@ -51,7 +55,7 @@ namespace NodeEditorFramework.Standard {
             description = GUILayout.TextField(description);
             GUILayout.EndVertical();
             GUILayout.EndHorizontal();
-             
+
             // node price
             GUILayout.BeginHorizontal();
             GUILayout.BeginVertical();
@@ -89,6 +93,7 @@ namespace NodeEditorFramework.Standard {
             GUILayout.EndHorizontal();
 
             GUILayout.EndScrollView();
+            #endif
         }
 
         private void CheckTitleType() {
